@@ -8,11 +8,29 @@
 
 # Description
 __Numeric addition__
-- as soon as both `value` and `input` are initialized, the `output` becomes `value` + `input`.
+- as soon as both `input` and `value` are initialized, the `output` becomes `input` + `value`.
 - when `input` or `value` updates, the `output` sum is updated.
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
-# Example
+# Semantics
+```python
+(x₀, t₀).add(x₁, t₁) = (x₀ + x₁, t₀.max(t₁)) 
+                       if t₀ > 0 and t₁ > 0 
+                       else (⊥, 0)
+```
+
+
+# Example 1
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
+{
+  input: 1,
+  value: 2,
+  ‘⌂’: { «output: input.add(value)» }
+}
+```
+
+# Example 2
 - shifts the oscillating `input` by two units.
 - the initialization of the `input` is delayed by one second.
 
