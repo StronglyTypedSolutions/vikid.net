@@ -64,6 +64,7 @@ export const en = {
   account_conflict_user_name: "😢 Oops, an account with the same username already exists.\n\n✏️ Try using a different username.",
   account_conflict_user_name_short: "This nickname is already in use.",
 
+  no_clipboard_read: `😢 Your browser has no clipboard support.\n✏️ Please paste your text below.`,
   script_load_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be loaded!`,
   script_save_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be saved!`,
   thumb_save_error: (progId: string) => `😢 Oops!\n\nThumbnail of '${progId}' couldn't be saved!`,

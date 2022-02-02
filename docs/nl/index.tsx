@@ -64,6 +64,7 @@ export const nl: Translations = {
   account_conflict_user_name: "😢 Oops, er lijkt al een account te bestaan met deze bijnaam.\n\n✏️ Probeer een andere bijnaam te verzinnen!.",
   account_conflict_user_name_short: "Deze bijnaam is al in gebruik.",
 
+  no_clipboard_read: `😢 Je browser ondersteunt geen klembord.\n✏️ Plak je tekst hieronder aub.`,
   script_load_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet geladen worden!`,
   script_save_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet opgeslagen worden!`,
   thumb_save_error: (progId: string) => `😢 Oops!\n\nMiniatuur van '${progId}' kon niet opgeslagen worden!`,
