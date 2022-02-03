@@ -16,11 +16,18 @@ __Numeric addition__
 ```julia
 input.add(value) = input.pure(+, value)
 
-input.pure(operator, value).at(t) = [ x0.operator(x1), t0.max(t1) ] if ready else pending
-                                    where [x0, t0] = input.at(t)
-                                          [x1, t1] = value.at(t)
-                                          ready    = (t0 > 0 and t1 > 0)
-                                          pending  = [⊥, 0]
+input.pure(operator, value).at(ts) = ( x0.operator(x1), t0.max(t1) ) if ready else pending
+                                     where (x0, t0) = input.at(ts)
+                                           (x1, t1) = value.at(ts)
+                                           ready    = (t0 > 0 and t1 > 0)
+                                           pending  = (⊥, 0)
+
+# A signal is a sequence of (value, stamp) pairs, where the first pair is pending (⊥, 0), and timestamp is monotonically increasing.
+signal = [ (⊥, 0), (x0, t0), (x1, t1), ... ] where ∀ i > 0: t[i] > 0 and t[i] > t[i-1]
+
+# A signal sampled at a timestamp ts is the pair with stamp closest to ts but not larger than ts
+signal.at(ts) = (x[i], t[i]) where ∀ j ≤ i: t[j] <= ts and ∀ j > i: t[j] > ts
+               
 ```
 
 
