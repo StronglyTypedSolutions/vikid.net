@@ -19,21 +19,21 @@ __Numeric addition__
 
 input.add(value) = input.pure(+, value)
 
-input.pure(operator, value).at(ts) = ( x0.operator(x1), t0.max(t1) ) if ready else pending
-                                     where (x0, t0) = input.at(ts)
-                                           (x1, t1) = value.at(ts)
-                                           ready    = (t0 > 0 and t1 > 0)
+input.pure(operator, value).at(Ts) = ( V0.operator(V1), T0.max(T1) ) if ready else pending
+                                     where (V0, T0) = input.at(Ts)
+                                           (V1, T1) = value.at(Ts)
+                                           ready    = (T0 > 0 and T1 > 0)
                                            pending  = (⊥, 0)
 
 # A signal is a sequence of (value, stamp) pairs.
 # The first pair is always pending = (⊥, 0), where ⊥ = 'undefined'.
 # The timestamp of all other pairs is monotonically increasing.
-signal = [ (⊥, 0), (x0, t0), (x1, t1), ... ] where ∀ i > 0: t[i] > 0 and t[i] > t[i-1]
+signal = [ (⊥, 0), (V0, T0), (V1, T1), ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
 
-# A signal sampled at a timestamp ts is the pair 
-# with stamp closest to ts but not larger than ts.
-# Basically the pair of the signal that is not newer than ts.
-signal.at(ts) = (x[i], t[i]) where ∀ j ≤ i: t[j] <= ts and ∀ j > i: t[j] > ts
+# A signal sampled at a timestamp Ts is the pair 
+# with stamp closest to ts but not larger than Ts.
+# Basically the pair of the signal that is not newer than Ts.
+signal.at(Ts) = (Vi, Ti) where ∀ j ≤ i: Tj <= Ts and ∀ j > i: Tj > Ts
                
 ```
 
