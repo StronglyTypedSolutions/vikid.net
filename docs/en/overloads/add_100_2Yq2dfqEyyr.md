@@ -8,15 +8,19 @@
 
 # Description
 __Numeric addition__
-- as soon as both `input` and `value` are initialized, the `output` becomes `input` + `value`.
+- as soon as both `input` and `value` are ready, the `output` becomes `input` + `value`.
 - when `input` or `value` updates, the `output` sum is updated.
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
 # Semantics
-```python
-(x₀, t₀).add(x₁, t₁) = (x₀ + x₁, t₀.max(t₁)) 
-                       if t₀ > 0 and t₁ > 0 
-                       else (⊥, 0)
+```julia
+input.add(value) = input.pure(+, value)
+
+input.pure(operator, value).at(t) = [ x0.operator(x1), t0.max(t1) ] if ready else pending
+                                    where [x0, t0] = input.at(t)
+                                          [x1, t1] = value.at(t)
+                                          ready    = (t0 > 0 and t1 > 0)
+                                          pending  = [⊥, 0]
 ```
 
 
