@@ -54,24 +54,25 @@ input.add(value) = input.pure(+, value)
 #
 # Intuitively, a signal is a variable that has a value and timestamp.
 # The variable might not be "ready" yet; then it is "pending" aka uninitialized.
+# E.g. the result of an exam is not known before it is graded; the result is "pending".
 #
-# Mathematically, a signal is a sequence of (value, stamp) pairs.
-# The first pair is always pending = (⊥, 0), where ⊥ = 'undefined'.
+# Mathematically, a signal is a sequence of (Value,Timestamp) pairs, written as V@T.
+# The first pair is always pending = ⊥ @ 0, where ⊥ = 'undefined'.
 # The timestamp of all other pairs is monotonically increasing.
-signal = [ (⊥, 0), (V0, T0), (V1, T1), ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
+signal = [ ⊥ @ 0, V0 @ T0, V1 @ T1, ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
 
 # A signal sampled at a timestamp Ts is the pair 
 # with stamp closest to Ts but not larger than Ts.
 #
 # Intuitively, you get back the value and timestamp most recent to Ts
-signal.at(Ts) = (Vi, Ti) where ∀ j ≤ i: Tj <= Ts and ∀ j > i: Tj > Ts
+signal.at(Ts) = Vi @ Ti where ∀ j ≤ i: Tj <= Ts and ∀ j > i: Tj > Ts
 
 # In ViKID, every pure operator has the following reactive behavior.
-input.pure(operator, value).at(Ts) = ( V0.operator(V1), T0.max(T1) ) if ready else pending
-                                     where (V0, T0) = input.at(Ts)
-                                           (V1, T1) = value.at(Ts)
-                                           ready    = (T0 > 0 and T1 > 0)
-                                           pending  = (⊥, 0)            
+input.pure(operator, value).at(Ts) = V0.operator(V1) @ T0.max(T1) if ready else pending
+                                     where V0 @ T0 = input.at(Ts)
+                                           V1 @ T1 = value.at(Ts)
+                                           ready    = T0 > 0 and T1 > 0
+                                           pending  = ⊥ @ 0
 ```
 
 See also: [pure function](https://en.wikipedia.org/wiki/Pure_function)
