@@ -13,6 +13,7 @@ __Numeric addition__
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
 # Example 1
+- 1 + 2 = 3
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
 {
@@ -24,7 +25,7 @@ __Numeric addition__
 
 # Example 2
 - shifts the oscillating `input` by two units.
-- the initialization of the `input` is delayed by one second.
+- the `input` is ready after one second.
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
