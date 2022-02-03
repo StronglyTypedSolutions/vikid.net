@@ -14,6 +14,9 @@ __Numeric addition__
 
 # Semantics
 ```julia
+# The following pseudo code is a mathematical way 
+# to exactly describe the behavior of this ViKiD function.
+
 input.add(value) = input.pure(+, value)
 
 input.pure(operator, value).at(ts) = ( x0.operator(x1), t0.max(t1) ) if ready else pending
