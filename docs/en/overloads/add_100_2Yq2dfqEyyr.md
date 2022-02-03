@@ -47,7 +47,7 @@ __Numeric addition__
 # The following pseudo code is a mathematical way 
 # to exactly describe the behavior of this ViKiD function.
 
-# add is a pure operator: when applying a given set of parameters, the output is always the same.
+# "add" is a pure operator: when applying a given set of parameters, the output is always the same.
 input.add(value) = input.pure(+, value)
 
 # In ViKiD, every parameter is a signal.
