@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, type, output
+TODO: Explain the function overload and parameters `make`, `type`, `output`
 
 [more...](type)
+
+----
+# Semantics

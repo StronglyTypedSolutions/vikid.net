@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, allow hover?, support touch?, output
+TODO: Explain the function overload and parameters `make`, `allow hover?`, `support touch?`, `output`
 
 [more...](support touch?)
+
+----
+# Semantics

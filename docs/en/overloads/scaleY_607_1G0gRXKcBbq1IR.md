@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, vertically, output
+TODO: Explain the function overload and parameters `input`, `vertically`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Scaling_(geometry))
+
+----
+# Semantics

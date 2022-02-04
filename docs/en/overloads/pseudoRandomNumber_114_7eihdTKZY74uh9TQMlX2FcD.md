@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, from, to, seed, output
+TODO: Explain the function overload and parameters `make`, `from`, `to`, `seed`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Random_number_generation)
+
+----
+# Semantics

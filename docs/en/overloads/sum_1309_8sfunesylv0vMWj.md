@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, zero if empty?, output
+TODO: Explain the function overload and parameters `input`, `zero if empty?`, `output`
 
 [more...](https://simple.wikipedia.org/wiki/Sum)
+
+----
+# Semantics

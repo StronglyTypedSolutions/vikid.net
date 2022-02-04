@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, seconds, repeat?, output
+TODO: Explain the function overload and parameters `input`, `seconds`, `repeat?`, `output`
 
 [more...](http://reactivex.io/documentation/operators/timer.html)
+
+----
+# Semantics

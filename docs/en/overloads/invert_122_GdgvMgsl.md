@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, output
+TODO: Explain the function overload and parameters `input`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Invertible_matrix)
+
+----
+# Semantics

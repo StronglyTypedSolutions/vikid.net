@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, pass through?, output
+TODO: Explain the function overload and parameters `input`, `pass through?`, `output`
 
 [more...](http://reactivex.io/documentation/operators/filter.html)
+
+----
+# Semantics

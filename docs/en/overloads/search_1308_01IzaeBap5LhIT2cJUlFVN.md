@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, element(s), output
+TODO: Explain the function overload and parameters `input`, `element(s)`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Array_data_structure)
+
+----
+# Semantics

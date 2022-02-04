@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, number, output
+TODO: Explain the function overload and parameters `input`, `number`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Bitwise_operation#XOR)
+
+----
+# Semantics

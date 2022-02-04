@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, thickness, output
+TODO: Explain the function overload and parameters `input`, `thickness`, `output`
 
 [more...](thickness)
+
+----
+# Semantics

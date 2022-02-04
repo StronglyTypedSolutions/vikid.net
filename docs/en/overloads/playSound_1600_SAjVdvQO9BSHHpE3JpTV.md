@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, active?, rate, output
+TODO: Explain the function overload and parameters `input`, `active?`, `rate`, `output`
 
 [more...](rate)
+
+----
+# Semantics

@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, index, count, output
+TODO: Explain the function overload and parameters `input`, `key`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Array_data_structure)
+[more...](https://en.wikipedia.org/wiki/Set_(mathematics))
+
+----
+# Semantics

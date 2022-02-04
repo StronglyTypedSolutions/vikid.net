@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, value, lengte, at the end?, output
+TODO: Explain the function overload and parameters `input`, `value`, `length`, `at the end?`, `output`
 
 [more...](at the end?)
+
+----
+# Semantics

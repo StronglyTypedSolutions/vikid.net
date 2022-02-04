@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, width , height , interpolated?, output
+TODO: Explain the function overload and parameters `input`, `width `, `height `, `interpolated?`, `output`
 
 [more...](interpolated?)
+
+----
+# Semantics

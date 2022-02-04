@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, hours, output
+TODO: Explain the function overload and parameters `input`, `hours`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Rotation_(mathematics))
+
+----
+# Semantics

@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, key, load!, active?, output
+TODO: Explain the function overload and parameters `input`, `key`, `load!`, `active?`, `output`
 
 [more...](active?)
+
+----
+# Semantics

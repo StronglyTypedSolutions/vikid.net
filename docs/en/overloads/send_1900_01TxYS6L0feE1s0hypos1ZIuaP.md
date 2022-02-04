@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, message, count, output
+TODO: Explain the function overload and parameters `input`, `message`, `count`, `output`
 
 [more...](count)
+
+----
+# Semantics

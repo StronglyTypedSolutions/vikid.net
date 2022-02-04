@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, duration, output
+TODO: Explain the function overload and parameters `input`, `duration`, `output`
 
 [more...](duration)
+
+----
+# Semantics

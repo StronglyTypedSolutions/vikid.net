@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, x direction, y direction, origin, output
+TODO: Explain the function overload and parameters `make`, `x direction`, `y direction`, `origin`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Affine_transformation)
+
+----
+# Semantics

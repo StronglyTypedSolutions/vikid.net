@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, start color, end color, start point, end point, output
+TODO: Explain the function overload and parameters `input`, `start color`, `end color`, `start point`, `end point`, `output`
 
 [more...](end point)
+
+----
+# Semantics

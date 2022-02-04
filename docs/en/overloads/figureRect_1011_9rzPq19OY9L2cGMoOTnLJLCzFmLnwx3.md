@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, width, height, corner rounding, center point, output
+TODO: Explain the function overload and parameters `make`, `width`, `height`, `corner rounding`, `center point`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Rectangle)
+
+----
+# Semantics

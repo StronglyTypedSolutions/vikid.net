@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, x, output
+TODO: Explain the function overload and parameters `input`, `x`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Atan2)
+
+----
+# Semantics

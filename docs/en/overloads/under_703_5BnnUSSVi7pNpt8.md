@@ -7,9 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `make`, `id or URI`, `output`
+TODO: Explain the function overload and parameters `input`, `graphic`, `output`
 
-[more...](id or URI)
+[more...](graphic)
 
 ----
 # Semantics

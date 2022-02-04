@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, default input, open!, output
+TODO: Explain the function overload and parameters `input`, `default input`, `open!`, `output`
 
 [more...](open!)
+
+----
+# Semantics

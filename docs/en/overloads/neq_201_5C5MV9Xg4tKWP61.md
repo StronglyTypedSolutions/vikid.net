@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, value, output
+TODO: Explain the function overload and parameters `input`, `value`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Inequality_(mathematics))
+
+----
+# Semantics

@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, start, step, count, output
+TODO: Explain the function overload and parameters `make`, `start`, `step`, `count`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Array_data_structure)
+
+----
+# Semantics

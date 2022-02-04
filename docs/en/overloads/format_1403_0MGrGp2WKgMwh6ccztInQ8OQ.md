@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, format, output
+TODO: Explain the function overload and parameters `input`, `format`, `indent`, `output`
 
-[more...](format)
+[more...](indent)
+
+----
+# Semantics

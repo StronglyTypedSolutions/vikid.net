@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, with label, without label, active?, maximum depth, output
+TODO: Explain the function overload and parameters `input`, `with label`, `without label`, `active?`, `maximum depth`, `output`
 
 [more...](maximum depth)
+
+----
+# Semantics

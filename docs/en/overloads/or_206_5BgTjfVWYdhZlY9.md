@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, boolean, output
+TODO: Explain the function overload and parameters `input`, `boolean`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Logical_disjunction)
+
+----
+# Semantics

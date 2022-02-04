@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, velocity, output
+TODO: Explain the function overload and parameters `input`, `velocity`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Velocity)
+
+----
+# Semantics

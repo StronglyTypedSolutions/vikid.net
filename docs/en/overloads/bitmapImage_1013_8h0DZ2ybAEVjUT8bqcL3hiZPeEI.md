@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters make, URI, interpolated?, height, output
+TODO: Explain the function overload and parameters `make`, `URI`, `interpolated?`, `height`, `output`
 
 [more...](https://en.wikipedia.org/wiki/Sprite_(computer_graphics))
+
+----
+# Semantics

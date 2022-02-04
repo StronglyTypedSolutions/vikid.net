@@ -7,6 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters input, point, output
+TODO: Explain the function overload and parameters `input`, `point`, `output`
 
 [more...](point)
+
+----
+# Semantics
