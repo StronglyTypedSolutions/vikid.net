@@ -9,7 +9,7 @@
 # Description
 __Numeric addition__
 - as soon as both `input` and `value` are ready, the `output` becomes `input` + `value`.
-- when `input` or `value` updates, the `output` sum is updated.
+- when `input` or `value` update, the `output` sum is updated.
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
 # Example 1
@@ -42,40 +42,50 @@ __Numeric addition__
 
 # Semantics
 <details>
-    <summary>Click to expand</summary>
+<summary>Mathematical description of the behavior of this operator</summary>
+    
+```julia
+input.add(value) = input.pure(+, value)
+```
+
+<details>
+<summary>Explanation of <code>pure</code></summary>
+
+In ViKID, every pure reactive operator has the following behavior:
 
 ```julia
-# The following pseudo code is a mathematical way 
-# to exactly describe the behavior of this ViKiD function.
-
-# "add" is a pure operator: when applying a given set of parameters, the output is always the same.
-input.add(value) = input.pure(+, value)
-
-# In ViKiD, every parameter is a signal.
-#
-# Intuitively, a signal is a variable that has a value and timestamp.
-# The variable might not be "ready" yet; then it is "pending" aka uninitialized.
-# E.g. the result of an exam is not known before it is graded; the result is "pending".
-#
-# Mathematically, a signal is a sequence of (Value,Timestamp) pairs, written as V@T.
-# The first pair is always pending = ⊥ @ 0, where ⊥ = 'undefined'.
-# The timestamp of all other pairs is monotonically increasing.
-signal = [ ⊥ @ 0, V0 @ T0, V1 @ T1, ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
-
-# A signal sampled at a timestamp Ts is the pair 
-# with stamp closest to Ts but not larger than Ts.
-#
-# Intuitively, you get back the value and timestamp most recent to Ts
-signal.at(Ts) = Vi @ Ti where ∀ j ≤ i: Tj <= Ts and ∀ j > i: Tj > Ts
-
-# In ViKID, every pure operator has the following reactive behavior.
-input.pure(operator, value).at(Ts) = V0.operator(V1) @ T0.max(T1) if ready else pending
-                                     where V0 @ T0 = input.at(Ts)
-                                           V1 @ T1 = value.at(Ts)
-                                           ready    = T0 > 0 and T1 > 0
+input.pure(operator, value).at(Ts) = V1.operator(V2) @ T1.max(T2) if ready else pending
+                                     where V1 @ T1 = input.at(Ts)
+                                           V2 @ T2 = value.at(Ts)
+                                           ready    = T1 > 0 and T2 > 0
                                            pending  = ⊥ @ 0
 ```
 
 See also: [pure function](https://en.wikipedia.org/wiki/Pure_function)
 
+<details>
+<summary>Explanation of <code>@, pending, ready, at</code></summary>
+
+In ViKiD, every `parameter` is a `signal`.
+
+Intuitively, a `signal` is a variable that has a `value` and `timestamp`.
+The variable might not be `ready` yet; then it is `pending` aka `uninitialized`.
+E.g. the result of an exam is not known before it is graded; the result is `pending`.
+
+Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`.
+The first pair is always `pending = ⊥ @ 0`, where `⊥` means `undefined`.
+The timestamp of all other pairs is monotonically increasing.
+
+```julia
+signal = [ ⊥ @ 0, V1 @ T1, V2 @ T2, ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
+```
+
+Sampling a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, so no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
+
+```julia
+signal.at(Ts) = Vi @ Ti where ¬ Ǝ Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts
+```
+
+</details>
+</details>
 </details>
