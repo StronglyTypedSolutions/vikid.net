@@ -25,6 +25,7 @@ export const en = {
   type: "type",
   types: "types",
   functions: "functions",
+  concepts: "concepts",
 
   toggle_type_filter: "click to toggle input type filter",
 

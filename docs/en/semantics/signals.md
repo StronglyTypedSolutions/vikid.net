@@ -1,53 +1,80 @@
-## Signals
+> NOTE: The following text is very technical and advanced, and describes exact mathematical semantics for ViKiD. If this is too hard, please play our puzzle game or watch the community's Youtube tutorials. Learning is mostly done by playing and experimenting, until you develop an intuition.
+
+## Signals everywhere
 
 In ViKiD, variables and function parameters are `signals`.
 
-Intuitively, a `signal` is a value that changes over time. The signal might not be `ready` yet, then it is `pending` aka `uninitialized`. E.g. the result of an exam is not known before it is graded; the result is `pending`.
+Intuitively, a `signal` is a value that changes over time, like the mouse position. The signal might not be `ready` yet, then it is `pending` aka `uninitialized`. E.g. the result of an exam is not known before it is graded; the result is `pending`.
 
-Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`.
-The first pair is always `pending = ⊥ @ 0`, where `⊥` means `undefined`.
-The timestamp of all other pairs is monotonically increasing.
+> For easier reasoning, ViKiD uses natural `time-stamp` numbers instead of real `time` numbers. In animation, this is also known as `frame numbers`. 
 
-```pseudo
-signal = [ ⊥ @ 0, V1 @ T1, V2 @ T2, ... ] where ∀ i > 0: Ti > 0 and Ti > T(i-1)
-```
-
-Sampling a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, so no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
+Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamp of all other pairs is _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
 
 ```pseudo
-signal.at(Ts) = Vi @ Ti where ¬ Ǝ Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts
+signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
 ```
 
-Since writing out the full infinite sequence of a signal is impractical, so we describe the behavior of a signal using the `at` operator.
+> For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. For an ultimate debugging experience, premium members can __rewind__ their simulation in time!
 
-For example, all constants in ViKiD have the following signal:
+## Sampling signals
+
+Conceptually, sampling a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
 
 ```pseudo
-constant(value).at(Ts) = value @ 1
+signal.at(Ts) = Vi @ Ti where ¬Ǝ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts)
 ```
 
-The time signal is sampled automatically at the refresh rate of your monitor by ViKiD, typically 60hz:
+> Practically - since we cannot do time-travel outside of mathematics yet - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. 
+
+Since writing out the full infinite sequence of a `signal` is impractical, we describe the semantics of a `signal` using the `at` operator.
+
+For example, the semantics of a `constant signal` with value `42` are:
+
+```pseudo
+constant(42).at(Ts) = 42 @ 1
+```
+
+`time` itself is also a `signal`. It is sampled automatically at the _refresh rate_ of your monitor by ViKiD, typically 60hz:
 
 ```pseudo
 time.at(Ts) = Ts * 1/60 @ Ts
 ```
 
-(Unfortunately this is not exactly 60hz, so this varies)
-
+> Unfortunately this is not exactly 60hz, so this varies. Also, some monitors have much higher refresh rates, so you should never rely on 60Hz! 
 ## Combining signals
 
-Every expression in ViKiD combines various signals into new ones, using signal functions.
+Every expression in ViKiD combines various `signals` into new ones, using `signal functions`.
 
-Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but imperative variables. For example, suppose we keep a `highscore` and want to increment a `score` when an event named `kaboom` happens. This is written as follows in C# (other languages even don't have builtin support for events):
+Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but __mutable variables__. For example, suppose we keep a `highscore` and want to increment a `score` when an event named `kaboom` happens. This is written as follows in C# (other languages even don't have builtin support for events):
 
-```pseudo
-score = 0;
-highscore = 0;
+> If you don't know these programming languages, feel free to skip ahead to the [spreadsheets](#spreadsheets) section
 
-kaboom += delegate {
-   score = score + 1;
-   highscore = Math.Max(score, highscore);
-};
+
+```C#
+public class Example
+{
+    public int UserScore { get; private set; }
+    public int HighScore { get; private set; }
+
+    public event Action Kaboom;
+
+    public Example()
+    {
+        UserScore = 0;
+        HighScore = 0;
+
+        Kaboom += delegate
+        {
+            UserScore = UserScore + 1;
+            HighScore = Math.Max(HighScore, UserScore);
+        };
+    }
+
+    public void RaiseKaboom()
+    {
+        Kaboom?.Invoke();
+    }
+}
 ```
 
 Not only is this very verbose, it has many problems:

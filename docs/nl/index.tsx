@@ -25,6 +25,8 @@ export const nl: Translations = {
   type: "type",
   functions: "functies",
   types: "types",
+  concepts: "concepten",
+
 
   toggle_type_filter: "klik om invoer type filter aan/uit te zetten",
 
