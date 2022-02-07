@@ -10,7 +10,7 @@ Intuitively, a `signal` is a value that changes over `time`, like the `mouse pos
 
 > For easier reasoning, ViKiD uses natural `time-stamp` numbers instead of real `time` numbers. In animation, this is also known as `frame numbers`. 
 
-Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamp of all other pairs is _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
+Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
 
 ```pseudo
 signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
