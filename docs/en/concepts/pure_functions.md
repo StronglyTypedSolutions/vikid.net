@@ -1,6 +1,16 @@
-A pure reactive function zips its parameter signals together with some scalar operator.
+# Pure signal functions
 
-In computer science, we also say the operator is "lifted" on signals.
+Many of the reactive `signal functions` in ViKiD are `pure`. 
+
+In general, a `pure function` returns the same output for the same given set of input values.
+
+Most of the well know operators in mathematics are pure.
+
+A `pure signal function` __combines__ its parameter signals values together with the corresponding non-reactive function. In computer science, we also say the operator is _lifted_ on signals, or that it _zips_ the signal values together.
+
+When any of the parameter signals update, the `pure signal function` updates too.
+
+However, it waits for all parameters to be `ready` before updating at all.
 
 For example, addition on signals `input` and `param` zips the + operator:
 
@@ -8,7 +18,7 @@ For example, addition on signals `input` and `param` zips the + operator:
 input.add(param) = input.zip(param, +)
 ```
 
-Often we use the same symbol or name for both the reactive function and scalar operator.
+Often we use the same symbol or name for both the reactive function and non-reactive operator.
 
 For example, the sine function:
 
