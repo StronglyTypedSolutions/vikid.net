@@ -1,1 +1,1 @@
-This is a [pure](/refman/concepts/pure) signal function.
+This is a [pure](/refman/concepts/pure_functions) signal function.
