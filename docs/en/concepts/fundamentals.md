@@ -152,7 +152,7 @@ Let's look at this ViKiD program in detail:
     - you often want to revise these, and make them explicit.
   - Many bindings like `score` refer to their own value. 
     - to avoid __infinite loops__, we have to sample their previous, delayed value. 
-  - Only a few operators allow making loops, the most important being `merge` `$500`, `integral`, `filter`
+  - Only a few operators allow making loops, the most important being `merge` `$501`, `snapshot` `$509`, `filter` `$508` and `integral` `$400`,
 - Numbers are shown both in the decimal system, but also in a more intuitive clock-like graphical representation.
 - In the `giveExtraLive` binding, `score >= nextExtraLiveScore` gives a `boolean` value (`on`/`off`, `true`/`false`, `yes`/`no`, ...)
   - this `boolean` signal updates whenever it becomes either `true` or `false`
