@@ -3,7 +3,7 @@ import { methodDescriptions, adjusterDescription, overloadDescription } from "lo
 
 /**
  * NOTE: We assume the overload description are sorted from specific to generic!
- * So always add _: overloadDescription(...) as the last one, 
+ * So always add _: overloadDescription(...) as the last one,
  * and exact matches like "𝕍": overloadDescription(...) first.
  */
 export const methods = methodDescriptions({
@@ -578,7 +578,8 @@ export const methods = methodDescriptions({
     _: overloadDescription("repeated as list", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.TO_DRAWING]: {
-    _: overloadDescription("as line drawing", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
+    "[𝕍]": overloadDescription("as line drawing", "closed?", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
+    "[[𝕍]]": overloadDescription("as line drawing", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
   },
   [MethodId.TO_SET]: {
     _: overloadDescription("as set", "https://en.wikipedia.org/wiki/Set_(mathematics)")

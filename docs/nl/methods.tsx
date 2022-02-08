@@ -581,7 +581,8 @@ export const methods = methodDescriptions({
     _: overloadDescription("herhaald als lijst", "aantal", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.TO_DRAWING]: {
-    _: overloadDescription("als lijntekening", "startpunt", "losse segmenten?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
+    "[[𝕍]]": overloadDescription("als lijntekening", "startpunt", "losse segmenten?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
+    "[𝕍]": overloadDescription("als lijntekening", "gesloten?", "startpunt", "losse segmenten?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
   },
   [MethodId.TO_SET]: {
     _: overloadDescription("als verzameling", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)")
