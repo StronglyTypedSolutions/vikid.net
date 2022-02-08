@@ -1,6 +1,11 @@
 import { MethodId, AdjusterMethodId, ReceiverMethodId } from "language";
 import { methodDescriptions, adjusterDescription, overloadDescription } from "locale/MethodDescription";
 
+/**
+ * NOTE: We assume the overload description are sorted from specific to generic!
+ * So always add _: overloadDescription(...) as the last one, 
+ * and exact matches like "𝕍": overloadDescription(...) first.
+ */
 export const methods = methodDescriptions({
   [AdjusterMethodId.Instance]: adjusterDescription("one adjusted instance", "…adjustments"),
   [AdjusterMethodId.Population]: adjusterDescription("multiple adjusted instances", "…adjustments", "initial amount", "spawn amount", "active?"),
