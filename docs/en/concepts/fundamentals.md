@@ -1,4 +1,4 @@
-# Essentials
+# Fundamentals
 
 > NOTE: The following text is __rather technical and advanced__, and describes the exact mathematical semantics for ViKiD. If this is too hard, please just __skim over it__, replacing all words you don't understand with ___yadi yadi yadi___ 😉. But make sure to play our __puzzle game__ and watch __the community's Youtube tutorials__ to get the basics. Learning is mostly done by __playing and experimenting__, until you develop __intuition__ about the matter.
 
@@ -17,6 +17,42 @@ signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(
 ```
 
 > For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. For an ultimate debugging experience, premium members can __rewind__ their simulation in time!
+
+## Signal functions
+
+In ViKiD, we use the __object-oriented__ syntax when applying functions, also called __methods__.
+
+So instead of the _mathematical_ way of writing 
+
+```pseudo
+pow(sin(time),4)
+```
+
+we write
+
+```pseudo
+time.sin().pow(4)
+```
+
+> This form is used in most popular programming languages too.
+
+So the `subject` (aka `self` or `this`) followed by a `method application`, then the `verb`, then a (_possibly empty_) tuple of `parameters`. In ViKiD we call the subject the `input`. 
+
+> We have chosen this this asymmetric form because it matches the [subject-verb-object](https://en.wikipedia.org/wiki/Subject%E2%80%93verb%E2%80%93object) sentence structure used in most Western natural languages.
+
+Especially when working with graphics, this works out nicely:
+
+```pseudo
+square.rotated(time).painted(red).under(circle).scaled(4)
+```
+
+In ViKiD's block syntax:
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-671-gf3ba72e28207 s21
+{ ‘⌂’: {* a: ■.rotate(🕒).paintSolid(#FF0000).under(●).scale(«4») } }
+```
+
+We call a function on signals a `signal function`, for obvious reasons 😉.
 
 ## Sampling signals
 
@@ -43,6 +79,7 @@ time.at(Ts) = Ts * 1/60 @ Ts
 ```
 
 > Unfortunately this is not exactly 60hz, so this varies. Also, some monitors have much higher refresh rates, so you should never rely on 60Hz! 
+
 ## Combining signals
 
 Every expression in ViKiD combines various `signals` into new ones, using `signal functions`.
