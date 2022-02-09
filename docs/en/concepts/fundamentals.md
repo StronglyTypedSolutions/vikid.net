@@ -36,9 +36,9 @@ time.sin().pow(4)
 
 > This form is used in most popular programming languages too.
 
-So the `subject` (aka `self` or `this`) followed by a `method application`, then the `verb`, then a (_possibly empty_) tuple of `parameters`. In ViKiD we call the subject the `input`. 
+So we start with the `subject` (aka `self` or `this`) followed by a `method application`, then the `verb`, then a (_possibly empty_) tuple of `parameters`. In ViKiD we call the subject the `input`. 
 
-> We have chosen this this asymmetric form because it matches the [subject-verb-object](https://en.wikipedia.org/wiki/Subject%E2%80%93verb%E2%80%93object) sentence structure used in most Western natural languages.
+> We have chosen this asymmetric form because it matches the [subject-verb-object](https://en.wikipedia.org/wiki/Subject%E2%80%93verb%E2%80%93object) sentence structure used in most Western natural languages.
 
 Especially when working with graphics, this works out nicely:
 
@@ -59,7 +59,7 @@ We call a function on signals a `signal function`, for obvious reasons 😉.
 Conceptually, sampling a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
 
 ```pseudo
-signal.at(Ts) = Vi @ Ti where ¬Ǝ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts)
+signal.at(Ts) = Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts)
 ```
 
 > Practically - since we cannot do time-travel outside of mathematics yet - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. When a `signal` gets a new `(Value, Timestamp)`, we say the `signal` __updates__.
@@ -144,10 +144,10 @@ If you ever programmed a __spread sheet__, you will have noticed that all __cell
 Let us code the same thing in ViKiD pseudo code:
 
 ```pseudo
-score: 0 ⊕ (score + 1).when(kaboom),
-nextExtraLiveScore: 10 ⊕ (nextExtraLiveScore + 10).when(giveExtraLive),
+score: 0 ⊕ (score.previous() + 1).when(kaboom),
+nextExtraLiveScore: 10 ⊕ (nextExtraLiveScore.previous() + 10).when(giveExtraLive),
 giveExtraLive: (score >= nextExtraLiveScore).rising(),
-lives: 3 ⊕ (lives + 1).when(extraLive)
+lives: 3 ⊕ (lives.previous() + 1).when(giveExtraLive)
 ```
 
 > In most programming languages, `score`, `nextExtraLiveScore` etc are called __variables__. To avoid confusion, we call these [__`bindings`__](https://en.wikipedia.org/wiki/Name_binding) in ViKiD.
@@ -159,6 +159,26 @@ That's it, 4 lines of code. Read this as follows:
 - `nextExtraLiveScore` starts with `10`, and is incremented by `10` whenever an `extra live is given`.
 - `an extra live should be given` the moment the `score` goes above the `nextExtraLiveScore`
 - `lives` starts at `3` and is incremented when an `extra live must be given`.
+
+Note that incrementing the score in C# is done like:
+
+```pseudo
+score = score + 1
+```
+
+But that doesn't make any sense mathematically, because that would mean we have a value that is equal to itself plus one. No such value exists...
+
+In ViKiD, such constructions are not possible, we can not directly "write" to the score signal.
+
+What we could do is:
+
+```pseudo
+score = score.previous() + 1
+```
+
+Todo: move this to an earlier "mutable variables vs signals" section
+
+
 
 Here's the real ViKiD program, that raises the `kaboom` event every second, and also converts the `score` and `lives` into a text `string`
 
