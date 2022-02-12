@@ -10,7 +10,7 @@ Intuitively, a `signal` is a value that changes over `time`, like the `mouse pos
 
 > For easier reasoning, ViKiD uses natural `time-stamp` numbers instead of real `time` numbers. In animation, this is also known as `frame numbers`. 
 
-Mathematically, a `signal` is a sequence of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
+Mathematically, a `signal` is a __sequence__ of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
 
 ```pseudo
 signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
@@ -51,6 +51,14 @@ In ViKiD's block syntax:
 𝕍i𝕂i𝔻 v0.7-671-gf3ba72e28207 s21
 { ‘⌂’: {* a: ■.rotate(🕒).paintSolid(#FF0000).under(●).scale(«4») } }
 ```
+
+Let's go over the buttons in the toolbar:
+- The __clock__ icon shows the `time` since the simulation has been running
+- Clicking the __clock__ icon will reveal the `time-stamps` of all signals.
+- The `$enterFullscreen` button allows opening the script in the playground editor.
+- The `$restart`, `$stop`, `$pause`, `$play` buttons __restart__, __stop__, __pause__ and __resume__ the simulation.
+- The `$step`, `$rewind` buttons __step forwards__ and __backwards__ one frame.
+  - Long pressing the button will speed this up.
 
 We call a function on signals a `signal function`, for obvious reasons 😉.
 
