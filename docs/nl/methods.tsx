@@ -187,6 +187,9 @@ export const methods = methodDescriptions({
   [MethodId.BUFFER]: {
     _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden]", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
+  [MethodId.SLIDING_BUFFER]: {
+    _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden]", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
+  },
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
   },
