@@ -10,7 +10,7 @@ Intuitively, a `signal` is a value that changes over `time`, like the `mouse pos
 
 > For easier reasoning, ViKiD uses natural `time-stamp` numbers instead of real `time` numbers. In animation, this is also known as `frame numbers`. 
 
-Mathematically, a `signal` is a __sequence__ of `(Value,Timestamp)` pairs, written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
+Mathematically, a `signal` is a __sequence__ of `(Value,Timestamp)` pairs (also called `samples`), written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
 
 ```pseudo
 signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
@@ -18,7 +18,7 @@ signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(
 
 > For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. For an ultimate debugging experience, premium members can __rewind__ their simulation in time!
 
-## Signal functions
+## Language syntax
 
 In ViKiD, we use the __object-oriented__ syntax when applying functions, also called __methods__.
 
@@ -46,6 +46,8 @@ Especially when working with graphics, this works out nicely:
 square.rotated(time).painted(red).under(circle).scaled(4)
 ```
 
+> Note that we used the __simple past tense__ for the verbs here. Unlike most traditional programming languages, ViKiD is a __declarative language__: you describe what things __are__, and _not_ what to __do__. ViKiD has __no statement order__!
+
 In ViKiD's block syntax:
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-671-gf3ba72e28207 s21
@@ -60,17 +62,15 @@ Let's go over the buttons in the toolbar:
 - The `$step`, `$rewind` buttons __step forwards__ and __backwards__ one frame.
   - Long pressing the button will speed this up.
 
-We call a function on signals a `signal function`, for obvious reasons 😉.
-
 ## Sampling signals
 
-Conceptually, sampling a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
+Conceptually, __sampling__ a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
 
 ```pseudo
 signal.at(Ts) = Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts)
 ```
 
-> Practically - since we cannot do time-travel outside of mathematics yet - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. When a `signal` gets a new `(Value, Timestamp)`, we say the `signal` __updates__.
+> Practically - since we cannot do time-travel outside of mathematics yet 😉 - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. When a `signal` gets a new `(Value, Timestamp)`, we say the `signal` __updates__.
 
 Since writing out the full infinite sequence of a `signal` is impractical, we describe the semantics of a `signal` using the `at` operator.
 
@@ -88,14 +88,70 @@ time.at(Ts) = Ts * 1/60 @ Ts
 
 > Unfortunately this is not exactly 60hz, so this varies. Also, some monitors have much higher refresh rates, so you should never rely on 60Hz! 
 
-## Combining signals
+## Signal functions
 
-Every expression in ViKiD combines various `signals` into new ones, using `signal functions`.
+We call a function on signals a `signal function`, for obvious reasons 😉. 
+
+> Often we also use the term `reactive operator`, or just `operator` or `function` when the context is clear.
+
+Mathematically, a `signal function` transforms one or more `input signals` into an `output signal`.
+
+We roughly classify `signal functions` into three groups:
+
+- `pure signal functions`
+   - These are just regular [pure functions](https://en.wikipedia.org/wiki/Pure_function) that are lifted to work on signals.
+   - We only need to known the `input values` at the __current time__ to compute the output values, the `time-stamps` nor signal history doesn't matter.
+   - For example, all the __arithmetic operators__ and __trigonometric functions__ can be applied to signal functions.
+   - See the page [pure signal functions](/refman/concepts/pure_functions) for more details
+- `plain signal functions`
+   - These are reactive operators that need both the `time-stamps` _and_ `values` at the __current time__ to compute the output.
+   - The most frequently used plain signal functions are `merge` `$501`, `snapshot` `$509` and `filter` `$508` 
+   - See the page [plain signal functions](/refman/concepts/plain_functions) for more details
+- `history signal functions`
+   - The output of these operators depends on the __history__ of the input signals.
+   - For example, an `integral` `$400` will make a sum of __many samples__ in the `input velocity signal`.
+
+Here are some examples:
+
+### Pure: rotating a square with time multiplied by 3
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-657-g990cc30c2e38 s21
+{ 
+  pure👁: ■.rotate(🕒.mul(3))
+}
+```
+
+### Plain: blocking time unless mouse button is pressed, using merge to provide an initial value.
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-687-g0b41cdbf s21
+{ 
+  ‘⌂’: {* 
+    ‘mouse down?’: 🏭.mouseButton(0, ☑),
+    time👁: 🕒.filter(‘mouse down?’).print(3).mergeLeft(«'click%0Ahere'»)
+  }
+}
+```
+
+### History: integrals in [Hooke's law](https://en.wikipedia.org/wiki/Hooke%27s_law)
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-687-g0b41cdbf s21
+{ 
+  ‘⌂’: {* 
+    a: (-1).mul(x),
+    v: 0.integral(a),
+    x: 6.integral(v),
+    spring👁: «●.translateX(x)»
+  }
+}
+```
+
+> Note that due to _inaccuries_ we get some rounding errors over time. Computers have limited precision and can't represent real numbers exactly.
+
+## Signals vs variables
 
 Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but __mutable variables__. For example, suppose we want to increment a `score` when an event named `kaboom` happens. If the `score` goes above 10, we give the player an extra `live`, and repeat that when `score` goes above `20`, then `30`, etc... This is written as follows in C# (other languages even don't have builtin support for events):
 
 > If you don't know these programming languages, feel free to skip ahead to the __spreadsheets__ section. Actually, _not knowing_ any of the old-school languages is often an __advantage__ when learning reactive programming!
-
 
 ```pseudo
 public class EventSource 
