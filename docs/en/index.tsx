@@ -95,6 +95,9 @@ export const en = {
   consent_agree_selected_cookies: "Accept all neccessary and selected cookies",
   consent_agree_telemetry_cookies: "Accept usage telemetry cookies?",
 
+  gdpr_not_yet_automated: `⚠️ This is not yet automated`,
+  gdpr_send_email: (username: string) => `📧 Please send an email to gdpr@vikid.net,\nmentioning your username '${username}'`,
+
   login_header: "Sign-in",
   login_header_password: "Password?",
   login_email: "e-mail",
