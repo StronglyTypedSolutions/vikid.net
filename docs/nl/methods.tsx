@@ -194,7 +194,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
   },
   [MethodId.SNAPSHOT]: {
-    _: overloadDescription("bij update, neem", "waarde", "http://reactivex.io/documentation/operators/sample.html")
+    _: overloadDescription("bij update, neem", "bron", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
     _: overloadDescription("zo snel mogelijk", "maximum intra-frame updates")

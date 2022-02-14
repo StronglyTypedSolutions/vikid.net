@@ -192,7 +192,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
   },
   [MethodId.SNAPSHOT]: {
-    _: overloadDescription("on update, snapshot of", "value", "http://reactivex.io/documentation/operators/sample.html")
+    _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
     _: overloadDescription("as soon as possible", "maximum intra-frame updates")
