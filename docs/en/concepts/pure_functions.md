@@ -1,10 +1,62 @@
 # Pure signal functions
-
+## Introduction
 Many of the reactive `signal functions` in ViKiD are `pure`. 
 
 In general, a `pure function` returns the __same output__ for the same __given set of input values__.
 
-All mathematical functions are pure. In ViKiD however, we use the word `pure` for functions that __do not depend on time__. 
+All mathematical functions are pure. In ViKiD however, we use the word `pure` for functions that __do not depend on time-stamps__. 
+
+A very simple example is adding two constant signals:
+
+```pseudo
+three = 1 + 2
+```
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-699-gfefba65283bf s22
+{ ‘⌂’: {* three: 1.add(«2») } }
+```
+
+However, we can also add two varying signals in exactly the same. For example, here we add the mouse x and y positions:
+```pseudo
+mouse_sum = mouse_x + mouse_y
+```
+
+> In the script below, move your mouse over the blue grid. On mobile, you will need to touch it.
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-699-gfefba65283bf s22
+{ 
+  ‘⌂’: {* 
+    ‘mouse pos’👁: 🏭.mousePosition(☑, ☑),
+    ‘mouse x’📡: ‘mouse pos’.hor(),
+    ‘mouse y’📡: ‘mouse pos’.ver(),
+    ‘mouse x + y’: «‘mouse x’.add(‘mouse y’)»
+  }
+}
+```
+
+> For simplicity, VikiD uses a fixed coordinate grid of `18 x 12` units, where the horizontal `X axis` points to the __right__, and the vertical `Y axis` points __upwards__. So the range of grid is `-9...9` for `X` and `-6...6` for `Y`. This is a __mathematical Cartesian coordinate system__. _Note that typical 2D computer graphics often use a Y axis the points down, for [legacy reasons](https://gamedev.stackexchange.com/questions/83570/why-is-the-origin-in-computer-graphics-coordinates-at-the-top-left)!_
+
+We can do a lot with just pure signal functions in ViKiD. The following example applies a `sine` function to a speedup `time signal`, then applying the `absolute value` function, using it to drive a bouncing ball:
+
+```pseudo
+y: (time * 2).sin().abs() * 5
+ball: sphere.translateY(y)
+```
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-699-gfefba65283bf s22
+{ 
+  ‘⌂’: {* 
+    y: 🕒.mul(2).sin().abs().mul(5),
+    ball👁: «●.translateY(y)»
+  }
+}
+```
+
+
+## Semantics
 
 A `pure signal function` __combines__ its parameter signals values together with the corresponding non-reactive function. 
 
