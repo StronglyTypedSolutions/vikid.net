@@ -64,10 +64,10 @@ Let's go over the buttons in the toolbar:
 
 ## Sampling signals
 
-Conceptually, __sampling__ a signal `at` a timestamp `Ts` returns the pair `Vi @ Ti` closest to `Ts`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `Ts`:
+Conceptually, __sampling__ a signal `at` a timestamp `T` returns the pair `Vi @ Ti` closest to `T`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `T`:
 
 ```pseudo
-signal.at(Ts) = Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ Ts)
+signal.at(T) = Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ T)
 ```
 
 > Practically - since we cannot do time-travel outside of mathematics yet 😉 - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. When a `signal` gets a new `(Value, Timestamp)`, we say the `signal` __updates__.
@@ -77,13 +77,13 @@ Since writing out the full infinite sequence of a `signal` is impractical, we de
 For example, the semantic of a `constant signal` with value `42` is:
 
 ```pseudo
-constant(42).at(Ts) = 42 @ 1
+constant(42).at(T) = 42 @ 1
 ```
 
 `time` itself is also a `signal`. It is sampled automatically at the _refresh rate_ of your monitor by ViKiD, typically 60hz:
 
 ```pseudo
-time.at(Ts) = Ts * 1/60 @ Ts
+time.at(T) = T / 60 @ T
 ```
 
 > Unfortunately this is not exactly 60hz, so this varies. Also, some monitors have much higher refresh rates, so you should never rely on 60Hz! 
