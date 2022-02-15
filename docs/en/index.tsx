@@ -84,6 +84,8 @@ export const en = {
   script_moved_to_programs: <p><span>Moved to</span><br /><br /><b>programs</b></p>,
   upload_content_generic_error: `😢 Oops!\n\nThe file upload failed.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nThe file is too large to be uploaded!\n\nThe maximum allowed size is ${mb} megabyte.`,
+  upload_premium_members_only: `🥇 Uploading to the ViKiD cloud requires a premium membership.\n\n🛒 Visit our e-shop for more information.`,
+  premium_members_only_title: `⚠️ Premium members only`,
 
   cookies_ViKiD_keeps: "ViKiD stores",
   cookies_on_this_pc: "on this computer.",
