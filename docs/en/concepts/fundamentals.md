@@ -16,7 +16,7 @@ Mathematically, a `signal` is a __sequence__ of `(Value,Timestamp)` pairs (also 
 signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
 ```
 
-> For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. For an ultimate debugging experience, premium members can __rewind__ their simulation in time!
+> For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. You can also __rewind__ your simulation in time, to investigate  past updates!
 
 ## Language syntax
 
