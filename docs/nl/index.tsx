@@ -84,7 +84,7 @@ export const nl: Translations = {
   script_moved_to_programs: <p><span>Verplaatst naar</span><br /><br /><b>Programma's</b></p>,
   upload_content_generic_error: `😢 Oops!\n\nHet bestand kon niet geüpload worden.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nHet bestand is te groot om te uploaden!\n\nDe maximum grootte is ${mb} megabyte.`,
-  upload_premium_members_only: `🥇 Uploaden naar de ViKiD cloud vereist een premium lidmaatschap.\n\n🛒 Bezoek onze e-shop voor meer informatie.`,
+  upload_premium_members_only: `🥇 Uploaden naar de ViKiD cloud vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
   premium_members_only_title: `🥇 Enkel voor premium leden`,
 
   cookies_ViKiD_keeps: "ViKiD bewaart",
