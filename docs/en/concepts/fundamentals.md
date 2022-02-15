@@ -147,6 +147,10 @@ Here are some examples:
 
 > Note that due to _inaccuries_ we get some rounding errors over time. Computers have limited precision and can't represent real numbers exactly.
 
+> In most imperative programming languages, `a`, `v`, etc in the example above are called __variables__. To avoid confusion, we call these [__`bindings`__](https://en.wikipedia.org/wiki/Name_binding) in ViKiD, as often done in computer science. A `binding` just gives a __name__ to a `formula`, also called an `expression`. 
+
+> To inspect this program, __click__ on the formula row above or below the __active row__, or click on the corresponding `bindings` (the top blocks named `a`, `v`, `x` and `spring`). Because every value animates in ViKiD, we don't show all formulas at once - at least not in the animating block style - but we do plan to support that someday.
+
 ## Signals vs variables
 
 Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but __mutable variables__. 
@@ -254,9 +258,6 @@ giveExtraLive: (score >= nextExtraLiveScore).rising(),
 lives: 3 ⊕ (lives.previous() + 1).when(giveExtraLive)
 ```
 
-> In most programming languages, `score`, `nextExtraLiveScore` etc are called __variables__. To avoid confusion, we call these [__`bindings`__](https://en.wikipedia.org/wiki/Name_binding) in ViKiD.
-
-
 That's it, 4 lines of code. Read this as follows:
 - the `⊕` symbol stands for `merge`, but for now, read it as `followed by`.
 - `score` starts with the value `0`, and is incremented when `kaboom` happens.
@@ -264,7 +265,7 @@ That's it, 4 lines of code. Read this as follows:
 - `an extra live should be given` the moment the `score` goes above the `nextExtraLiveScore`
 - `lives` starts at `3` and is incremented when an `extra live must be given`.
 
-Here's the real ViKiD program, that raises the `kaboom` event every second, and also converts the `score` and `lives` into a text `string`
+Here's the real ViKiD program, that raises the `kaboom` event every second:
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-657-g990cc30c2e38 s21
@@ -274,15 +275,10 @@ Here's the real ViKiD program, that raises the `kaboom` event every second, and 
     lives: (3.000000).merge(lives🐢.add((1.000000)).when(‘giveExtraLive!’)),
     ‘giveExtraLive!’: score.gte(nextExtraLiveScore).rising(),
     nextExtraLiveScore: (10.000000).merge(nextExtraLiveScore🐢.add((10.000000)).when(‘giveExtraLive!’)),
-    score: (0.000000).merge(score🐢.add((1.000000)).when(‘kaboom!’)),
-    scoreText: 'score%3D'.concat(score.print((0.000000))),
-    livesText: 'lives%3D'.concat(lives.print((0.000000))),
-    text: «scoreText.concat('%0A%0A').concat(livesText)»
+    score👁: «(0.000000).merge(score🐢.add((1.000000)).when(‘kaboom!’))»,
   }
 }
 ```
-
-> __Click__ on the formula row above or below the `#0FF current row □` to see the rest of the ViKiD program. Because every values animates, we don't show all formulas at once in ViKiD - at least not in the animating block style - but we do plan to support that someday.
 
 Let's look at this ViKiD program in detail:
 - Every `signal` is shown as a block.
@@ -291,9 +287,10 @@ Let's look at this ViKiD program in detail:
   - purple `#F0F ◯` is a delayed reference explicitly made the user, by __long-pressing the chain icon__ when linking to a formula.
   - red `#F00 ◯` delays are inserted automatically by ViKiD to avoid __infinite loops__. 
     - you often want to revise these, and make them explicit.
-  - Many bindings like `score` refer to their own value. 
+  - Many bindings like `score` refer to their own value, creating a __feedback loop__.
     - to avoid __infinite loops__, we have to sample their previous, delayed value. 
-  - Only a few operators allow making loops, the most important being `merge` `$501`, `snapshot` `$509`, `filter` `$508` and `integral` `$400`,
+  - Only a few operators allow making loops, the most important being `merge` `$501`, `snapshot` `$509`, `filter` `$508` and `integral` `$400`.
+    - `Feedback loops` can only be made in the __right parameter__ of these operators (a ⟲ icon will be shown in the top-right corner when __hovering__ the mouse over it).
 - Numbers are shown both in the decimal system, but also in a more intuitive clock-like graphical representation.
 - In the `giveExtraLive` binding, `score >= nextExtraLiveScore` gives a `boolean` value (`on`/`off`, `true`/`false`, `yes`/`no`, ...)
   - this `boolean` signal updates whenever it becomes either `true` or `false`
