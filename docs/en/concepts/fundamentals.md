@@ -149,7 +149,47 @@ Here are some examples:
 
 ## Signals vs variables
 
-Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but __mutable variables__. For example, suppose we want to increment a `score` when an event named `kaboom` happens. If the `score` goes above 10, we give the player an extra `live`, and repeat that when `score` goes above `20`, then `30`, etc... This is written as follows in C# (other languages even don't have builtin support for events):
+Non-reactive programming languages (like C, C++, C#, Python, Javascript, etc) don't use signals but __mutable variables__. 
+
+For example, __incrementing a variable__ (e.g. the player's `score`) in such imperative languages is done like this:
+
+```pseudo
+score = score + 1
+```
+
+But that doesn't make any sense mathematically, because that would mean we have a value that is equal to itself plus one. No such value exists...
+
+In ViKiD, such constructions are not possible, __we cannot directly write__ to the `score` signal.
+
+What we can do is:
+
+```pseudo
+score = score.previous() + 1
+```
+
+Semantically, this means:
+
+```pseudo
+score.at(T) = score.at(T-1) + 1
+```
+
+> ViKiD doesn't have a `previous` function, this is just pseudo code. To refer to a signal that is delayed by one sample, you just __long-press__ on a binding's chain icon.
+
+This wil increment the `score` as _fast as the ViKiD clock runs_, which is by default the refresh rate of your screen.
+
+However, you most likely want to increment the `score` __because some event triggered it__.
+
+Let's say this event is called `kaboom`. 
+
+The ViKiD pseudo code that would increment the `score` when `kaboom` happens is:
+
+```pseudo
+score = (score.previous() + 1).when(kaboom)
+```
+
+## Example
+
+For example, suppose we still want to increment a `score` when the event named `kaboom` happens. Also, when the `score` goes above 10, we give the player an extra `live`, and repeat that when `score` goes above `20`, then `30`, etc... This is written as follows in C# (other languages even don't have builtin support for events):
 
 > If you don't know these programming languages, feel free to skip ahead to the __spreadsheets__ section. Actually, _not knowing_ any of the old-school languages is often an __advantage__ when learning reactive programming!
 
@@ -193,13 +233,13 @@ public class Example
 
 Not only is this very verbose, it has many problems:
 - the event handler (`delegate`) must be removed at some point from the `Kaboom` event, otherwise you get a __memory leak__.
-- code that depends on the `Score` must be called explicitly, since changing a variable in these languages __does not update other variables that use `Score` automatically__. In this example, we are updating the `Lives`. But we might also need to repaint the `Score`, or keep a high scores, etc...
+- code that depends on the `Score` must be called explicitly, since changing a variable in these languages __does not update other variables that use `Score` automatically__. In this example, we are updating the `Lives`. But we might also need to repaint the `Score`, or keep high scores, etc...
 
 Explicitly calling other code that depends on `Score` being incremented is error prone, since other parts of the code could change `Score` too.
 
 To solve this in C#, `Score` is often changed into an __observable property__, that has its own event, e.g. `ScoreChanged`. Dependent code can then just subscribe to the `ScoreChanged` event, observing the `Score`, and act upon changes, just like we reacted on the `Kaboom` event. However this now means that changing the `Score` suddenly changes many other variables in the system, in a __hard to determine order__, making it almost impossible to reason about what is happening... Furthermore this can introduce __infinite loops__ when two variables depend on each other!
 
-> We have been writing software like this for over 30 years, so we have felt the pain... We only discovered reactive programming late in our careers, and ViKiD was born out of enthusiasm for this amazing paradigm!
+> We have been writing software like this for over 20 years, so we have felt the pain... We only discovered reactive programming late in our careers, and ViKiD was born out of enthusiasm for this amazing paradigm!
 
 ## Spreadsheets
 
@@ -223,26 +263,6 @@ That's it, 4 lines of code. Read this as follows:
 - `nextExtraLiveScore` starts with `10`, and is incremented by `10` whenever an `extra live is given`.
 - `an extra live should be given` the moment the `score` goes above the `nextExtraLiveScore`
 - `lives` starts at `3` and is incremented when an `extra live must be given`.
-
-Note that incrementing the score in C# is done like:
-
-```pseudo
-score = score + 1
-```
-
-But that doesn't make any sense mathematically, because that would mean we have a value that is equal to itself plus one. No such value exists...
-
-In ViKiD, such constructions are not possible, we can not directly "write" to the score signal.
-
-What we could do is:
-
-```pseudo
-score = score.previous() + 1
-```
-
-Todo: move this to an earlier "mutable variables vs signals" section
-
-
 
 Here's the real ViKiD program, that raises the `kaboom` event every second, and also converts the `score` and `lives` into a text `string`
 
