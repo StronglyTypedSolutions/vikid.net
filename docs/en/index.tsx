@@ -161,6 +161,12 @@ export const en = {
   footer_legal: `Legal`,
   footer_contact: "Contact",
 
+  device_not_supported: "😕 Resolution not supported",
+  screen_too_small: "📺 Your screen is too small for ViKiD\n\n🔍 Try zooming out your browser,\n🖵 or use a device with a larger screen,\n💻 like a laptop or large tablet.",
+
+  portrait_not_supported: "😕 Portrait mode not supported",
+  landscape_request_rotation: "↺ Try rotating your device into 🖵 landscape mode.",
+
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
   extract_redundant_lets: (lets: string) => `🐞 Error in puzzle program.\n\nThe formulas ${lets} are not used in the end-result.\n\nUnused formulas are not allowed in a puzzle.\n\nUse the 🎁 function to mark formulas as pure examples,\nor delete the formulas.`,

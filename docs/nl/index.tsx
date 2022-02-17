@@ -161,6 +161,12 @@ export const nl: Translations = {
   footer_legal: `Legal`,
   footer_contact: "Contact",
 
+  device_not_supported: "😕 Resolutie niet ondersteund",
+  screen_too_small: "📺 Je scherm is te klein voor ViKiD.\n\n🔍 Probeer je browser uit te zoomen,\n🖵 of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.",
+
+  portrait_not_supported: "😕 Staand scherm niet ondersteund",
+  landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
+
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\nFoute volgorde van formules.\n\nDe formule '${referencedLetLabel}' moet vóór de formule '${currentLetLabel}' staan zijn in een puzzel`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nDe derde parameter van de functie ∞\nmoet een verwijzing zijn naar een formule in hetzelfde sub-programma`,
   extract_redundant_lets: (lets: string) => `🐞 Fout in puzzel programma!\n\nDe formules ${lets} worden niet gebruikt in het eindresultaat.\n\nDit is niet toegelaten in een puzzel.\n\nGebruik de functie 🎁 om een formule te markeren als een voorbeeld,\nof verwijder de formules.`,
