@@ -162,11 +162,12 @@ export const en = {
   footer_legal: `Legal`,
   footer_contact: "Contact",
 
-  device_not_supported: "😕 Resolution not supported",
-  screen_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${config.minSmallestViewSize}×${config.minLargestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
+  resolution_not_supported: "😕 Resolution not supported",
+  screen_size_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${config.minLargestViewSize}×${config.minSmallestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
+  screen_width_too_small: (width: number) => `📺 Your screen has a CSS width of ${width};\nthis too small for ViKiD's minimum (${config.minReadingViewWidth}).\n\n↺ Try rotating your device, 🔍 zooming out the webpage,\n🖥 enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
 
   portrait_not_supported: "😕 Portrait mode not supported",
-  landscape_request_rotation: "↺ Try rotating your device into 🖵 landscape mode.",
+  landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",
 
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
