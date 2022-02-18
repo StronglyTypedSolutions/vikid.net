@@ -1,5 +1,6 @@
 import { Let } from "language";
 import { Language } from "locale";
+import config from "../../../config";
 import { groups } from "./groups";
 import { methods } from "./methods";
 import { puzzles } from "./puzzles";
@@ -162,7 +163,7 @@ export const en = {
   footer_contact: "Contact",
 
   device_not_supported: "😕 Resolution not supported",
-  screen_too_small: "📺 Your screen is too small for ViKiD\n\n🔍 Try zooming out your browser,\n🖵 or use a device with a larger screen,\n💻 like a laptop or large tablet.",
+  screen_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${config.minSmallestViewSize}×${config.minLargestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
 
   portrait_not_supported: "😕 Portrait mode not supported",
   landscape_request_rotation: "↺ Try rotating your device into 🖵 landscape mode.",

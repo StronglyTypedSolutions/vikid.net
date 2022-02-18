@@ -6,6 +6,7 @@ import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import type { Translations } from "../types";
+import config from "../../../config";
 
 export const nl: Translations = {
   language: "nl" as Language,
@@ -162,7 +163,7 @@ export const nl: Translations = {
   footer_contact: "Contact",
 
   device_not_supported: "😕 Resolutie niet ondersteund",
-  screen_too_small: "📺 Je scherm is te klein voor ViKiD.\n\n🔍 Probeer je browser uit te zoomen,\n🖵 of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.",
+  screen_too_small: (width: number, height: number) => `📺 Je scherm heeft een resolutie van ${width}×${height};\ndit is te klein voor ViKiD's minimum (${config.minSmallestViewSize}×${config.minLargestViewSize}).\n\n🔍 Probeer de webpagina uit te zoomen,\n \n🖥 of desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
 
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
   landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
