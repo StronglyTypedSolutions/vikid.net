@@ -7,9 +7,9 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `value`, `output`
+TODO: Explain the function overload and parameters `input`, `param`, `output`
 
-[more...](value)
+[more...](param)
 
 ----
 # Semantics

@@ -4,7 +4,7 @@ Many of the reactive `signal functions` in ViKiD are `pure`.
 
 In general, a `pure function` returns the __same output__ for the same __given set of input values__.
 
-All mathematical functions are pure. In ViKiD however, we use the word `pure` for functions that produce an `output value` that __do not depend on time-stamps__. So if you known the `input values`, you can compute the `output value`.
+All mathematical functions are pure. In ViKiD however, we use the word `pure` for functions that produce an `output value` that __does not depend on the time-stamps of the inputs__. So if you _only know_ the `input values`, you can compute the `output value`.
 
 > For pure signal functions, if any of the `input values` is `⊥` (_undefined_), the `output value` is `⊥` too
 

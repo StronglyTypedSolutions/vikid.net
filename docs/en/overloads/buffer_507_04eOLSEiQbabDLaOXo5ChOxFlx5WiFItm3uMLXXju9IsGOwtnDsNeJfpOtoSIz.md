@@ -7,7 +7,7 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `amount `, `delay?`, `active?`, `output`
+TODO: Explain the function overload and parameters `input`, `count`, `delay?`, `active?`, `output`
 
 [more...](http://reactivex.io/documentation/operators/buffer.html)
 

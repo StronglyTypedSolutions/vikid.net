@@ -7,13 +7,16 @@
 ```
 
 # Description
-__Numeric addition__
-- as soon as both `input` and `value` are ready, the `output` becomes `input` + `value`.
-- when `input` or `value` update, the `output` sum is updated.
+
+__Numeric addition__ [lifted on signals](/refman/concepts/pure_functions) 
+- as soon as both `input` and `param` are _ready_, the `output` becomes `input` + `param`.
+- then, whenever `input` or `param` _update_, the `output` is updated with `input` + `param`.
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
 # Example 1
-- 1 + 2 = 3
+
+- `1 + 2 = 3`
+
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
 {
@@ -24,8 +27,17 @@ __Numeric addition__
 ```
 
 # Example 2
+
+- A `circle` `translates` with the `clock`, but offset to the right by `2 units`.
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-726-g355c27b76cf4 s22
+{ ‘⌂’: {* a👁: ●.translateX(🕒.add(«2»)) } }
+```
+
+# Example 3
 - shifts the oscillating `input` by two units.
-- the `input` is ready after one second.
+- the `input` is _ready_ after one second, so the `output` is _pending_ for one second.
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
@@ -38,11 +50,4 @@ __Numeric addition__
   value📡: { value📡: { value📡: 2 } },
   ‘⌂’: { «output: input.add(value)» }
 }
-```
-
-----
-#  Semantics
-
-```pseudo
-input.add(value) = input.pure(+, value)
 ```
