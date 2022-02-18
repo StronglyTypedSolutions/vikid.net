@@ -18,11 +18,11 @@ export const methods = methodDescriptions({
 
   [MethodId.ADD]: {
     "𝕍": overloadDescription("plus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
-    _: overloadDescription("plus", "value", "https://en.wikipedia.org/wiki/Addition"),
+    _: overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Addition"),
   },
   [MethodId.SUB]: {
     "𝕍": overloadDescription("minus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
-    _: overloadDescription("minus", "value", "https://en.wikipedia.org/wiki/Subtraction"),
+    _: overloadDescription("minus", "param", "https://en.wikipedia.org/wiki/Subtraction"),
   },
   [MethodId.MUL]: {
     "ℝ": overloadDescription("times", "factor", "https://en.wikipedia.org/wiki/Multiplication"),
@@ -110,10 +110,10 @@ export const methods = methodDescriptions({
 
   /** Boolean operators */
   [MethodId.EQU]: {
-    _: overloadDescription("is equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+    _: overloadDescription("is equal to", "param", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
   },
   [MethodId.NEQ]: {
-    _: overloadDescription("is not equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+    _: overloadDescription("is not equal to", "param", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
   },
   [MethodId.GT]: {
     _: overloadDescription("is greater than", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
@@ -185,8 +185,11 @@ export const methods = methodDescriptions({
   [MethodId.BUFFER]: {
     _: overloadDescription("buffer updates", "amount [@<0 ⇒ count=-@ | @>0 ⇒ duration=@seconds]", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
   },
-  [MethodId.SLIDING_BUFFER]: {
-    _: overloadDescription("buffer updates", "window [@<0 ⇒ count or stamps | @>0 ⇒ seconds]", "delay?", "sliding?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
+  [MethodId.BUFFER]: {
+    _: overloadDescription("buffer updates", "count", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
+  },
+  [MethodId.RECENT]: {
+    _: overloadDescription("recent updates", "duration [@<0 ⇒ stamps | @>0 ⇒ seconds]", "delay?", "sliding?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
@@ -363,7 +366,7 @@ export const methods = methodDescriptions({
 
   /** Puzzle methods */
   [MethodId.EXTRA]: {
-    _: overloadDescription("extra", "value")
+    _: overloadDescription("extra", "param")
   },
   [MethodId.PUZZLE]: {
     _: overloadDescription("puzzle", "kind [@=1 ⇒ fixed blocks, @2 ⇒ free values]")
@@ -483,7 +486,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("empty set", "type", "https://en.wikipedia.org/wiki/Set_(mathematics)")
   },
   [MethodId.EMPTY_MAP]: {
-    _: overloadDescription("empty map [associative array]", "key type", "value type", "https://en.wikipedia.org/wiki/Associative_array")
+    _: overloadDescription("empty map [associative array]", "key type", "param type", "https://en.wikipedia.org/wiki/Associative_array")
   },
   [MethodId.NUMERIC_RANGE]: {
     _: overloadDescription("numeric range", "start", "step", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
@@ -572,7 +575,7 @@ export const methods = methodDescriptions({
   //   _: overloadDescriptor("trim elements", "which [@>0 ⇒ without stamp=@ | @≤0 ⇒ with stamp=-@]", "update when empty?")
   // },
   [MethodId.FILL]: {
-    _: overloadDescription("filled with", "value", "https://en.wikipedia.org/wiki/Array_data_structure")
+    _: overloadDescription("filled with", "param", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.ORDER]: {
     _: overloadDescription("indices of ordered elements", "descending?")
@@ -627,7 +630,7 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.PAD]: {
-    _: overloadDescription("padded with", "value", "length", "at the end?")
+    _: overloadDescription("padded with", "param", "length", "at the end?")
   },
 
   [MethodId.INDEX]: {
@@ -644,7 +647,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("play sound", "active?", "rate")
   },
   [MethodId.SET_VOLUME]: {
-    _: overloadDescription("with volume", "value")
+    _: overloadDescription("with volume", "param")
   },
   // [MethodId.ANALYSE_AUDIO]: {
   //   _: overloadDescriptor("play and analyse sound", "Fast Fourier Transform size", "minimum Decibels", "maximum Decibels", "smoothing time constant", "active?", "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode")

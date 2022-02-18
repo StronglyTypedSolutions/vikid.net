@@ -13,7 +13,7 @@ export const methods = methodDescriptions({
 
   [MethodId.ADD]: {
     "𝕍": overloadDescription("plus", "vector", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Optellen_van_vectoren"),
-    _: overloadDescription("plus", "waarde", "https://en.wikipedia.org/wiki/Addition"),
+    _: overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Addition"),
   },
   [MethodId.SUB]: {
     "ℝ": overloadDescription("min", "aantal", "https://wikikids.nl/Aftrekken"),
@@ -111,10 +111,10 @@ export const methods = methodDescriptions({
 
   /** Boolean operators */
   [MethodId.EQU]: {
-    _: overloadDescription("is gelijk aan", "waarde", "https://nl.wikipedia.org/wiki/Ongelijkheid_(wiskunde)")
+    _: overloadDescription("is gelijk aan", "param", "https://nl.wikipedia.org/wiki/Ongelijkheid_(wiskunde)")
   },
   [MethodId.NEQ]: {
-    _: overloadDescription("is niet gelijk aan", "waarde", "https://nl.wikipedia.org/wiki/Ongelijkheid_(wiskunde)")
+    _: overloadDescription("is niet gelijk aan", "param", "https://nl.wikipedia.org/wiki/Ongelijkheid_(wiskunde)")
   },
   [MethodId.GT]: {
     _: overloadDescription("is groter dan", "getal", "https://nl.wikipedia.org/wiki/Ongelijkheid_(wiskunde)")
@@ -187,8 +187,11 @@ export const methods = methodDescriptions({
   [MethodId.BUFFER]: {
     _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden]", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
-  [MethodId.SLIDING_BUFFER]: {
-    _: overloadDescription("buffer updates", "venster [@<0 ⇒ aantal of stamps | @>0 ⇒ seconden]", "vertraagd?", "glijdend?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
+  [MethodId.BUFFER]: {
+    _: overloadDescription("buffer updates", "aantal", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
+  },
+  [MethodId.RECENT]: {
+    _: overloadDescription("recente updates", "tijdspanne [@<0 ⇒ tijdstempels | @>0 ⇒ seconden]", "vertraagd?", "glijdend?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
@@ -354,7 +357,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("aangeraakt", "data type", "met label", "zonder label", "actief?")
   },
   [MethodId.HIT_REGION]: {
-    _: overloadDescription("aanraakbaar", "label", "waarde")
+    _: overloadDescription("aanraakbaar", "label", "param")
   },
 
   [MethodId.CULL]: {
@@ -366,7 +369,7 @@ export const methods = methodDescriptions({
 
   /** Puzzle methods */
   [MethodId.EXTRA]: {
-    _: overloadDescription("extra", "waarde")
+    _: overloadDescription("extra", "param")
   },
   [MethodId.PUZZLE]: {
     _: overloadDescription("puzzle", "soort [@=1 ⇒ vaste blokken, @2 ⇒ vrij instellen]")
@@ -575,7 +578,7 @@ export const methods = methodDescriptions({
   // _: overloadDescription("trim elementen", "welke [@>0 ⇒ met stamp=@ | @≤0 ⇒ zonder stamp=-@]", "update als leeg?")
   // },
   [MethodId.FILL]: {
-    _: overloadDescription("gevuld met", "waarde", "https://nl.wikipedia.org/wiki/Array")
+    _: overloadDescription("gevuld met", "param", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.ORDER]: {
     _: overloadDescription("indices van geordende elementen", "aflopend?")
@@ -631,7 +634,7 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.PAD]: {
-    _: overloadDescription("opgevuld met", "waarde", "lengte", "achteraan?")
+    _: overloadDescription("opgevuld met", "param", "lengte", "achteraan?")
   },
 
   [MethodId.INDEX]: {
@@ -649,7 +652,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("speel geluid", "aan?", "tempo")
   },
   [MethodId.SET_VOLUME]: {
-    _: overloadDescription("met volume", "waarde")
+    _: overloadDescription("met volume", "param")
   },
   // [MethodId.ANALYSE_AUDIO]: {
   //   _: overloadDescription("speel en analyseer geluid", "Fast Fourier Transform size", "minimum Decibels", "maximum Decibels", "smoothing time constant", "actief?", "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode")
