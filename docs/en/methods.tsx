@@ -168,7 +168,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("snapshot on", "update", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.TIMER]: {
-    _: overloadDescription("after", "seconds", "repeat?", "http://reactivex.io/documentation/operators/timer.html")
+    _: overloadDescription("after", "seconds", "repeat?", "immediately?", "http://reactivex.io/documentation/operators/timer.html")
   },
   [MethodId.RISING]: {
     _: overloadDescription("count rising edges", "https://en.wikipedia.org/wiki/Signal_edge")

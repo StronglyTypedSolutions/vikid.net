@@ -170,7 +170,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("neem waarde bij", "update", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.TIMER]: {
-    _: overloadDescription("na", "seconden", "herhalen?", "http://reactivex.io/documentation/operators/timer.html")
+    _: overloadDescription("na", "seconden", "herhalen?", "onmiddelijk?", "http://reactivex.io/documentation/operators/timer.html")
   },
   [MethodId.RISING]: {
     _: overloadDescription("aantal stijgende flanken", "https://nl.wikipedia.org/wiki/Flank_(elektrisch)")

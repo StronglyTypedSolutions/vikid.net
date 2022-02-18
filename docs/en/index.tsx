@@ -260,6 +260,12 @@ export const en = {
   warn_unsaved: "⚠️ You modified this program without saving it.\n\n❗ Are you sure you want to lose your changes?\n",
   video_export_failed: "⚠️ Failed to export video",
 
+  copy_script_text: "Copy program to clipboard (text)",
+  paste_script_text: "Paste program from clipboard (text)",
+
+  copy_script_json: "Copy program to clipboard (JSON)",
+  paste_script_json: "Paste program from clipboard (JSON)",
+
   import_module: "Import a module",
   show_list_item_methods: "Show functions on the list items?",
 

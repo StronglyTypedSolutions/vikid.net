@@ -260,6 +260,12 @@ export const nl: Translations = {
   warn_unsaved: "⚠️ Je hebt je programma gewijzigd zonder op te slaan.\n\n❗ Ben je zeker dat je je wijzigingen wil verliezen?",
   video_export_failed: "⚠️ Video kon niet geëxporteerd worden",
 
+  copy_script_text: "Kopieer het programma naar je klembord (tekst)",
+  paste_script_text: "Plak het programma uit je klembord (tekst)",
+
+  copy_script_json: "Kopieer het programma naar je klembord (JSON)",
+  paste_script_json: "Plak het programma uit je klembord (JSON)",
+
   import_module: "Importeer een module",
   show_list_item_methods: "Toon functies op de elementen in de lijst?",
 

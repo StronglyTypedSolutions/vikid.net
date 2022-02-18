@@ -8,7 +8,7 @@
 
 # Description
 
-__Numeric addition__ [lifted on signals](/refman/concepts/pure_functions) 
+__Number addition__ [lifted on signals](/refman/concepts/pure_functions) 
 - as soon as both `input` and `param` are _ready_, the `output` becomes `input` + `param`.
 - then, whenever `input` or `param` _update_, the `output` is updated with `input` + `param`.
 - [more...](https://en.wikipedia.org/wiki/Addition)
