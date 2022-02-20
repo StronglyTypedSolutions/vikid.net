@@ -165,7 +165,7 @@ export const methods = methodDescriptions({
 
   /** Event operators */
   [MethodId.WHEN]: {
-    _: overloadDescription("snapshot on", "update", "http://reactivex.io/documentation/operators/sample.html")
+    _: overloadDescription("snapshot on", "trigger", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.TIMER]: {
     _: overloadDescription("after", "seconds", "repeat?", "immediately?", "http://reactivex.io/documentation/operators/timer.html")
