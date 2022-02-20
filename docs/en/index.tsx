@@ -90,13 +90,12 @@ export const en = {
 
   cookies_ViKiD_keeps: "ViKiD stores",
   cookies_on_this_pc: "on this computer.",
-  cookies_thanks_to_cookies: "Thanks to cookies we can keep you signed in, remember your game progress, personalise your experience, and improve ViKiD.",
-  cookies_necessary_cookies: "Functional and analytical cookies are neccessary.",
+  cookies_thanks_to_cookies: "Thanks to cookies we can keep you signed in, remember your game progress, personalise your experience, and improve ViKiD. Sign-in cookies are neccessary.",
   cookies_we_value_privacy: "We respect your privacy and protect your data.",
 
   consent_agree_all_cookies: "Accept all neccessary and optional cookies",
   consent_agree_selected_cookies: "Accept all neccessary and selected cookies",
-  consent_agree_telemetry_cookies: "Accept usage telemetry cookies?",
+  consent_agree_telemetry_cookies: "Accept analytics cookies?",
 
   gdpr_not_yet_automated: `⚠️ This is not yet automated`,
   gdpr_send_email: (username: string) => `📧 Please send an email to gdpr@vikid.net,\nmentioning your username '${username}'`,
@@ -430,7 +429,7 @@ export const en = {
   clock: "clock",
   cycle: "cycle",
 
-  build_this: "Can you <b>build a blue square</b>...",
+  build_this: "Can you <b>build this blue square</b>...",
   these_values: "by using these <b>values</b>...",
   these_functions: "and these <b>functions</b>...",
   this_formula: "in this <b>formula</b>? The <b>yellow finger</b> will show you how!",

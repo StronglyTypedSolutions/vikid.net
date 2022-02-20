@@ -90,13 +90,12 @@ export const nl: Translations = {
 
   cookies_ViKiD_keeps: "ViKiD bewaart",
   cookies_on_this_pc: "op deze computer.",
-  cookies_thanks_to_cookies: "Dankzij cookies kan je ingelogd blijven, onthouden we jouw vooruitgang in het spel, personalizeren en verbeteren we ViKiD.",
-  cookies_necessary_cookies: "Functionele en analytische cookies zijn noodzakelijk.",
+  cookies_thanks_to_cookies: "Dankzij cookies kan je ingelogd blijven, onthouden we jouw vooruitgang in het spel, personalizeren en verbeteren we ViKiD. Cookies om in te loggen zijn noodzakelijk.",
   cookies_we_value_privacy: "Wij respecteren jouw privacy en beschermen jouw gegevens.",
 
   consent_agree_all_cookies: "Alle noodzakelijke en optionele cookies aanvaarden",
   consent_agree_selected_cookies: "Alle noodzakelijke en geselecteerde cookies aanvaarden",
-  consent_agree_telemetry_cookies: "Aanvaard gebruiks-telemetrie cookies?",
+  consent_agree_telemetry_cookies: "Aanvaard analytische cookies?",
 
   gdpr_not_yet_automated: `⚠️ Dit is nog niet geautomatiseerd.`,
   gdpr_send_email: (username: string) => `📧 Gelieve een e-mail te sturen naar gdpr@vikid.net,\nmet vermelding van je gebruikersnaam '${username}'.`,
@@ -432,7 +431,7 @@ export const nl: Translations = {
   clock: "klok",
   cycle: "cyclus",
 
-  build_this: "Kan je een <b>blauw vierkant nabouwen</b>...",
+  build_this: "Kan je dit <b>blauwe vierkant nabouwen</b>...",
   these_values: "door deze <b>waarden</b>...",
   these_functions: "en deze <b>functies</b>...",
   this_formula: "in deze <b>formule</b> te gebruiken? De <b>gele vinger</b> zal je tonen hoe!",
@@ -443,7 +442,7 @@ export const nl: Translations = {
   explain_output: "Lees de formule <i>van links naar rechts</i>: <b>vierkant geverfd in blauw</b> ⟶ <b>blauw vierkant</b>",
   //change_selected_param: "Laten we de <b><S>geselecteerde</S> parameter aanpassen</b>",
 
-  click_color: "Klik op de  waarde <b>'blauwe kleur'</b>...",
+  click_color: "Klik op de waarde <b>'blauwe kleur'</b>...",
   clicked_color: "De <b><S>geselecteerde</S> parameter</b> is nu blauw...",
   explain_blue_result: "en het <b>resultaat</b> is nu: <i>een vierkant, geverfd in het blauw</i>",
 
