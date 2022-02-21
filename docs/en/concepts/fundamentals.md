@@ -104,10 +104,10 @@ We roughly classify `signal functions` into three groups:
    - We only need to known the `input values` at the __current time__ to compute the output values, the `time-stamps` nor signal history doesn't matter.
    - For example, all the __arithmetic operators__ and __trigonometric functions__ can be applied to signal functions.
    - See the page [pure signal functions](/refman/concepts/pure_functions) for more details
-- `plain signal functions`
+- `actual signal functions`
    - These are reactive operators that need both the `time-stamps` _and_ `values` at the __current time__ to compute the output.
-   - The most frequently used plain signal functions are `merge` `$501`, `snapshot` `$509` and `filter` `$508` 
-   - See the page [plain signal functions](/refman/concepts/plain_functions) for more details
+   - The most frequently used actual signal functions are `merge` `$501`, `snapshot` `$509` and `filter` `$508` 
+   - See the page [actual signal functions](/refman/concepts/present_functions) for more details
 - `history signal functions`
    - The output of these operators depends on the __history__ of the input signals.
    - For example, an `integral` `$400` will make a sum of __many samples__ in the `input velocity signal`.

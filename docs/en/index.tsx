@@ -29,6 +29,9 @@ export const en = {
   concepts: "concepts",
   fundamentals: "fundamentals",
   pure_functions: "pure functions",
+  actual_functions: "actual functions",
+  points_and_vectors: "points & vectors",
+  angles: "angles",
 
   toggle_type_filter: "click to toggle input type filter",
 

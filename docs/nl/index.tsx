@@ -29,6 +29,9 @@ export const nl: Translations = {
   concepts: "concepten",
   fundamentals: "fundamenten",
   pure_functions: "pure functies",
+  actual_functions: "actuele functies",
+  points_and_vectors: "punten & vectoren",
+  angles: "hoeken",
 
   toggle_type_filter: "klik om invoer type filter aan/uit te zetten",
 
