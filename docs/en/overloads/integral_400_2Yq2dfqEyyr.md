@@ -24,7 +24,7 @@ __Integrates a number over time__
 {
   input📡: 0.timer(1, ☒).merge(0.timer(5, ☑)),
   velocity📡: 1,
-  ‘⌂’: { «output: input.integral(velocity)» }
+  ‘⌂’: { output: input.«integral»(velocity) }
 }
 ```
 
@@ -37,8 +37,8 @@ __Integrates a number over time__
   ‘⌂’: {* 
     bounce: y.lte((-5)).rising(),
     v: 0.merge(v.neg().when(bounce)).integral((-9.810)),
-    y: 5.integral(v),
-    ball: «●.translateY(y)»
+    y: 5.«integral»(v),
+    ball: ●.translateY(y)
   }
 }
 ```

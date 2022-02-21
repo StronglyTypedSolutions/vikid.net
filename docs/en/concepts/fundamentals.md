@@ -52,7 +52,7 @@ square.rotated(time).painted(red).under(circle).scaled(4)
 In ViKiD's block syntax:
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-671-gf3ba72e28207 s21
-{ ‘⌂’: {* a: ■.rotate(🕒).paintSolid(#FF0000).under(●).scale(«4») } }
+{ ‘⌂’: {* «a: ■.rotate(🕒).paintSolid(#FF0000).under(●).scale(4)» } }
 ```
 
 Let's go over the buttons in the toolbar:
@@ -122,13 +122,13 @@ Here are some examples:
 }
 ```
 
-### Plain: blocking time unless mouse button is pressed, using merge to provide an initial value.
+### Plain: blocking time with filter unless mouse button is pressed, using merge to provide an initial value.
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-687-g0b41cdbf s21
 { 
   ‘⌂’: {* 
     ‘mouse down?’: 🏭.mouseButton(0, ☑),
-    time👁: 🕒.filter(‘mouse down?’).print(3).mergeLeft(«'click%0Ahere'»)
+    time👁: 🕒.«filter»(‘mouse down?’).print(3).mergeLeft('click%0Ahere')
   }
 }
 ```
@@ -140,8 +140,8 @@ Here are some examples:
   ‘⌂’: {* 
     a: (-1).mul(x),
     v: 0.integral(a),
-    x: 6.integral(v),
-    spring👁: «●.translateX(x)»
+    x: 6.«integral»(v),
+    spring👁: ●.translateX(x)
   }
 }
 ```

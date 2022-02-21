@@ -22,7 +22,7 @@ __Number addition__ [lifted on signals](/refman/concepts/pure_functions)
 {
   input: 1,
   value: 2,
-  ‘⌂’: { «output: input.add(value)» }
+  ‘⌂’: { output: input.«add»(value) }
 }
 ```
 
@@ -32,7 +32,7 @@ __Number addition__ [lifted on signals](/refman/concepts/pure_functions)
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-726-g355c27b76cf4 s22
-{ ‘⌂’: {* a👁: ●.translateX(🕒.add(«2»)) } }
+{ ‘⌂’: {* a👁: ●.translateX(🕒.«add»(2)) } }
 ```
 
 # Example 3
@@ -48,6 +48,6 @@ __Number addition__ [lifted on signals](/refman/concepts/pure_functions)
     sine: 0.when(‘active?’).integral(speed.ite(‘active?’, 0)).sin().mul(3)
   },
   value📡: { value📡: { value📡: 2 } },
-  ‘⌂’: { «output: input.add(value)» }
+  ‘⌂’: { output: input.«add»(value) }
 }
 ```
