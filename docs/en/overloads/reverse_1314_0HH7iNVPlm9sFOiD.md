@@ -7,9 +7,15 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `output`
+The __[number]__ `reversed` function [lifted on signals](/refman/concepts/pure_functions)
+
+# Example
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
+{ ‘⌂’: { a👁: [].«reverse»() } }
+```
+
 
 [related...](https://en.wikipedia.org/wiki/Array_data_structure)
 
-----
 # Semantics

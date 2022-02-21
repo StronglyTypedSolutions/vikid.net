@@ -7,9 +7,15 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `set`, `output`
+The __{number}__ `*` operator (`intersection` function) [lifted on signals](/refman/concepts/pure_functions)
+
+# Example
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
+{ ‘⌂’: { a👁: {}.«setIntersection»({}) } }
+```
+
 
 [related...](https://en.wikipedia.org/wiki/Intersection_(set_theory))
 
-----
 # Semantics

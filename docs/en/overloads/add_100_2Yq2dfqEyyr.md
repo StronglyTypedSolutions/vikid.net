@@ -9,8 +9,7 @@
 # Description
 
 __Number addition__ [lifted on signals](/refman/concepts/pure_functions) 
-- as soon as both `input` and `param` are _ready_, the `output` becomes `input` + `param`.
-- then, whenever `input` or `param` _update_, the `output` is updated with `input` + `param`.
+
 - [related...](https://en.wikipedia.org/wiki/Addition)
 
 # Example 1
@@ -20,9 +19,7 @@ __Number addition__ [lifted on signals](/refman/concepts/pure_functions)
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-642-g83fec8270bfd s21
 {
-  input: 1,
-  value: 2,
-  ‘⌂’: { output: input.«add»(value) }
+  ‘⌂’: { output: 1.«add»(2) }
 }
 ```
 
