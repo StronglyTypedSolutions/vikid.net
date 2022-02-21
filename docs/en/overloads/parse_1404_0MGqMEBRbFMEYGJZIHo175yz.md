@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `formaat`, `type`, `output`
 
-[more...](type)
+[related...](type)
 
 ----
 # Semantics

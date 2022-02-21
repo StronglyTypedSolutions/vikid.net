@@ -13,7 +13,7 @@ __Integrates a number over time__
  - when the `velocity` is `zero`, the `output` is _not updated_.
  - the `output` can only be produced when both the `input` and `velocity` are _ready_.
 
-[more...](https://en.wikipedia.org/wiki/Velocity)
+[related...](https://en.wikipedia.org/wiki/Velocity)
 
 # Example 1
 - the initialization of the `output` is delayed by one second.

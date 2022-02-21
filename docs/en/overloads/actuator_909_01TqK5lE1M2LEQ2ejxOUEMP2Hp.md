@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `which `, `actuator reference`, `output`
 
-[more...](actuator reference)
+[related...](actuator reference)
 
 ----
 # Semantics

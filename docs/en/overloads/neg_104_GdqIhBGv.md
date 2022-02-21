@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication)
+[related...](https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication)
 
 ----
 # Semantics

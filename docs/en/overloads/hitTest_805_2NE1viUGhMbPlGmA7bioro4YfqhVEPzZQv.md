@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `with label`, `without label`, `active?`, `maximum depth`, `output`
 
-[more...](maximum depth)
+[related...](maximum depth)
 
 ----
 # Semantics

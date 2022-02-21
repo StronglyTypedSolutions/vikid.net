@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `seconds`, `repeat?`, `immediate?`, `output`
 
-[more...](http://reactivex.io/documentation/operators/timer.html)
+[related...](http://reactivex.io/documentation/operators/timer.html)
 
 ----
 # Semantics

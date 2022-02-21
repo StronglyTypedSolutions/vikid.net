@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `set`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Set_(mathematics))
+[related...](https://en.wikipedia.org/wiki/Set_(mathematics))
 
 ----
 # Semantics

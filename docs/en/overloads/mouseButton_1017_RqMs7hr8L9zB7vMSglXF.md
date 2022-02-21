@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `make`, `which button `, `support touch?`, `output`
 
-[more...](support touch?)
+[related...](support touch?)
 
 ----
 # Semantics

@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `corners only?`, `output`
 
-[more...](corners only?)
+[related...](corners only?)
 
 ----
 # Semantics

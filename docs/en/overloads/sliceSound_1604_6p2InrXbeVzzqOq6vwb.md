@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `start time`, `duration`, `output`
 
-[more...](duration)
+[related...](duration)
 
 ----
 # Semantics

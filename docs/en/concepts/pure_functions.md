@@ -11,7 +11,7 @@ All mathematical functions are pure. In ViKiD however, we use the word `pure` fo
 A very simple example is adding two constant signals:
 
 ```pseudo
-three = 1 + 2
+three := 1 + 2
 ```
 
 ```vikid-script
@@ -21,7 +21,7 @@ three = 1 + 2
 
 However, we can also add two varying signals in exactly the same. For example, here we add the mouse x and y positions:
 ```pseudo
-mouse_sum = mouse_x + mouse_y
+mouse_sum := mouse_x + mouse_y
 ```
 
 > In the script below, move your mouse over the blue grid. On mobile, you will need to touch it.
@@ -43,8 +43,8 @@ mouse_sum = mouse_x + mouse_y
 We can do a lot with just pure signal functions in ViKiD. The following example applies a `sine` function to a speedup `time signal`, then applying the `absolute value` function, using it to drive a bouncing ball:
 
 ```pseudo
-y: (time * 2).sin().abs() * 5
-ball: sphere.translateY(y)
+y := (time * 2).sin().abs() * 5
+ball := sphere.translateY(y)
 ```
 
 ```vikid-script
@@ -70,25 +70,25 @@ A `pure signal function` __combines__ its parameter signals values together with
 For example, `addition` on the signals `input` and `param` zips the `+ operator`:
 
 ```pseudo
-input.add(param) = input.zip(param, +)
+input.add(param) := input.zip(param, +)
 ```
 
 Often we use the __same symbol or name__ for both the reactive function and non-reactive operator. For example, the sine function:
 
 ```pseudo
-input.sin(param) = input.zip(param, sin)
+input.sin(param) := input.zip(param, sin)
 ```
 
 The semantics of a binary zip are:
 
 ```pseudo
-input.zip(operator, param).at(T) = 
+input.zip(operator, param).at(T) := 
   V1.operator(V2) @ T1.max(T2) if ready else pending
   where 
-    V1 @ T1 = input.at(T)
-    V2 @ T2 = param.at(T)
-    ready   = T1 > 0 and T2 > 0
-    pending = ⊥ @ 0
+    V1 @ T1 := input.at(T)
+    V2 @ T2 := param.at(T)
+    ready   := T1 > 0 and T2 > 0
+    pending := ⊥ @ 0
 ```
 
 See also: [pure function](https://en.wikipedia.org/wiki/Pure_function)

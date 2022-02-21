@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `factor`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Transparency_(graphic))
+[related...](https://en.wikipedia.org/wiki/Transparency_(graphic))
 
 ----
 # Semantics

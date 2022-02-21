@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `graphic`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Intersection_(set_theory))
+[related...](https://en.wikipedia.org/wiki/Intersection_(set_theory))
 
 ----
 # Semantics

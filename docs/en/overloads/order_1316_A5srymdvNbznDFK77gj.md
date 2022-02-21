@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `descending?`, `output`
 
-[more...](descending?)
+[related...](descending?)
 
 ----
 # Semantics

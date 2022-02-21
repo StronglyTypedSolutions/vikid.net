@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `make`, `element 0`, `element 1`, `element 2`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Tuple)
+[related...](https://en.wikipedia.org/wiki/Tuple)
 
 ----
 # Semantics

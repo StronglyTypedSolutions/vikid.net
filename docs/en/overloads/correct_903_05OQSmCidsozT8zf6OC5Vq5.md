@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `preview?`, `wrong value`, `output`
 
-[more...](wrong value)
+[related...](wrong value)
 
 ----
 # Semantics

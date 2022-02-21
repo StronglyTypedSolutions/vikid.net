@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `number`, `output`
 
-[more...](number)
+[related...](number)
 
 ----
 # Semantics

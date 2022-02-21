@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `make`, `x coordinate`, `y coordinate`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Euclidean_vector)
+[related...](https://en.wikipedia.org/wiki/Euclidean_vector)
 
 ----
 # Semantics

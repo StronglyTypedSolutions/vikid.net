@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `mode `, `output`
 
-[more...](https://en.wikipedia.org/wiki/Letter_case)
+[related...](https://en.wikipedia.org/wiki/Letter_case)
 
 ----
 # Semantics

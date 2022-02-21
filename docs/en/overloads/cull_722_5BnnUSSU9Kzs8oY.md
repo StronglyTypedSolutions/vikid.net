@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `active?`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Hidden-surface_determination#Viewing-frustum_culling)
+[related...](https://en.wikipedia.org/wiki/Hidden-surface_determination#Viewing-frustum_culling)
 
 ----
 # Semantics

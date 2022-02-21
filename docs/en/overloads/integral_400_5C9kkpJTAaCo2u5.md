@@ -13,7 +13,7 @@ __Integrates a vector or point over time__
  - when the `velocity` is `zero`, the `output` is _not updated_.
  - the `output` can only be produced when both the `input` and `velocity` are _ready_.
 
-[more...](https://en.wikipedia.org/wiki/Velocity)
+[related...](https://en.wikipedia.org/wiki/Velocity)
 
 # Example 1
 - the `circle` `translates` towards the `mouse position` at a `velocity` proportional to the distance between them.

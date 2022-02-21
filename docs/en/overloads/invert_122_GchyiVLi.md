@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Complement_(set_theory))
+[related...](https://en.wikipedia.org/wiki/Complement_(set_theory))
 
 ----
 # Semantics

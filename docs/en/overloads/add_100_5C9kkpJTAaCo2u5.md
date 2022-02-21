@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `vector`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction)
+[related...](https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction)
 
 ----
 # Semantics

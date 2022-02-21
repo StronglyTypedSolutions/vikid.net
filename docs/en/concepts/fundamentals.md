@@ -13,7 +13,8 @@ Intuitively, a `signal` is a value that changes over `time`, like the `mouse pos
 Mathematically, a `signal` is a __sequence__ of `(Value,Timestamp)` pairs (also called `samples`), written as `V @ T`. The first pair is always `pending := ⊥ @ 0`, where `⊥` means `undefined`. The timestamps of all other pairs are _monotonically increasing_. `Timestamps` in ViKiD start at `1`, with `0` reserved for  `pending`:
 
 ```pseudo
-signal = { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
+signal := { ⊥ @ 0, V1 @ T1, V2 @ T2, ... } 
+  where ∀ i > 0 : Ti > 0 and Ti > T(i-1)
 ```
 
 > For performance reasons, ViKiD's implementation is not mathematical. ViKiD just stores the __most recent__ `value` and `timestamp` of a `signal` into a __hidden mutable variable__, that is __encapsulated__ from the programmer. The `timestamps` can be visualized by clicking the __clock__ in the debug toolbar. You can also __rewind__ your simulation in time, to investigate  past updates!
@@ -67,23 +68,23 @@ Let's go over the buttons in the toolbar:
 Conceptually, __sampling__ a signal `at` a timestamp `T` returns the pair `Vi @ Ti` closest to `T`, i.e. no other `Vj @ Tj` exists in the signal between `Ti` and `T`:
 
 ```pseudo
-signal.at(T) = Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ T)
+signal.at(T) := Vi @ Ti where ¬∃ (Vj @ Tj ∈ signal: Ti ≤ Tj ≤ T)
 ```
 
 > Practically - since we cannot do time-travel outside of mathematics yet 😉 - sampling a `signal` just gives you the __most recent__ `(Value, Timestamp)`. When a `signal` gets a new `(Value, Timestamp)`, we say the `signal` __updates__.
 
-Since writing out the full infinite sequence of a `signal` is impractical, we describe the semantics of a `signal` using the `at` operator.
+Since writing out the full infinite sequence of a `signal` is impractical, we often describe the semantics of a `signal` using this `at` operator.
 
 For example, the semantic of a `constant signal` with value `42` is:
 
 ```pseudo
-constant(42).at(T) = 42 @ 1
+constant(42).at(T) := 42 @ 1
 ```
 
 `time` itself is also a `signal`. It is sampled automatically at the _refresh rate_ of your monitor by ViKiD, typically 60hz:
 
 ```pseudo
-time.at(T) = T / 60 @ T
+time.at(T) := T / 60 @ T
 ```
 
 > Unfortunately this is not exactly 60hz, so this varies. Also, some monitors have much higher refresh rates, so you should never rely on 60Hz! 
@@ -168,13 +169,13 @@ In ViKiD, such constructions are not possible, __we cannot directly write__ to t
 What we can do is:
 
 ```pseudo
-score = score.previous() + 1
+score := score.previous() + 1
 ```
 
 Semantically, this means:
 
 ```pseudo
-score.at(T) = score.at(T-1) + 1
+score.at(T) := score.at(T-1) + 1
 ```
 
 > ViKiD doesn't have a `previous` function, this is just pseudo code. To refer to a signal that is delayed by one sample, you just __long-press__ on a binding's chain icon.
@@ -188,7 +189,7 @@ Let's say this event is called `kaboom`.
 The ViKiD pseudo code that would increment the `score` when `kaboom` happens is:
 
 ```pseudo
-score = (score.previous() + 1).when(kaboom)
+score := (score.previous() + 1).when(kaboom)
 ```
 
 ## Example
@@ -252,10 +253,10 @@ If you ever programmed a __spread sheet__, you will have noticed that all __cell
 Let us code the same thing in ViKiD pseudo code:
 
 ```pseudo
-score: 0 ⊕ (score.previous() + 1).when(kaboom),
-nextExtraLiveScore: 10 ⊕ (nextExtraLiveScore.previous() + 10).when(giveExtraLive),
-giveExtraLive: (score >= nextExtraLiveScore).rising(),
-lives: 3 ⊕ (lives.previous() + 1).when(giveExtraLive)
+score := 0 ⊕ (score.previous() + 1).when(kaboom),
+nextExtraLiveScore := 10 ⊕ (nextExtraLiveScore.previous() + 10).when(giveExtraLive),
+giveExtraLive := (score >= nextExtraLiveScore).rising(),
+lives := 3 ⊕ (lives.previous() + 1).when(giveExtraLive)
 ```
 
 That's it, 4 lines of code. Read this as follows:
@@ -294,7 +295,7 @@ Let's look at this ViKiD program in detail:
 - Numbers are shown both in the decimal system, but also in a more intuitive clock-like graphical representation.
 - In the `giveExtraLive` binding, `score >= nextExtraLiveScore` gives a `boolean` value (`on`/`off`, `true`/`false`, `yes`/`no`, ...)
   - this `boolean` signal updates whenever it becomes either `true` or `false`
-  - but we only want to give an extra live the __moment__ the `score` becomes `>= nextExtraLiveScore`, so when `score >= nextExtraLiveScore` goes from `false` to `true`. This is what the [`rising` operator](https://en.wikipedia.org/wiki/Signal_edge) does.
+  - but we only want to give an extra live the __moment__ the `score` becomes `>= nextExtraLiveScore`, so when `score >= nextExtraLiveScore` goes from `false` to `true`. This is what the [rising` operator](https://en.wikipedia.org/wiki/Signal_edge) does.
 - just like a spreadsheet, ViKiD will automatically keep all `signal` values and `timestamps` synchronized in the __correct order__, and manage event handler memory for you.
 - We use a lot of symbols for frequently used or intuitive operators:
   - the `output` of each operator is shown on the __right of a horizontal arrow__ ➔.
@@ -309,7 +310,6 @@ Let's look at this ViKiD program in detail:
 
 So in ViKiD (or in general, any declarative reactive language), each binding's formula describes __all of the possible behavior of the signal__, it tells the __full story__. Is this __easier__ than in classical languages? That is debatable, but we feel it is whole lot __simpler__ 😉.
 
-> Note that many __mission critical software__ for nuclear power plants, fighter jets, rockets, etc is written in similar dataflow languages. For example Airbus, Dassault, Verilog and others use [Scade](https://en.wikipedia.org/wiki/Lustre_(programming_language))
+> Note that many __mission critical software__ for nuclear power plants, fighter jets, rockets, etc is written in similar dataflow languages. For example Airbus, Dassault, Verilog and others often seem to use [Scade](https://en.wikipedia.org/wiki/Lustre_(programming_language))
 
-
-
+> Imperative and pure functional programming are two other very important techniques to master. Since all values in ViKiD are immutable, some aspects of functional programming are trained with it. And since other software (like Scratch) exists to learn the imperative paradigm, ViKiD doesn't yet include support for this. However the Rust programming language has recently shown that a subset of imperative programming can also allow both reasoning, safety, and high performance. Features from academic languages - like Haskell's monads and Clean's uniques types - made this possible. We plan to introduce safe imperative programming in a future version of ViKiD, while keeping all the debugging and inspection features.

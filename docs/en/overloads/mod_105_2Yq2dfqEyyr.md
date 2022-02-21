@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `divisor`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Remainder)
+[related...](https://en.wikipedia.org/wiki/Remainder)
 
 ----
 # Semantics

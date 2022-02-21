@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `label`, `data`, `output`
 
-[more...](data)
+[related...](data)
 
 ----
 # Semantics

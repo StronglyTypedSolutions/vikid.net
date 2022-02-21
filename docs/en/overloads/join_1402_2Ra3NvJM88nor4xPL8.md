@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `separator`, `output`
 
-[more...](separator)
+[related...](separator)
 
 ----
 # Semantics

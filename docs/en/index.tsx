@@ -21,7 +21,7 @@ export const en = {
 
   recent: "recently",
 
-  more: "more...",
+  more: "related...",
   parameter: "parameter",
   type: "type",
   types: "types",
@@ -143,6 +143,8 @@ export const en = {
 
   reference_manual: "Reference manual",
   users_guide: "User guide",
+
+  see_also: "See also:",
 
   gender_male: "Boy",
   gender_female: "Girl",
@@ -338,7 +340,7 @@ export const en = {
   create_reference: "🔗 Make a link to this formula\n🎞️ Press long to delay the link by a single update",
   pick_instance: "Pick adjusted instances",
   filter_instances: "Filter all/present/past/future instanties",
-  more_script_tools: "More...",
+  more_script_tools: "related...",
   exit_selection_mode: "Return to regular selection mode",
   work_in_progress: "work in progress!",
 

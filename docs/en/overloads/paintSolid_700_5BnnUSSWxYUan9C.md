@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `color`, `output`
 
-[more...](color)
+[related...](color)
 
 ----
 # Semantics

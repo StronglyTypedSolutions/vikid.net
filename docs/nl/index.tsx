@@ -144,6 +144,8 @@ export const nl: Translations = {
   reference_manual: "Referentie handleiding",
   users_guide: "Gebruikers handleiding",
 
+  see_also: "Zie ook:",
+
   gender_male: "Jongen",
   gender_female: "Meisje",
   gender_other: "Anders",

@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `param`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Subtraction)
+[related...](https://en.wikipedia.org/wiki/Subtraction)
 
 ----
 # Semantics

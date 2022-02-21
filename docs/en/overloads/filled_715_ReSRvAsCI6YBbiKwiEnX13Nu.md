@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `horizontal text alignment`, `vertical text alignment`, `line spacing`, `output`
 
-[more...](line spacing)
+[related...](line spacing)
 
 ----
 # Semantics

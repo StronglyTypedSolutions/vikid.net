@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `output`
 
-[more...](https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/)
+[related...](https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/)
 
 ----
 # Semantics

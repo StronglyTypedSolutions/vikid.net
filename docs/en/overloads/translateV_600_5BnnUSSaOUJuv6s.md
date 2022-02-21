@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `vector`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Translation_(geometry))
+[related...](https://en.wikipedia.org/wiki/Translation_(geometry))
 
 ----
 # Semantics

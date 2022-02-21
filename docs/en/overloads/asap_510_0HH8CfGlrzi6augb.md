@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `maximum intra-frame updates`, `output`
 
-[more...](maximum intra-frame updates)
+[related...](maximum intra-frame updates)
 
 ----
 # Semantics

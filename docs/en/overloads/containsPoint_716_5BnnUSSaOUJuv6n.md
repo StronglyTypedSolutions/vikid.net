@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `point`, `output`
 
-[more...](point)
+[related...](point)
 
 ----
 # Semantics

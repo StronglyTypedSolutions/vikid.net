@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `make`, `red`, `green`, `blue`, `output`
 
-[more...](https://en.wikipedia.org/wiki/RGB_color_model)
+[related...](https://en.wikipedia.org/wiki/RGB_color_model)
 
 ----
 # Semantics

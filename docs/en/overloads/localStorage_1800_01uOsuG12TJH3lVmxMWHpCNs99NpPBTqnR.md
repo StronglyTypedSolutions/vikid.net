@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `key`, `load!`, `active?`, `output`
 
-[more...](active?)
+[related...](active?)
 
 ----
 # Semantics

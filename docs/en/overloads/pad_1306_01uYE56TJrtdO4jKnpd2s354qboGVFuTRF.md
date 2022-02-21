@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `param`, `length`, `at the end?`, `output`
 
-[more...](at the end?)
+[related...](at the end?)
 
 ----
 # Semantics

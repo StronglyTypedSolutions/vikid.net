@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `count`, `output`
 
-[more...](http://reactivex.io/documentation/operators/take.html)
+[related...](http://reactivex.io/documentation/operators/take.html)
 
 ----
 # Semantics

@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `thickness`, `output`
 
-[more...](thickness)
+[related...](thickness)
 
 ----
 # Semantics

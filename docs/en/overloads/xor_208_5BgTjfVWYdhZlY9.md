@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `boolean`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Exclusive_or)
+[related...](https://en.wikipedia.org/wiki/Exclusive_or)
 
 ----
 # Semantics

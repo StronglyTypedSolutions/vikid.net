@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `ordering`, `output`
 
-[more...](ordering)
+[related...](ordering)
 
 ----
 # Semantics

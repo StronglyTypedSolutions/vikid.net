@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `simultaneous`, `updates`, `output`
 
-[more...](http://reactivex.io/documentation/operators/merge.html)
+[related...](http://reactivex.io/documentation/operators/merge.html)
 
 ----
 # Semantics

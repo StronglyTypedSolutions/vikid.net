@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `default input`, `open!`, `output`
 
-[more...](open!)
+[related...](open!)
 
 ----
 # Semantics

@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `number`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Bitwise_operation#AND)
+[related...](https://en.wikipedia.org/wiki/Bitwise_operation#AND)
 
 ----
 # Semantics

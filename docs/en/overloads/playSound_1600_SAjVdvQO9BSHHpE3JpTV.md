@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `active?`, `rate`, `output`
 
-[more...](rate)
+[related...](rate)
 
 ----
 # Semantics

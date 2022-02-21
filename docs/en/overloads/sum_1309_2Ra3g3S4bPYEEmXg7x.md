@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `zero if empty?`, `output`
 
-[more...](https://simple.wikipedia.org/wiki/Sum)
+[related...](https://simple.wikipedia.org/wiki/Sum)
 
 ----
 # Semantics

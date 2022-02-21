@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `start point`, `output`
 
-[more...](https://www.w3schools.com/tags/canvas_moveto.asp)
+[related...](https://www.w3schools.com/tags/canvas_moveto.asp)
 
 ----
 # Semantics

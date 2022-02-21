@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `skip?`, `output`
 
-[more...](skip?)
+[related...](skip?)
 
 ----
 # Semantics

@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Unit_vector)
+[related...](https://en.wikipedia.org/wiki/Unit_vector)
 
 ----
 # Semantics

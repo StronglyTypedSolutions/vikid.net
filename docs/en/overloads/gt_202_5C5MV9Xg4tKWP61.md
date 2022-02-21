@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `number`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Inequality_(mathematics))
+[related...](https://en.wikipedia.org/wiki/Inequality_(mathematics))
 
 ----
 # Semantics

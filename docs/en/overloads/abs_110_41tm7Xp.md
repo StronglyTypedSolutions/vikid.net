@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm)
+[related...](https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm)
 
 ----
 # Semantics

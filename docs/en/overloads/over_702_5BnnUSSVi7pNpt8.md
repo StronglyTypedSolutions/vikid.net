@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `graphic`, `output`
 
-[more...](graphic)
+[related...](graphic)
 
 ----
 # Semantics

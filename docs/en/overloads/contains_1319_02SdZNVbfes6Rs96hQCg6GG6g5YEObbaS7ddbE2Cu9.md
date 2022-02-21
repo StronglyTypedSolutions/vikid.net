@@ -9,7 +9,7 @@
 # Description
 TODO: Explain the function overload and parameters `input`, `element(s)`, `output`
 
-[more...](https://en.wikipedia.org/wiki/Element_(mathematics))
+[related...](https://en.wikipedia.org/wiki/Element_(mathematics))
 
 ----
 # Semantics
