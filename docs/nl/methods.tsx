@@ -184,8 +184,6 @@ export const methods = methodDescriptions({
   [MethodId.SKIP]: {
     _: overloadDescription("sla eerste updates over", "aantal", "http://reactivex.io/documentation/operators/skip.html")
   },
-  [MethodId.BUFFER]: {
-    _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden]", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.BUFFER]: {
     _: overloadDescription("buffer updates", "aantal", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
