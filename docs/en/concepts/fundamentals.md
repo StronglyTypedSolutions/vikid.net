@@ -37,7 +37,7 @@ time.sin().pow(4)
 
 > This form is used in most popular programming languages too.
 
-So we start with the `subject` (aka `self` or `this`) followed by a `method application`, then the `verb`, then a (_possibly empty_) tuple of `parameters`. In ViKiD we call the subject the `input`. 
+So we start with the `subject` (aka __self__ or __this__) followed by a `method application` (the __verb__), then a (_possibly empty_) tuple of `parameters`. In ViKiD we call the `subject` the (primary) `input`.
 
 > We have chosen this asymmetric form because it matches the [subject-verb-object](https://en.wikipedia.org/wiki/Subject%E2%80%93verb%E2%80%93object) sentence structure used in most Western natural languages.
 
