@@ -279,7 +279,7 @@ export const nl: Translations = {
 
   mark_broadcaster: "Maak actieve formule beschikbaar in sub-programma's",
   remove_broadcaster: "Verberg actieve formule voor sub-programma's",
-  title_break_broadcaster: "⚠️ Opgelet!",
+  warning: "⚠️ Opgelet!",
   body_break_broadcaster: (paths: string) => `⚠️ Het verbergen van de actieve formule voor sub-programma's\nzou de volgende 🔗 links in geneste formules breken:\n\n${paths}\n\n🛠️ Je zal je programma hierna moeten herstellen, of annuleer en\n💡 gebruik SHIFT + 🖱️RECHTER MUISKNOP om deze links te vinden.`,
   button_break_broadcaster: "Breek links!",
   // in_use_broadcaster: (paths: string[]) => `⚠️ Kan de actieve formule niet verbergen voor sub-programma's\nomdat deze 🔗 links ernaar verwijzen:\n\n${paths.join("\n")}\nGebruik (SHIFT + RECHTER MUISKNOP 🖱️) op de actieve formule om deze links te vinden,\nof gebruik SHIFT+CLICK op deze knop om de links te breken.`,
