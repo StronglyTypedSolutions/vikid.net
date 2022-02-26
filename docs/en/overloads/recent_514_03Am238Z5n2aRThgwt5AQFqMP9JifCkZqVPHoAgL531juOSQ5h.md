@@ -7,7 +7,7 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `duration `, `delay?`, `sliding?`, `active?`, `output`
+TODO: Explain the function overload and parameters `input`, `duration `, `delay?`, `slider`, `active?`, `output`
 
 # Example
 ```vikid-script

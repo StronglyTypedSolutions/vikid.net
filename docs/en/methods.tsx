@@ -186,7 +186,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("buffer updates", "count", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.RECENT]: {
-    _: overloadDescription("recent updates", "duration [@<0 ⇒ stamps | @>0 ⇒ seconds]", "delay?", "sliding?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
+    _: overloadDescription("recent updates", "duration [@<0 ⇒ stamps | @>0 ⇒ seconds]", "delay?", "slider", "active?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
