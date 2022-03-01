@@ -752,4 +752,15 @@ export const methods = methodDescriptions({
   [MethodId.SET_SYMMETRIC_DIFFERENCE]: {
     _: overloadDescription("symmetrisch verschil met", "verzameling", "https://nl.wikipedia.org/wiki/Symmetrisch_verschil")
   },
+
+  [MethodId.DYN_FROM]: {
+    _: overloadDescription("als dynamische waarde", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
+  },
+  [MethodId.DYN_IS]: {
+    _: overloadDescription("is van type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
+  },
+  [MethodId.DYN_AS]: {
+    _: overloadDescription("als waarde van type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
+  },
+
 });

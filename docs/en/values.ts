@@ -68,7 +68,7 @@ export const primitives: Record<PrimitiveKind, string> = {
   [PrimitiveKind.Boolean]: "boolean",
   [PrimitiveKind.Figure]: "figure",
   [PrimitiveKind.Drawing]: "drawing",
-  [PrimitiveKind.Factory]: "make new",
+  [PrimitiveKind.Factory]: "factory",
   [PrimitiveKind.SoundStream]: "streamed sound source",
   [PrimitiveKind.SoundBuffer]: "buffered sound source",
   [PrimitiveKind.Audio]: "audio node",
