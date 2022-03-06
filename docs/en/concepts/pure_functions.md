@@ -40,7 +40,7 @@ mouse_sum := mouse_x + mouse_y
 
 > For simplicity, VikiD uses a fixed coordinate grid of `18 x 12` units, where the horizontal `X axis` points to the __right__, and the vertical `Y axis` points __upwards__. So the range of grid is `-9...9` for `X` and `-6...6` for `Y`. This is a __mathematical Cartesian coordinate system__. _Note that typical 2D computer graphics often use a Y axis the points down, for [legacy reasons](https://gamedev.stackexchange.com/questions/83570/why-is-the-origin-in-computer-graphics-coordinates-at-the-top-left)!_
 
-We can do a lot with just pure signal functions in ViKiD. The following example applies a `sine` function to a speedup `time signal`, then applying the `absolute value` function, using it to drive a bouncing ball:
+We can do a lot with just pure signal functions in ViKiD. The following example applies a `sine` function to the `time signal` that was speed-up, then applying the `absolute value` function, using it to drive a "fake bouncing ball":
 
 ```pseudo
 y := (time * 2).sin().abs() * 5
@@ -60,7 +60,7 @@ ball := sphere.translateY(y)
 
 ## Semantics
 
-A `pure signal function` __combines__ its parameter signals values together with the corresponding non-reactive function. 
+A `pure signal function` [combines](https://reactivex.io/documentation/operators/combinelatest.html) its parameter signals values into an output value by applying the corresponding non-reactive function. 
 
 > In computer science, we also say the operator is _lifted_ on signals, or that it _zips_ the signal values together.
 
@@ -82,7 +82,7 @@ input.sin(param) := input.zip(param, sin)
 The semantics of a binary zip are:
 
 ```pseudo
-input.zip(operator, param).at(T) := 
+input.zip(param, operator).at(T) := 
   V1.operator(V2) @ T1.max(T2) if ready else pending
   where 
     V1 @ T1 := input.at(T)
