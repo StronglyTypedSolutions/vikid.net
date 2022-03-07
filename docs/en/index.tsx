@@ -261,7 +261,11 @@ export const en = {
   download_script: "Download this program to your device",
   upload_script: "Upload a program from your device",
   share_script: "Put a shareable link on your clipboard",
-  warn_unsaved: "⚠️ You modified this program without saving it.\n\n❗ Are you sure you want to lose your changes?\n",
+  warn_unsaved: {
+    message: "⚠️ You modified this program without saving it.\n\n❗ If you leave this page, you will lose your changes!\n",
+    yes: "Leave",
+    no: "Stay",
+  },
   video_export_failed: "⚠️ Failed to export video",
 
   copy_script_text: "Copy program to clipboard (text)",

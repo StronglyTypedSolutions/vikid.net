@@ -261,7 +261,13 @@ export const nl: Translations = {
   download_script: "Download dit programma naar je toestel",
   upload_script: "Upload een programma van je toestel",
   share_script: "Zet een deelbare link op je klembord",
-  warn_unsaved: "⚠️ Je hebt je programma gewijzigd zonder op te slaan.\n\n❗ Ben je zeker dat je je wijzigingen wil verliezen?",
+
+  warn_unsaved: {
+    message: "⚠️ Je hebt je programma gewijzigd zonder op te slaan.\n\n❗ Als je verder gaat, verlies je je wijzigingen!",
+    yes: "Ga verder",
+    no: "Ga terug",
+  },
+
   video_export_failed: "⚠️ Video kon niet geëxporteerd worden",
 
   copy_script_text: "Kopieer het programma naar je klembord (tekst)",
