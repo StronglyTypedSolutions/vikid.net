@@ -6,6 +6,7 @@ See also these [slides made with ViKiD](https://vikid.net/share?key=A9hlmv7YyQ3J
 
 # Example 1
 - Adding the vector to a point with weight 2
+- Because the point has weight 2, it will move by half the vector
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-760-g848761a556d6 s22
@@ -17,7 +18,6 @@ See also these [slides made with ViKiD](https://vikid.net/share?key=A9hlmv7YyQ3J
 }
 ```
 
-> Currently, in the formula we only draw the direction of vectors and put points on the unit circle, or origin. These blocks are too tiny to draw a grid and the exact vectors and points. 
 
 # Example 2
 - Adding a point with weight 2 to a point with weight 3
@@ -32,6 +32,18 @@ See also these [slides made with ViKiD](https://vikid.net/share?key=A9hlmv7YyQ3J
 ```
 
 > Projective points with a weight `w` can be regarded as point particles with a mass `w`. Adding points results in the `center of mass`. See also [this demo](https://vikid.net/share?key=A9hlmv7YyQ3JdATPUUC69SqHuAQmIAeJD5t29bI9CqPQtvISIR2oM2P8dnGIaGamaVMjbUAa2hCylGPc0ZB0CRWWwXroWR8T86zZC1sLfJe8swvjJPLZAN8x71Ix8ss1R90EpqQj1fRhVKbIKiBKBo13ysZSTbbcBIPQ1X7sb2kGi2NYa208ZHZrXd19seT2sKonxvMthDtNEZlNQdbs6Zxve4AY)
+
+# Example 3
+- Normalizing a point so it gets weight 1 (aka a Cartesian point)
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-760-g848761a556d6 s22
+{ 
+  ‘⌂’: {* 
+    p👁: ⟨0 0 2⟩.«cartesian»()
+  }
+}
+```
 
 # Choice of origin
 
