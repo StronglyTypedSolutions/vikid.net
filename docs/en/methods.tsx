@@ -468,10 +468,10 @@ export const methods = methodDescriptions({
     _: overloadDescription("circle", "radius", "center point", "https://en.wikipedia.org/wiki/Circle")
   },
   [MethodId.FIGURE_ELLIPSE]: {
-    _: overloadDescription("ellipse", "width", "height", "center point", "rotation", "start angle", "end angle", "reversed?", "https://en.wikipedia.org/wiki/Ellipse")
+    _: overloadDescription("ellipse", "width", "height", "center point", "rotation", "start angle", "end angle", "clockwise?", "closed?", "https://en.wikipedia.org/wiki/Ellipse")
   },
   [MethodId.FIGURE_ARC]: {
-    _: overloadDescription("arc", "radius", "center point", "start angle", "end angle", "reversed?", "https://en.wikipedia.org/wiki/Circular_arc")
+    _: overloadDescription("arc", "radius", "center point", "start angle", "end angle", "clockwise?", "closed?", "https://en.wikipedia.org/wiki/Circular_arc")
   },
   [MethodId.DRAWING_PATH]: {
     _: overloadDescription("line drawing", "start point", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
