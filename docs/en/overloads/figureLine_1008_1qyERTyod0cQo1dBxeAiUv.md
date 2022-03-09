@@ -7,7 +7,7 @@
 ```
 
 # Description
-The __make new__ `line segment` function [lifted on signals](/refman/concepts/pure_functions)
+The __make__ `line segment` function [lifted on signals](/refman/concepts/pure_functions)
 
 # Example
 ```vikid-script

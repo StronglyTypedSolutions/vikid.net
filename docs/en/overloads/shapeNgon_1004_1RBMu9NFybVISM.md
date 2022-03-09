@@ -7,7 +7,7 @@
 ```
 
 # Description
-The __make new__ `regular polygon` function [lifted on signals](/refman/concepts/pure_functions)
+The __make__ `regular polygon` function [lifted on signals](/refman/concepts/pure_functions)
 
 # Example
 ```vikid-script
