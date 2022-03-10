@@ -471,10 +471,10 @@ export const methods = methodDescriptions({
     _: overloadDescription("cirkel", "straal", "middelpunt", "https://nl.wikipedia.org/wiki/Cirkel")
   },
   [MethodId.FIGURE_ELLIPSE]: {
-    _: overloadDescription("ellips", "breedte", "hoogte", "middelpunt", "rotatie", "starthoek", "eindhoek", "andersom?", "https://nl.wikipedia.org/wiki/Ellips_(wiskunde)")
+    _: overloadDescription("ellips", "breedte", "hoogte", "middelpunt", "rotatie", "starthoek", "eindhoek", "wijzerzin?", "gesloten?", "https://nl.wikipedia.org/wiki/Ellips_(wiskunde)")
   },
   [MethodId.FIGURE_ARC]: {
-    _: overloadDescription("boog", "straal", "middelpunt", "starthoek", "eindhoek", "andersom?", "https://nl.wikipedia.org/wiki/Boog_(meetkunde)")
+    _: overloadDescription("boog", "straal", "middelpunt", "starthoek", "eindhoek", "wijzerzin?", "gesloten?", "https://nl.wikipedia.org/wiki/Boog_(meetkunde)")
   },
   [MethodId.DRAWING_PATH]: {
     _: overloadDescription("lijntekening", "startpunt", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
