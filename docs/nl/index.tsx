@@ -271,10 +271,8 @@ export const nl: Translations = {
   video_export_failed: "⚠️ Video kon niet geëxporteerd worden",
 
   copy_script_text: "Kopieer het programma naar je klembord (tekst)",
-  paste_script_text: "Plak het programma uit je klembord (tekst)",
-
   copy_script_json: "Kopieer het programma naar je klembord (JSON)",
-  paste_script_json: "Plak het programma uit je klembord (JSON)",
+  paste_script: "Plak het programma uit je klembord",
 
   import_module: "Importeer een module",
   show_list_item_methods: "Toon functies op de elementen in de lijst?",
