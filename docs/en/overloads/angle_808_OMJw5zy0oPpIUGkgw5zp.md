@@ -15,79 +15,58 @@
 - When `radians?` is `on`, then
   - the `output` is in __radians__ units
   - the `output` is __negative__ if the shortest rotation from the `input` to the `param` vector is __clockwise__
-  
-[see also...](/refman/concepts/angles)
+    - More generally, the sign is __positive__ when this is in the __same direction__ as rotating the `X-axis` to the `Y-axis`.
+      - This is counter-clockwise in ViKiD and math, but is clockwise in most 2D computer graphics software.
+
+> Currently this function treats points `⟨x,y,w⟩` as vectors `⟨x,y,0⟩`, so it completely ignores the weight. _But this behavior can change, so you should only pass vectors_
+
+[more about vectors...](/refman/concepts/vectors)
+
+[more about angles...](/refman/concepts/angles)
 
 [related...](https://en.wikipedia.org/wiki/Dot_product#Geometric_definition)
 
-# Example 1
+# Example
 - The angle between the vectors `u` and `v`
+
+> Drag the blue points to get a feel of the function.
 
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-804-g5ae79b5f s23
 { 
   ‘⌂’: {* 
-    u📡: ⟨5 0 0⟩,
-    v📡: ⟨5 0 0⟩.rotate(🕒.div(2)),
-    α📡: u.«angle»(v, ☒),
-    visualization👁: { 
-      Vector: { 
-        vector🔩: ⟨4.25 0 0⟩,
-        label🔩: 'a',
-        color🔩: #FFFFFF,
-        thickness🔩: 2,
-        offset🔩: ⟨0 0 0⟩,
-        ‘label shape’: label.filled(0, 0, 0),
-        ‘label gfx’: ‘label shape’.translateV(vector.div(2).add(vector.normalize().div(2).rotate(3))),
-        graphic: vector.filled(thickness).under(‘label gfx’).paintSolid(color),
-        result: graphic.translateV(offset)
-      },
-      ‘u gfx’: Vector.instance(u, 'u', #FF4832, Vector↳thickness, Vector↳offset),
-      ‘v gfx’: Vector.instance(v, 'v', #19CB33, Vector↳thickness, Vector↳offset),
-      ‘α gfx’: '𝛼='.concat(α.print(2)).filled(1, 0, 0).paintSolid(#FFEF00).translateV(⟨4.5 0 0⟩.rotate(α.div(2))),
-      radius: 8,
-      arc: 🏭.figureArc(4, ⟨0 0 1⟩, 0, α, α.gt(0), ☒).stroke(#FFEF00, 1, ☑).under(‘α gfx’),
-      bg: 𝕌.paintSolid(#000000),
-      scene: bg.under(‘u gfx’).under(‘v gfx’).under(arc)
-    }
-  }
-}
-```
-
-# Example 2
-- The angle between the vectors `u` and `v`
-- Drag the blue handles to get a feel of how this function behaves
-
-```vikid-script
-𝕍i𝕂i𝔻 v0.7-804-g5ae79b5fb8ca s23
-{ 
-  ‘⌂’: {* 
-    bg: 𝕌.paintSolid(#000000),
+    ‘animate?’📡: ☑.merge(☒.when(🏭.mouseButton(0, ☑).rising().take(1))),
+    animation: 🕒.div(2).filter(‘animate?’),
     ‘Circle Constraint’📡: { 
-      ‘position﹟604’🔩: ⟨0 0 1⟩,
+      ‘position﹟604’🔩: ⟨4.75 4.5 1⟩,
       ‘radius﹟621’: 5,
-      ‘on circle’: ‘position﹟604’.sub(⟨0 0 1⟩).normalize().mul(‘radius﹟621’),
-      ‘output﹟613’: ⟨0 0 1⟩.add(‘on circle’)
+      ‘grid steps’: 12,
+      angle: ⟨1 0 0⟩.angle(‘position﹟604’, ☒).mul(‘grid steps’).round().div(‘grid steps’),
+      snapped: ⟨0 0 1⟩.add(⟨1 0 0⟩.mul(‘radius﹟621’)).rotate(angle),
+      ‘result﹟765’: ‘position﹟604’.ite(‘animate?’, snapped)
     },
     Draggable📡: { 
       ‘start pos’🔩: ⟨3.75 3.25 1⟩,
-      shape🔩: ●.scale((0.5)).paintSolid(#0057FF),
+      shape🔩: ●.scale((0.5)).paintSolid(#08ACFF).transparentize((0.5)),
       Constraint🔩: { ‘position﹟348’🔩: ⟨0 0 1⟩ },
-      ‘mouse pos﹟531’: 🏭.mousePosition(☒, ☑),
-      ‘mouse down?﹟703’: 🏭.mouseButton(0, ☑),
-      ‘mouse down!﹟545’: ‘mouse down?﹟703’.rising(),
-      ‘mouse up!﹟695’: ‘mouse down?﹟703’.not().rising(),
-      ‘drag﹟498’: ‘mouse pos﹟531’.derivative(‘in shape?’),
-      ‘in shape?’: ‘output﹟341’.containsPoint(‘mouse pos﹟531’).when(‘mouse down!﹟545’),
+      ‘mouse pos’: 🏭.mousePosition(☒, ☑),
+      ‘mouse down?’: 🏭.mouseButton(0, ☑),
+      ‘mouse down!’: ‘mouse down?’.rising(),
+      ‘mouse up!’: ‘mouse down?’.not().rising(),
+      drag: ‘mouse pos’.derivative(‘in shape?’),
+      ‘in shape?’: output.containsPoint(‘mouse pos’).when(‘mouse down!’),
       ‘initial position’: Constraint.instance(‘start pos’),
-      ‘drag position’: ‘initial position’.merge(‘constrained position’.when(‘mouse up!﹟695’)).integral(‘drag﹟498’),
+      ‘drag position’: ‘initial position’.merge(‘constrained position’.when(‘mouse up!’)).integral(drag),
       ‘constrained position’✉: Constraint.instance(‘drag position’),
-      ‘output﹟341’: shape.translateV(‘constrained position’)
+      output: shape.translateV(‘constrained position’)
     },
     Visualization📡: { 
-      ‘u﹟253’🔩: ⟨5 -5 0⟩,
-      ‘v﹟255’🔩: ⟨-5 -5 0⟩,
-      ‘α﹟262’🔩: ‘u﹟253’.angle(‘v﹟255’, ☒),
+      ‘u vec’🔩: ⟨5 -5 0⟩,
+      ‘v vec’🔩: ⟨-5 -5 0⟩,
+      ‘α angle’🔩: ‘u vec’.angle(‘v vec’, ☒),
+      red: #FF5F44,
+      green: #24D53E,
+      yellow: #EFFF00,
       Vector: { 
         vector🔩: ⟨4.25 0 0⟩,
         label🔩: 'a',
@@ -97,25 +76,29 @@
         ‘label shape’: label.filled(0, 0, 0),
         ‘label gfx’: ‘label shape’.translateV(vector.div(2).add(vector.normalize().div(2).rotate(3))),
         graphic: vector.filled(thickness).under(‘label gfx’).paintSolid(color),
-        result: graphic.translateV(offset)
+        ‘result﹟67’: graphic.translateV(offset)
       },
-      ‘u gfx’: Vector.instance(‘u﹟253’, 'u', #FF4832, Vector↳thickness, Vector↳offset).hitRegion('u', 0),
-      ‘v gfx’: Vector.instance(‘v﹟255’, 'v', #19CB33, Vector↳thickness, Vector↳offset).hitRegion('v', 0),
+      ‘u gfx’: Vector.instance(‘u vec’, 'u', red, Vector↳thickness, Vector↳offset).hitRegion('u', 0),
+      ‘v gfx’: Vector.instance(‘v vec’, 'v', green, Vector↳thickness, Vector↳offset).hitRegion('v', 0),
       ‘text alignment’: 1.ite(‘text position’.hor().gt(0), (-1)),
-      ‘text position’: ‘u﹟253’.normalize().mul(5).rotate(‘α﹟262’.div(2)),
-      ‘α gfx’: '𝛼='.concat(‘α﹟262’.print(2)).filled(‘text alignment’, 0, 0).paintSolid(#FFEF00).translateV(‘text position’),
+      ‘text position’: ‘u vec’.normalize().mul(5).rotate(‘α angle’.div(2)),
+      ‘α gfx’: '𝛼='.concat(‘α angle’.print(2)).filled(‘text alignment’, 0, 0).paintSolid(#FFEF00).translateV(‘text position’),
       ‘radius﹟124’: 8,
-      arc: 🏭.figureArc(4, ⟨0 0 1⟩, ⟨1 0 0⟩.angle(‘u﹟253’, ☒), ⟨1 0 0⟩.angle(‘v﹟255’, ☒), ‘α﹟262’.gt(0), ☒).stroke(#FFEF00, 1, ☑).under(‘α gfx’),
+      arc: 🏭.figureArc(4, ⟨0 0 1⟩, ⟨1 0 0⟩.angle(‘u vec’, ☒), ⟨1 0 0⟩.angle(‘v vec’, ☒), ‘α angle’.gt(0), ☒).stroke(yellow, 1, ☑).under(‘α gfx’),
       ‘scene﹟152’: ‘u gfx’.under(‘v gfx’).under(arc)
     },
     ‘draggable u’: Draggable.instance(⟨5 0 1⟩, Draggable↳shape, ‘Circle Constraint’),
-    ‘draggable v’: Draggable.instance(⟨0 -5 1⟩, Draggable↳shape, ‘Circle Constraint’),
-    ‘u﹟2’: ‘draggable u’.track(Draggable↳‘constrained position’).sub(⟨0 0 1⟩),
-    ‘v﹟4’: ‘draggable v’.track(Draggable↳‘constrained position’).sub(⟨0 0 1⟩),
-    ‘α﹟12’: ‘u﹟2’.«angle»(‘v﹟4’, ☒),
-    ‘scene﹟657’👁: Visualization.instance(‘u﹟2’, ‘v﹟4’, Visualization↳‘α﹟262’).over(‘draggable u’).over(‘draggable v’).over(bg)
+    ‘draggable v’: Draggable.instance(⟨0 -5 1⟩.rotate(animation), Draggable↳shape, ‘Circle Constraint’),
+    u: ‘draggable u’.track(Draggable↳‘constrained position’).sub(⟨0 0 1⟩),
+    v: ‘draggable v’.track(Draggable↳‘constrained position’).sub(⟨0 0 1⟩),
+    α: u.«angle»(v, ☒),
+    background: 𝕌.paintSolid(#000000).transparentize((0.5)),
+    ‘scene﹟657’👁: Visualization.instance(u, v, Visualization↳‘α angle’).over(‘draggable u’).over(‘draggable v’).over(background)
   }
 }
 ```
+
+
+
 
 # Semantics

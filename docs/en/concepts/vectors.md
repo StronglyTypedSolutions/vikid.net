@@ -2,6 +2,12 @@
 
 In ViKiD, points and vectors are elements of a [2D projective space](https://en.wikipedia.org/wiki/Projective_space) and use [homogeneous coordinates](https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/). 
 
+__Points__ are used to mark __places__ (positions, locations) in space. For example, to mark a city on a map. Points are drawn as a dot.
+
+__Vectors__ are __displacements__ (directions, oriented line segments). For example, `5 units up`, or the straight displacement from one city to another. Vectors are visualized as a __line segment__ (length and attitude) with an __arrow__ (direction).
+
+2-dimensonal homogenous points and vectors both have 3 coordinates: `⟨x,y,w⟩`. `w` stands for __weight__, and is always zero for vectors: displacements have __no fixed location__ in space (like wind blowing in a certain direction and force). For points, `w` is typically zero. You can see the the weight of a point as the mass of a particle. Adding a vector `v` to a point `p` with weight `w` will be move the point by `v / w`.
+
 See also these [slides made with ViKiD](https://vikid.net/share?key=A9hlmv7YyQ3JdATPUUC69SqHuANJUdgkGgVZte14hlKf0lJkRIdBSVKhLk3Tdt68j7IdK9686NUg7RvMdyEux9HccHjUyztW30DQxtkmVgizJ7vDNA6Yqhfb08LXls8xPvdqI4JLnXz3b8NUEhrk01cuQK170DW1ZT2pahxZ5xLkYxkMdDAZtJ4Q85gX2zNxETwraWI1bkcWKuqmKD7Gk35GADjm)
 
 # Example 1

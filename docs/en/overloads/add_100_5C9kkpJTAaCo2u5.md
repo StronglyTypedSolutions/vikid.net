@@ -9,7 +9,7 @@
 # Description
 The __vector__ `+` operator (`plus` function) [lifted on signals](/refman/concepts/pure_functions)
 
-[see also...](/refman/concepts/vectors)
+[more about vectors...](/refman/concepts/vectors)
 
 [related...](https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction)
 

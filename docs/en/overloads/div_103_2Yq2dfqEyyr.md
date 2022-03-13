@@ -12,7 +12,7 @@ The __number__ `/` operator (`divided by` function) [lifted on signals](/refman/
 # Example
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
-{ ‘⌂’: { a👁: 0.«div»(2) } }
+{ ‘⌂’: { a👁: 6.«div»(3) } }
 ```
 
 
