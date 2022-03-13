@@ -12,12 +12,12 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.ADD]: {
-    "𝕍": overloadDescription("plus", "vector", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Optellen_van_vectoren"),
+    "𝕍": overloadDescription("plus", "param", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Optellen_van_vectoren"),
     _: overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Addition"),
   },
   [MethodId.SUB]: {
     "ℝ": overloadDescription("min", "aantal", "https://wikikids.nl/Aftrekken"),
-    "𝕍": overloadDescription("min", "vector", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Verschil_van_vectoren"),
+    "𝕍": overloadDescription("min", "param", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Verschil_van_vectoren"),
   },
   [MethodId.MUL]: {
     "ℝ": overloadDescription("maal", "factor", "https://wikikids.nl/Vermenigvuldigen"),
@@ -214,7 +214,7 @@ export const methods = methodDescriptions({
 
   /** Transformation operators */
   [MethodId.TRANSLATE_V]: {
-    _: overloadDescription("verschoven", "vector", "https://nl.wikipedia.org/wiki/Translatie_(meetkunde)")
+    _: overloadDescription("verschoven", "param", "https://nl.wikipedia.org/wiki/Translatie_(meetkunde)")
   },
   [MethodId.TRANSLATE_X]: {
     _: overloadDescription("verschoven", "horizontaal", "https://nl.wikipedia.org/wiki/Translatie_(meetkunde)")
@@ -313,19 +313,19 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.DOT]: {
-    _: overloadDescription("inwendig product met", "vector", "https://nl.wikipedia.org/wiki/Inwendig_product")
+    _: overloadDescription("inwendig product met", "param", "https://nl.wikipedia.org/wiki/Inwendig_product")
   },
   [MethodId.DET]: {
-    _: overloadDescription("determinant met", "vector", "https://nl.wikipedia.org/wiki/Determinant")
+    _: overloadDescription("determinant met", "param", "https://nl.wikipedia.org/wiki/Determinant")
   },
   [MethodId.REFLECT]: {
     _: overloadDescription("gespiegeld om", "richting", "https://nl.wikipedia.org/wiki/Spiegeling_(meetkunde)")
   },
   [MethodId.ANGLE]: {
-    _: overloadDescription("angle between", "vector", "radians?", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Inwendig_product")
+    _: overloadDescription("angle between", "param", "radians?", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Inwendig_product")
   },
   [MethodId.TOWARDS]: {
-    _: overloadDescription("in de richting van", "vector")
+    _: overloadDescription("in de richting van", "param")
   },
   [MethodId.CARTESIAN]: {
     _: overloadDescription("to Euclidean point or vector", "https://nl.wikipedia.org/wiki/Projectieve_ruimte")
@@ -334,7 +334,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("normalized", "https://en.wikipedia.org/wiki/Unit_vector")
   },
   [MethodId.CROSS]: {
-    _: overloadDescription("3D uitwendig product met", "vector", "https://nl.wikipedia.org/wiki/Kruisproduct")
+    _: overloadDescription("3D uitwendig product met", "param", "https://nl.wikipedia.org/wiki/Kruisproduct")
   },
 
   [MethodId.BOUNDING_POINT]: {
@@ -428,7 +428,7 @@ export const methods = methodDescriptions({
   // [MethodId.NEW_BINDING]: "",
   [MethodId.VECTOR_2D]: {
     "ℝ²": overloadDescription("https://nl.wikipedia.org/wiki/Vector_(wiskunde)"),
-    _: overloadDescription("vector", "x coördinaat", "y coördinaat", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)")
+    _: overloadDescription("param", "x coördinaat", "y coördinaat", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)")
   },
   [MethodId.POINT_2D]: {
     "ℝ²": overloadDescription("https://nl.wikipedia.org/wiki/Punt_(wiskunde)"),

@@ -17,11 +17,11 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.ADD]: {
-    "𝕍": overloadDescription("plus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
+    "𝕍": overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
     _: overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Addition"),
   },
   [MethodId.SUB]: {
-    "𝕍": overloadDescription("minus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
+    "𝕍": overloadDescription("minus", "param", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
     _: overloadDescription("minus", "param", "https://en.wikipedia.org/wiki/Subtraction"),
   },
   [MethodId.MUL]: {
@@ -212,7 +212,7 @@ export const methods = methodDescriptions({
 
   /** Transformation operators */
   [MethodId.TRANSLATE_V]: {
-    _: overloadDescription("translated", "vector", "https://en.wikipedia.org/wiki/Translation_(geometry)")
+    _: overloadDescription("translated", "param", "https://en.wikipedia.org/wiki/Translation_(geometry)")
   },
   [MethodId.TRANSLATE_X]: {
     _: overloadDescription("translated", "horizontally", "https://en.wikipedia.org/wiki/Translation_(geometry)")
@@ -310,19 +310,19 @@ export const methods = methodDescriptions({
     _: overloadDescription("transformations after labeled graphic", "https://en.wikipedia.org/wiki/Graphics_pipeline#The_World_Coordinate_System")
   },
   [MethodId.DOT]: {
-    _: overloadDescription("dot product with", "vector", "https://en.wikipedia.org/wiki/Dot_product")
+    _: overloadDescription("dot product with", "param", "https://en.wikipedia.org/wiki/Dot_product")
   },
   [MethodId.DET]: {
-    _: overloadDescription("determinant with", "vector", "https://en.wikipedia.org/wiki/Determinant#2_%C3%97_2_matrices")
+    _: overloadDescription("determinant with", "param", "https://en.wikipedia.org/wiki/Determinant#2_%C3%97_2_matrices")
   },
   [MethodId.REFLECT]: {
     _: overloadDescription("reflected across", "direction", "https://en.wikipedia.org/wiki/Reflection_(mathematics)")
   },
   [MethodId.ANGLE]: {
-    _: overloadDescription("angle between", "vector", "radians?", "https://en.wikipedia.org/wiki/Dot_product#Geometric_definition")
+    _: overloadDescription("angle between", "param", "radians?", "https://en.wikipedia.org/wiki/Dot_product#Geometric_definition")
   },
   [MethodId.TOWARDS]: {
-    _: overloadDescription("in the direction of", "vector")
+    _: overloadDescription("in the direction of", "param")
   },
   [MethodId.CARTESIAN]: {
     _: overloadDescription("to Euclidean point or vector", "https://en.wikipedia.org/wiki/Projective_space")
@@ -331,7 +331,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("normalized", "https://en.wikipedia.org/wiki/Unit_vector")
   },
   [MethodId.CROSS]: {
-    _: overloadDescription("3D cross product product met", "vector", "https://en.wikipedia.org/wiki/Cross_product")
+    _: overloadDescription("3D cross product product met", "param", "https://en.wikipedia.org/wiki/Cross_product")
   },
 
   [MethodId.BOUNDING_POINT]: {
@@ -425,7 +425,7 @@ export const methods = methodDescriptions({
   // [MethodId.NEW_BINDING]: "",
   [MethodId.VECTOR_2D]: {
     "ℝ²": overloadDescription("https://en.wikipedia.org/wiki/Euclidean_vector"),
-    _: overloadDescription("vector", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector"),
+    _: overloadDescription("param", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector"),
   },
   [MethodId.POINT_2D]: {
     "ℝ²": overloadDescription("https://en.wikipedia.org/wiki/Point_(geometry)"),
