@@ -10,6 +10,9 @@ export const methods = methodDescriptions({
   [ReceiverMethodId.Track]: {
     _: overloadDescription("ontvang bericht", "spoor")
   },
+  [ReceiverMethodId.Deref]: {
+    _: overloadDescription("signaal verwijzing schakelaar", "asap")
+  },
 
   [MethodId.ADD]: {
     "𝕍": overloadDescription("plus", "param", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Optellen_van_vectoren"),

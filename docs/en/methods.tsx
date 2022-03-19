@@ -16,6 +16,10 @@ export const methods = methodDescriptions({
     _: overloadDescription("receive message", "track")
   },
 
+  [ReceiverMethodId.Deref]: {
+    _: overloadDescription("signal pointer switcher", "asap")
+  },
+
   [MethodId.ADD]: {
     "𝕍": overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
     _: overloadDescription("plus", "param", "https://en.wikipedia.org/wiki/Addition"),
