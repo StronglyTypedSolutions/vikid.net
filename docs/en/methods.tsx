@@ -198,13 +198,13 @@ export const methods = methodDescriptions({
     _: overloadDescription("as soon as possible", "maximum intra-frame updates")
   },
   [MethodId.MERGE]: {
-    _: overloadDescription("merged with", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("merged with", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.MERGE_LEFT]: {
-    _: overloadDescription("initialize and merge with", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("left-merged with", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.MERGE_BOTH]: {
-    _: overloadDescription("merged with", "simultaneous", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("merged with", "simultaneous", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.VSYNC]: {
     _: overloadDescription("when shown on screen", "active?")

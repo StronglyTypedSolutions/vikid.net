@@ -7,7 +7,7 @@
 ```
 
 # Description
-The __number__ `>=` operator (`is greater or equal to` function) [lifted on signals](/refman/concepts/pure_functions)
+The __number__ `≥` operator (`is greater or equal to` function) [lifted on signals](/refman/concepts/pure_functions)
 
 # Example
 ```vikid-script

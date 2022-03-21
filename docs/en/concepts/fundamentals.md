@@ -283,10 +283,10 @@ Here's the real ViKiD program, that raises the `kaboom` event every second:
 
 Let's look at this ViKiD program in detail:
 - Every `signal` is shown as a block.
-- When the `value` and `timestamp` of a `signal` __updates__, the little `#FF0 ⬤` light in the block __flashes__.
-- Some of these lights have a red `#F00 ◯` or purple `#F0F ◯` outline. This means the `signal` the block is refering to is __delayed__ by one `timestamp`, i.e. it will receive the `signal value` of the `previous frame`.
-  - purple `#F0F ◯` is a delayed reference explicitly made the user, by __long-pressing the chain icon__ when linking to a formula.
-  - red `#F00 ◯` delays are inserted automatically by ViKiD to avoid __infinite loops__. 
+- When the `value` and `timestamp` of a `signal` __updates__, the little `#FF0:⬤` light in the block __flashes__.
+- Some of these lights have a red `#F00:◯` or purple `#F0F:◯` outline. This means the `signal` the block is refering to is __delayed__ by one `timestamp`, i.e. it will receive the `signal value` of the `previous frame`.
+  - purple `#F0F:◯` is a delayed reference explicitly made the user, by __long-pressing the chain icon__ when linking to a formula.
+  - red `#F00:◯` delays are inserted automatically by ViKiD to avoid __infinite loops__. 
     - you often want to revise these, and make them explicit.
   - Many bindings like `score` refer to their own value, creating a __feedback loop__.
     - to avoid __infinite loops__, we have to sample their previous, delayed value. 

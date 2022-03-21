@@ -200,13 +200,13 @@ export const methods = methodDescriptions({
     _: overloadDescription("zo snel mogelijk", "maximum intra-frame updates")
   },
   [MethodId.MERGE]: {
-    _: overloadDescription("gecombineerd met", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("gecombineerd met", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.MERGE_LEFT]: {
-    _: overloadDescription("initialiseer en combineer met", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("links gecombineerd met", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.MERGE_BOTH]: {
-    _: overloadDescription("gecombineerd met", "simultaan", "updates", "http://reactivex.io/documentation/operators/merge.html")
+    _: overloadDescription("gecombineerd met", "simultaan", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
   [MethodId.VSYNC]: {
     _: overloadDescription("zodra getoond op het scherm", "active?")
