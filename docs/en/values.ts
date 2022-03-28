@@ -42,6 +42,8 @@ export const values = {
   sound: "sound source",
   audio: "audio node",
 
+  rigidBody: "rigid body",
+
   any: "value",
 
   receiver: "receiver",
@@ -72,4 +74,5 @@ export const primitives: Record<PrimitiveKind, string> = {
   [PrimitiveKind.SoundStream]: "streamed sound source",
   [PrimitiveKind.SoundBuffer]: "buffered sound source",
   [PrimitiveKind.Audio]: "audio node",
+  [PrimitiveKind.RigidBody]: "rigid body",
 }

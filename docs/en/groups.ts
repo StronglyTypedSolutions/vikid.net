@@ -12,6 +12,7 @@ export const groups: Record<GroupName, string> = {
   [GroupName.Factories]: "make",
   [GroupName.Lists]: "list",
   [GroupName.Audio]: "audio",
+  [GroupName.Physics]: "physics",
 
   /* Method groups */
   [GroupName.Others]: "others",
