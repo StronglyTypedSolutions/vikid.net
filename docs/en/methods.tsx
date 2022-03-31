@@ -757,4 +757,9 @@ export const methods = methodDescriptions({
   [MethodId.DYN_AS]: {
     _: overloadDescription("as value of type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
   },
+
+  [MethodId.TO_RIGID_BODY]: {
+    _: overloadDescription("to rigid body", "type [@<0 ⇒ static | @=0 ⇒ kinematic | @>0 ⇒ dynamic]", "position", "rotation", "linear velocity", "angular velocity", "active?", "https://box2d.org/documentation/index.html")
+  },
+
 });
