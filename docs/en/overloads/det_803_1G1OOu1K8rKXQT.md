@@ -96,15 +96,15 @@
 { 
   ‘⌂’: {* 
     Snap: { 
-      ‘﹟660’🔩: ⟨0 0 1⟩,
+      ‘tmp660﹟660’🔩: ⟨0 0 1⟩,
       ‘grid steps’: 5,
-      snapped: ‘﹟660’.sub(⟨0 0 1⟩).mul(‘grid steps’).round().div(‘grid steps’).add(⟨0 0 1⟩)
+      snapped: ‘tmp660﹟660’.sub(⟨0 0 1⟩).mul(‘grid steps’).round().div(‘grid steps’).add(⟨0 0 1⟩)
     },
     Draggable📡: { 
       ‘start pos’🔩: ⟨0 0 1⟩,
       shape🔩: ●.scale((0.5)).paintSolid(#08ACFF).transparentize((0.5)),
       ‘label﹟352’🔩: 'p',
-      Constraint🔩: { ‘﹟569’🔩: ⟨0 0 1⟩ },
+      Constraint🔩: { ‘tmp569﹟569’🔩: ⟨0 0 1⟩ },
       ‘text gfx’: ‘label﹟352’.filled(0, 0, 0).scale((0.625)),
       ‘mouse pos’: 🏭.mousePosition(☒, ☑),
       ‘mouse down?’: 🏭.mouseButton(0, ☑),
@@ -166,15 +166,15 @@
 { 
   ‘⌂’: {* 
     Snap: { 
-      ‘﹟660’🔩: ⟨0 0 1⟩,
+      ‘tmp660﹟660’🔩: ⟨0 0 1⟩,
       ‘grid steps’: 5,
-      snapped: ‘﹟660’.sub(⟨0 0 1⟩).mul(‘grid steps’).round().div(‘grid steps’).add(⟨0 0 1⟩)
+      snapped: ‘tmp660﹟660’.sub(⟨0 0 1⟩).mul(‘grid steps’).round().div(‘grid steps’).add(⟨0 0 1⟩)
     },
     Draggable📡: { 
       ‘start pos’🔩: ⟨0 0 1⟩,
       ‘shape﹟58’🔩: ●.scale((0.5)).paintSolid(#08ACFF).transparentize((0.5)),
       ‘label﹟352’🔩: 'p',
-      ‘Constraint﹟69’🔩: { ‘﹟569’🔩: ⟨0 0 1⟩ },
+      ‘Constraint﹟69’🔩: { ‘tmp569﹟569’🔩: ⟨0 0 1⟩ },
       ‘text gfx’: ‘label﹟352’.filled(0, 0, 0).scale((0.625)),
       ‘mouse pos’: 🏭.mousePosition(☒, ☑),
       ‘mouse down?’: 🏭.mouseButton(0, ☑),

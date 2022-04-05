@@ -62,7 +62,7 @@ The __vector__ `-` operator (`minus` function) [lifted on signals](/refman/conce
         ‘color﹟179’🔩: #000000,
         radius: scale.div(5),
         ‘label gfx﹟32’: ‘label﹟23’.filled(1, (-1), 0).translateX(radius).translateV(point),
-        ‘﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
+        ‘tmp65﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
       },
       Vector: { 
         vector🔩: ⟨4.25 0 0⟩,
@@ -104,7 +104,7 @@ The __vector__ `-` operator (`minus` function) [lifted on signals](/refman/conce
         ‘color﹟179’🔩: #000000,
         radius: scale.div(5),
         ‘label gfx﹟32’: ‘label﹟23’.filled(1, (-1), 0).translateX(radius).translateV(point),
-        ‘﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
+        ‘tmp65﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
       },
       Vector: { 
         vector🔩: ⟨4.25 0 0⟩,

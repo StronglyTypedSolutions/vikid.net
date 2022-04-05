@@ -39,7 +39,7 @@
       ‘start pos’🔩: ⟨0 0 1⟩,
       shape🔩: ●.scale((0.5)).paintSolid(#08ACFF).transparentize((0.5)),
       ‘label﹟598’🔩: 'p',
-      Constraint🔩: { ‘﹟569’🔩: ⟨0 0 1⟩ },
+      Constraint🔩: { ‘tmp569﹟569’🔩: ⟨0 0 1⟩ },
       ‘text gfx’: ‘label﹟598’.filled(0, 0, 0).scale((0.625)),
       ‘mouse pos’: 🏭.mousePosition(☒, ☑),
       ‘mouse down?’: 🏭.mouseButton(0, ☑),

@@ -61,7 +61,7 @@ The __vector__ `+` operator (`plus` function) [lifted on signals](/refman/concep
         ‘color﹟179’🔩: #000000,
         radius: scale.div(5),
         ‘label gfx﹟32’: ‘label﹟23’.filled(1, (-1), 0).translateX(radius).translateV(point),
-        ‘﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
+        ‘tmp65﹟65’: point.filled(scale).under(‘label gfx﹟32’).paintSolid(‘color﹟179’)
       },
       Vector: { 
         vector🔩: ⟨4.25 0 0⟩,
@@ -77,7 +77,7 @@ The __vector__ `+` operator (`plus` function) [lifted on signals](/refman/concep
       ‘q gfx’: Point.instance(q, 'q = p + v', Point↳scale, #FFF500),
       ‘v gfx’: Vector.instance(v, 'v', #FF4C4C, Vector↳thickness, p),
       bg: 𝕌.paintSolid(#000000),
-      ‘﹟34’: bg.under(‘p gfx’).under(‘q gfx’).under(‘v gfx’)
+      ‘tmp34﹟34’: bg.under(‘p gfx’).under(‘q gfx’).under(‘v gfx’)
     }
   }
 }
@@ -96,22 +96,22 @@ The __vector__ `+` operator (`plus` function) [lifted on signals](/refman/concep
     visualization👁: { 
       Point: { 
         point🔩: ⟨0 0 1⟩,
-        ‘﹟23’🔩: 'p',
+        ‘tmp23﹟23’🔩: 'p',
         scale🔩: 2,
-        ‘﹟179’🔩: #000000,
+        ‘tmp179﹟179’🔩: #000000,
         radius: scale.div(5),
-        ‘﹟32’: ‘﹟23’.filled(1, (-1), 0).translateX(radius).translateV(point),
-        ‘﹟65’: point.filled(scale).under(‘﹟32’).paintSolid(‘﹟179’)
+        ‘tmp32﹟32’: ‘tmp23﹟23’.filled(1, (-1), 0).translateX(radius).translateV(point),
+        ‘tmp65﹟65’: point.filled(scale).under(‘tmp32﹟32’).paintSolid(‘tmp179﹟179’)
       },
       Vector: { 
         vector🔩: ⟨4.25 0 0⟩,
-        ‘﹟60’🔩: 'a',
-        ‘﹟62’🔩: #FFFFFF,
+        ‘tmp60﹟60’🔩: 'a',
+        ‘tmp62﹟62’🔩: #FFFFFF,
         thickness🔩: 2,
         offset🔩: ⟨0 0 0⟩,
-        ‘label shape’: ‘﹟60’.filled(0, 0, 0).paintSolid(#000000),
-        ‘﹟68’: ■.transparentize((0.5)).scale((0.5)).scaleX(‘label shape’.boundingWidth().add((0.5))).paintSolid(‘﹟62’).under(‘label shape’),
-        graphic: vector.filled(thickness).paintSolid(‘﹟62’).under(‘﹟68’.translateV(vector.div(2))),
+        ‘label shape’: ‘tmp60﹟60’.filled(0, 0, 0).paintSolid(#000000),
+        ‘tmp68﹟68’: ■.transparentize((0.5)).scale((0.5)).scaleX(‘label shape’.boundingWidth().add((0.5))).paintSolid(‘tmp62﹟62’).under(‘label shape’),
+        graphic: vector.filled(thickness).paintSolid(‘tmp62﹟62’).under(‘tmp68﹟68’.translateV(vector.div(2))),
         result: graphic.translateV(offset)
       },
       ‘p gfx’: Point.instance(p, 'p', Point↳scale, #26BF26),
