@@ -13,7 +13,7 @@
   - More generally, the sign is __positive__ when this is in the __same direction__ as rotating the `X-axis` to the `Y-axis`.
      - This is counter-clockwise in ViKiD and math, but is clockwise in most 2D computer graphics software.
 - The `determinant` is `zero` when the `input` and `param` are __parallel__.
-- The `determinant` is __anti-commutative__, so `a.det(b) == -b.dot(a)`,
+- The `determinant` is __anti-commutative__, so `a.det(b) == -b.det(a)`,
 - This is also equal to the `sine` of the angle between the vectors multiplied by the `lengths` of the vectors
 
 > Currently this function treats points `⟨x,y,w⟩` as vectors `⟨x,y,0⟩`, so it completely ignores the weight. _But this behavior can change, so you should only pass vectors_
