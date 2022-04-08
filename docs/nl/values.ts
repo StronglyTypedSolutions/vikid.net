@@ -41,7 +41,9 @@ export const values: ValueDescription = {
   sound: "geluidsbron",
   audio: "audio node",
 
-  rigidBody: "star lichaam",
+  void: "void",
+  physicsWorld: "fysica wereld",
+  physicsBody: "star lichaam",
 
   any: "waarde",
 
@@ -73,6 +75,4 @@ export const primitives: Record<PrimitiveKind, string> = {
   [PrimitiveKind.SoundStream]: "gestreamde geluidsbron",
   [PrimitiveKind.SoundBuffer]: "gebufferde geluidsbron",
   [PrimitiveKind.Audio]: "audio node",
-  [PrimitiveKind.Fixture]: "fixture",
-  [PrimitiveKind.RigidBody]: "rigid body",
 }

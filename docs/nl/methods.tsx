@@ -766,4 +766,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("als waarde van type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
   },
 
+  [MethodId.PHYSICS_WORLD]: {
+    _: overloadDescription("fysica wereld", "zwaartekracht", "oorsprong", "actief?", "https://box2d.org/documentation/index.html")
+  },
 });
