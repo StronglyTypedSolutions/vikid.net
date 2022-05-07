@@ -759,10 +759,10 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.PHYSICS_WORLD]: {
-    _: overloadDescription("physics world", "gravity", "origin", "active?", "https://box2d.org/documentation/index.html")
+    _: overloadDescription("physics world", "gravity", "active?", "https://rapier.rs/docs/user_guides/javascript/getting_started_js")
   },
   // [MethodId.TO_RIGID_BODY]: {
-  //   _: overloadDescription("to rigid body", "type [@<0 ⇒ static | @=0 ⇒ kinematic | @>0 ⇒ dynamic]", "position", "rotation", "linear velocity", "angular velocity", "active?", "https://box2d.org/documentation/index.html")
+  //   _: overloadDescription("to rigid body", "type [@<0 ⇒ static | @=0 ⇒ kinematic | @>0 ⇒ dynamic]", "position", "rotation", "linear velocity", "angular velocity", "active?", "https://rapier.rs/docs/user_guides/javascript/getting_started_js")
   // },
 
 

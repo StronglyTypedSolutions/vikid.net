@@ -767,6 +767,6 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.PHYSICS_WORLD]: {
-    _: overloadDescription("fysica wereld", "zwaartekracht", "oorsprong", "actief?", "https://box2d.org/documentation/index.html")
+    _: overloadDescription("fysica wereld", "zwaartekracht", "actief?", "https://rapier.rs/docs/user_guides/javascript/getting_started_js")
   },
 });
