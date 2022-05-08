@@ -104,6 +104,29 @@ Reactive behavior is often easier to understand using [marble diagrams](https://
 }
 ```
 
+# Example 1
+- the circle is attached to the mouse position
+- but the **initial mouse position** is pending until the user clicks
+  - this is a limitation of the internet browser
+- using the `merge` operator, the pending signal is initialized with text and graphics
+- 
+
+```vikid-script
+𝕍i𝕂i𝔻 v0.7-818-g0a48cbc3 s23
+{ 
+  ‘⌂’: {* 
+    ‘mouse position’: 🏭.mousePosition(☒, ☑),
+    circle: ●.scale((2.75)),
+    ‘circle drag’: circle.translateV(‘mouse position’),
+    ‘initial text’: 'Click
+and
+Drag'.filled(0, 0, 0).paintSolid(#000000).over(circle),
+    scene👁: ‘circle drag’.«merge»(‘initial text’)
+  }
+}
+```
+
+
 # Semantics
 
 ```pseudo
