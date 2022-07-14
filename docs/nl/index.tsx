@@ -70,6 +70,7 @@ export const nl: Translations = {
   account_conflict_email: "😢 Oops, er lijkt al een account te bestaan met dit e-mail adres.\n\n✏️ ViKiD gaat proberen hiermee in te loggen.",
   account_conflict_user_name: "😢 Oops, er lijkt al een account te bestaan met deze bijnaam.\n\n✏️ Probeer een andere bijnaam te verzinnen!.",
   account_conflict_user_name_short: "Deze bijnaam is al in gebruik.",
+  account_conflict_license_key: "😢 Oops, een andere account gebruikt deze licentie sleutel al!",
 
   no_clipboard_read: `😢 Je browser ondersteunt geen klembord.\n✏️ Plak je tekst hieronder aub.`,
   script_load_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet geladen worden!`,
@@ -90,6 +91,9 @@ export const nl: Translations = {
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nHet bestand is te groot om te uploaden!\n\nDe maximum grootte is ${mb} megabyte.`,
   upload_premium_members_only: `🥇 Uploaden naar de ViKiD cloud vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
   premium_members_only_title: `🥇 Enkel voor premium leden`,
+  waiting_premium_member_sale: <p><h1>🥇 Even geduld, we verwerken je premium lidmaatschap...</h1><br /><br /><span>⏳ Dit kan enkele minuten duren.</span></p>,
+  premium_member_sale_successful: <p><h1>🥇 Je nu een Premium ViKiD lid!</h1><br /><br /><span>😍 Hartelijk dank van het ViKiD team, je bent geweldig!</span></p>,
+  premium_member_sale_header: "Premium lidmaatschap",
 
   cookies_ViKiD_keeps: "ViKiD bewaart",
   cookies_on_this_pc: "op deze computer.",
@@ -130,6 +134,8 @@ export const nl: Translations = {
   account_country: "land...",
   account_year_of_birth: "geboortejaar...",
   account_email: "e-mail...",
+  account_license_key: "premium lidmaatschap licentie sleutel...",
+  account_license_key_tip: "Zie email als je een premium lidmaatschap gekocht hebt.",
   register_password: "kies jouw paswoord...",
   register_user_name_invalid: "😕 Bijnaam mag alleen letters en nummers bevatten",
   register_confirm_password: "bevestig jouw paswoord...",
