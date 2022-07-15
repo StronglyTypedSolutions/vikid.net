@@ -58,8 +58,8 @@ export const en = {
 
   generic_error: `😢 Oops!\n\n🐞 Something went wrong.\n\n↺ Please try again.`,
 
-  generic_api_error: "😢 Oops!\n\n🐞 The ViKiD server responsed with an error.\n\n↺ Please try again..",
-  reload_api_error: "😢 Oops!\n\n🐞 The ViKiD server responsed with an error.\n\n↺ Please reload the web-page.",
+  generic_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↺ Please try again..",
+  reload_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↺ Please reload the web-page.",
   uncaught_fatal_error: "😢 Oops!\n\n🐞 Something unexpected happened!\n\n↺ Please reload the web-page and try again.",
   uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Something unexpected happened! ↺ Please reload the web-page and try again.\n\n⛑️ If a crash file was downloaded, then you can ⮹ import this to continue your work.",
 

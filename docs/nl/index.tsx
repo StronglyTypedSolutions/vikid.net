@@ -58,8 +58,8 @@ export const nl: Translations = {
 
   generic_error: `😢 Oops!\n\n🐞 Er liep iets mis\n\n↺ Probeer het nog eens.`,
 
-  generic_api_error: "😢 Oops!\n\n🐞 De ViKiD server gaf een fout terug.\n\n↺ Probeer het nog eens.",
-  reload_api_error: "😢 Oops!\n\n🐞 De ViKiD server gaf een fout terug.\n\n↺ Herlaad de web-pagina.",
+  generic_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↺ Probeer het nog eens.",
+  reload_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↺ Herlaad de web-pagina.",
   uncaught_fatal_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis!\n\n↺ Herlaad de web-pagina en probeer het nog eens.",
   uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis! ↺ Herlaad de web-pagina en probeer het nog eens.\n\n⛑️ Als er een crash bestand gedownload is, kan je dit ⮹ importeren en verder werken.",
 
