@@ -91,7 +91,7 @@ export const nl: Translations = {
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nHet bestand is te groot om te uploaden!\n\nDe maximum grootte is ${mb} megabyte.`,
   upload_premium_members_only: `🥇 Uploaden naar de ViKiD cloud vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
   premium_members_only_title: `🥇 Enkel voor premium leden`,
-  waiting_premium_member_sale: <p><h1>🥇 Even geduld, we verwerken je premium lidmaatschap...</h1><br /><br /><span>⏳ Dit kan enkele minuten duren.</span></p>,
+  waiting_premium_member_sale: <div><h1>🥇 Even geduld, we verwerken je premium lidmaatschap...</h1><br /><h2>⏳ Dit kan enkele minuten duren.</h2><br /><em>🛈 Je kan ook de licentiesleutel uit de aankoop-email plakken in je account page.</em></div>,
   premium_member_sale_successful: <p><h1>🥇 Je nu een Premium ViKiD lid!</h1><br /><br /><span>😍 Hartelijk dank van het ViKiD team, je bent geweldig!</span></p>,
   premium_member_sale_header: "Premium lidmaatschap",
 
