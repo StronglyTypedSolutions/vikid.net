@@ -1,4 +1,4 @@
-import { Geometry } from "values/graphics";
+import { Geometry } from "@vikid-core/engine/values/graphics";
 import { PrimitiveKind } from "language";
 import { ValueDescription } from "../types";
 
