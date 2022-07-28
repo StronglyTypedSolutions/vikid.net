@@ -99,6 +99,9 @@ export const en = {
   cookies_thanks_to_cookies: "Thanks to cookies we can keep you signed in, remember your game progress, personalise your experience, and improve ViKiD. Sign-in cookies are neccessary.",
   cookies_we_value_privacy: "We respect your privacy and protect your data.",
 
+  shop_coming_soon: <h1>Coming soon!</h1>,
+  shop_redirect: "Redirecting to shop...",
+
   consent_agree_all_cookies: "Accept all neccessary and optional cookies",
   consent_agree_selected_cookies: "Accept all neccessary and selected cookies",
   consent_agree_telemetry_cookies: "Accept analytics cookies?",

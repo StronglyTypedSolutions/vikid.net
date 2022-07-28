@@ -95,6 +95,9 @@ export const nl: Translations = {
   premium_member_sale_successful: <p><h1>🥇 Je nu een Premium ViKiD lid!</h1><br /><br /><span>😍 Hartelijk dank van het ViKiD team, je bent geweldig!</span></p>,
   premium_member_sale_header: "Premium lidmaatschap",
 
+  shop_coming_soon: <h1>Binnenkort beschikbaar!</h1>,
+  shop_redirect: "We verwijzen je door naar de winkelpagina...",
+
   cookies_ViKiD_keeps: "ViKiD bewaart",
   cookies_on_this_pc: "op deze computer.",
   cookies_thanks_to_cookies: "Dankzij cookies kan je ingelogd blijven, onthouden we jouw vooruitgang in het spel, personalizeren en verbeteren we ViKiD. Cookies om in te loggen zijn noodzakelijk.",
