@@ -1,6 +1,6 @@
 import { Let } from "language";
 import { Language } from "locale";
-import config from "../../../config";
+import appConfig from "../../../config";
 import { groups } from "./groups";
 import { methods } from "./methods";
 import { puzzles } from "./puzzles";
@@ -175,8 +175,8 @@ export const en = {
   footer_contact: "Contact",
 
   resolution_not_supported: "😕 Resolution not supported",
-  screen_size_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${config.minLargestViewSize}×${config.minSmallestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
-  screen_width_too_small: (width: number) => `📺 Your screen has a CSS width of ${width};\nthis too small for ViKiD's minimum (${config.minReadingViewWidth}).\n\n↺ Try rotating your device, 🔍 zooming out the webpage,\n🖥 enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
+  screen_size_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${appConfig.minLargestViewSize}×${appConfig.minSmallestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
+  screen_width_too_small: (width: number) => `📺 Your screen has a CSS width of ${width};\nthis too small for ViKiD's minimum (${appConfig.minReadingViewWidth}).\n\n↺ Try rotating your device, 🔍 zooming out the webpage,\n🖥 enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
 
   portrait_not_supported: "😕 Portrait mode not supported",
   landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",

@@ -6,7 +6,7 @@ import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import type { Translations } from "../types";
-import config from "../../../config";
+import appConfig from "../../../config";
 
 export const nl: Translations = {
   language: "nl" as Language,
@@ -176,8 +176,8 @@ export const nl: Translations = {
   footer_contact: "Contact",
 
   resolution_not_supported: "😕 Resolutie niet ondersteund",
-  screen_size_too_small: (width: number, height: number) => `📺 Je scherm heeft een resolutie van ${width}×${height};\ndit is te klein voor ViKiD's minimum (${config.minLargestViewSize}×${config.minSmallestViewSize}).\n\n🔍 Probeer de webpagina uit te zoomen,\n \n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
-  screen_width_too_small: (width: number) => `📺 Je scherm heeft een CSS breedte van ${width};\ndit is te klein voor ViKiD's minimum (${config.minReadingViewWidth}}).\n\n↺ Probeer je scherm te draaienm 🔍 de webpagina uit te zoomen,\n\n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
+  screen_size_too_small: (width: number, height: number) => `📺 Je scherm heeft een resolutie van ${width}×${height};\ndit is te klein voor ViKiD's minimum (${appConfig.minLargestViewSize}×${appConfig.minSmallestViewSize}).\n\n🔍 Probeer de webpagina uit te zoomen,\n \n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
+  screen_width_too_small: (width: number) => `📺 Je scherm heeft een CSS breedte van ${width};\ndit is te klein voor ViKiD's minimum (${appConfig.minReadingViewWidth}}).\n\n↺ Probeer je scherm te draaienm 🔍 de webpagina uit te zoomen,\n\n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
 
 
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
