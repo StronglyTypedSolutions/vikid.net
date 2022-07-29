@@ -1,4 +1,4 @@
-import { GroupName } from "language";
+import { GroupName } from "@vikid-core/language";
 
 export const groups: Record<GroupName, string> = {
   [GroupName.Graphics]: "vorm",

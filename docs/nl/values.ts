@@ -1,5 +1,5 @@
-import { Geometry } from "values/graphics";
-import { PrimitiveKind } from "language";
+import { Geometry } from "@vikid-core/values/graphics";
+import { PrimitiveKind } from "@vikid-core/language";
 import { ValueDescription } from "../types";
 
 export const values: ValueDescription = {

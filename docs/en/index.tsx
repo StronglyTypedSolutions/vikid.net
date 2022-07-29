@@ -1,6 +1,6 @@
-import { Let } from "language";
+import { Let } from "@vikid-core/language";
 import { Language } from "locale";
-import config from "../../../config";
+import config from "@vikid-core/config";
 import { groups } from "./groups";
 import { methods } from "./methods";
 import { puzzles } from "./puzzles";

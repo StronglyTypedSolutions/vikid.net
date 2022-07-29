@@ -1,4 +1,4 @@
-import { Let } from "language";
+import { Let } from "@vikid-core/language";
 import { Language } from "locale";
 import { groups } from "./groups";
 import { methods } from "./methods";
@@ -6,7 +6,7 @@ import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import type { Translations } from "../types";
-import config from "../../../config";
+import config from "@vikid-core/config";
 
 export const nl: Translations = {
   language: "nl" as Language,

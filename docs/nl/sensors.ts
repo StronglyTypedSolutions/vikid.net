@@ -1,5 +1,5 @@
 import { SensorDescription } from "locale/sensorDescription";
-import { SensorId } from "language";
+import { SensorId } from "@vikid-core/language";
 
 export const sensors: SensorDescription = {
   [SensorId.Time]: "klok",

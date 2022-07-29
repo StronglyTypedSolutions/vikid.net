@@ -1,4 +1,4 @@
-import { MethodId, AdjusterMethodId, ReceiverMethodId } from "language";
+import { MethodId, AdjusterMethodId, ReceiverMethodId } from "@vikid-core/language";
 import { methodDescriptions, adjusterDescription, overloadDescription } from "locale/MethodDescription";
 
 /**
