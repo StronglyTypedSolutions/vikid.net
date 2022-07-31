@@ -1,4 +1,4 @@
-import { Let } from "@vikid-core/language";
+import { Let } from "@vikid-mod/language";
 import { Language } from "locale";
 import { groups } from "./groups";
 import { methods } from "./methods";

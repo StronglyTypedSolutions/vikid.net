@@ -1,5 +1,5 @@
 import { Geometry } from "@vikid-core/values/graphics";
-import { PrimitiveKind } from "@vikid-core/language";
+import { PrimitiveKind } from "@vikid-mod/language";
 
 export type ValueDescription = typeof values;
 

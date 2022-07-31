@@ -1,4 +1,4 @@
-import { MethodId, AdjusterMethodId, ReceiverMethodId } from "@vikid-core/language";
+import { MethodId, AdjusterMethodId, ReceiverMethodId } from "@vikid-mod/language";
 import { methodDescriptions, adjusterDescription, overloadDescription } from "locale/MethodDescription";
 
 export const methods = methodDescriptions({
