@@ -80,6 +80,7 @@ export const en = {
   script_delete_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be deleted!`,
   script_restore_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be restored!`,
   confirm_delete: (title: string) => `❓ Are you sure you want to delete program '${title}'?\n\n⚠️ After a few days this cannot be undone anymore!`,
+  agree_delete: "Yes, delete it",
   confirm_delete_template: (title: string) => `❓ Are you sure you want to delete template '${title}'?\n\n❗ Programs using the template will break!\n\n⚠️ After a few days this cannot be undone anymore!`,
   templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template'!`,
   request_template_tags: `🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n`,

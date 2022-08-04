@@ -81,6 +81,7 @@ export const nl: Translations = {
   script_restore_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet terug toegevoegd worden!`,
   confirm_delete: (title: string) => `❓ Ben je zeker dat je programma '${title}' wil verwijderen?\n\n⚠️ Na een paar dagen kan je dit niet meer ongedaan maken!`,
   confirm_delete_template: (title: string) => `❓ Ben je zeker dat je sjabloon '${title}' wil verwijderen?\n\n⚠️ Na een paar dagen kan je dit niet meer ongedaan maken!`,
+  agree_delete: "Ja, verwijder het",
   templatization_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet omgezet worden naar een sjabloon!`,
   request_template_tags: `🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n`,
   edit_template: `🔩 Pas de tags van je sjabloon aan.`,
