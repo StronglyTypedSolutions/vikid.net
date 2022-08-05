@@ -6,7 +6,7 @@ import { methods } from "./methods";
 import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
-import { FeatureKey } from "../types";
+import { FeatureKey, Features } from "../types";
 
 
 
@@ -16,8 +16,10 @@ export const en = {
   features: {
     upload: "Uploading assets to the ViKiD cloud",
     rewind: "Time-travel debugging",
+    templatize: "Creating program templates",
     generic: "This function",
-  },
+    video: "Exporting video"
+  } as Features,
 
   methods,
   values,
@@ -194,6 +196,19 @@ export const en = {
   portrait_not_supported: "😕 Portrait mode not supported",
   landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",
 
+  video_exporter_title: "🎥 Video exporter",
+  video_exporter_width: "Frame width",
+  video_exporter_height: "Frame height",
+  video_exporter_fps: "Frame rate",
+  video_exporter_duration: "Video duration",
+  start: "Start!",
+  abort: "Abort...",
+  pixels: "pixels",
+  seconds: "seconds",
+  per_second: "/second",
+  gif_quality: "GIF quality",
+  gif_quality_range: "0...100",
+
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
   extract_redundant_lets: (lets: string) => `🐞 Error in puzzle program.\n\nThe formulas ${lets} are not used in the end-result.\n\nUnused formulas are not allowed in a puzzle.\n\nUse the 🎁 function to mark formulas as pure examples,\nor delete the formulas.`,
@@ -284,6 +299,9 @@ export const en = {
   download_script: "Download this program to your device",
   upload_script: "Upload a program from your device",
   share_script: "Put a shareable link on your clipboard",
+
+  export_video: "Export video (GIF/WebM/MP4)",
+
   warn_unsaved: {
     message: "⚠️ You modified this program without saving it.\n\n❗ If you leave this page, you will lose your changes!\n",
     yes: "Leave",

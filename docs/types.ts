@@ -12,7 +12,9 @@ export type TranslationKey = keyof Translations;
 export interface Features {
   readonly upload: string;
   readonly rewind: string;
+  readonly templatize: string;
   readonly generic: string;
+  readonly video: string;
 }
 
 export type FeatureKey = keyof Features;

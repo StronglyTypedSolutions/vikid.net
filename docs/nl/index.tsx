@@ -5,7 +5,7 @@ import { methods } from "./methods";
 import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
-import type { FeatureKey, Translations } from "../types";
+import type { FeatureKey, Features, Translations } from "../types";
 import config from "@vikid-core/config";
 
 export const nl: Translations = {
@@ -14,8 +14,10 @@ export const nl: Translations = {
   features: {
     upload: "Assets uploaden  naar de ViKiD cloud",
     rewind: "Time-travel debugging",
+    templatize: "Programma sjablonen maken",
     generic: "Deze functie",
-  },
+    video: "Video exporteren"
+  } as Features,
 
   methods,
   values,
@@ -193,6 +195,19 @@ export const nl: Translations = {
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
   landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
 
+  video_exporter_title: "🎥 Video exporter",
+  video_exporter_width: "Beeld breedte",
+  video_exporter_height: "Beeld hoogte",
+  video_exporter_fps: "Videobeeldsnelheid",
+  video_exporter_duration: "Video lengte",
+  start: "Start!",
+  abort: "Onderbreek...",
+  pixels: "pixels",
+  seconds: "seconds",
+  per_second: "/seconde",
+  gif_quality: "GIF kwaliteit",
+  gif_quality_range: "0...100",
+
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\nFoute volgorde van formules.\n\nDe formule '${referencedLetLabel}' moet vóór de formule '${currentLetLabel}' staan zijn in een puzzel`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nDe derde parameter van de functie ∞\nmoet een verwijzing zijn naar een formule in hetzelfde sub-programma`,
   extract_redundant_lets: (lets: string) => `🐞 Fout in puzzel programma!\n\nDe formules ${lets} worden niet gebruikt in het eindresultaat.\n\nDit is niet toegelaten in een puzzel.\n\nGebruik de functie 🎁 om een formule te markeren als een voorbeeld,\nof verwijder de formules.`,
@@ -260,6 +275,8 @@ export const nl: Translations = {
   export_puzzle: "Exporteer als puzzel",
   import_puzzle: "Importeer een puzzel",
   play_as_puzzle: "Speel als puzzel",
+
+  export_video: "Exporteer video (GIF/WebM/MP4)",
 
   list_plain: "Pas de functie toe op de lijst zelf",
   list_map: "Pas de functie toe op elk element in de lijst (map)",
