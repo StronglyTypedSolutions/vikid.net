@@ -6,9 +6,18 @@ import { methods } from "./methods";
 import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
+import { FeatureKey } from "../types";
+
+
 
 export const en = {
   language: "en" as Language,
+
+  features: {
+    upload: "Uploading assets to the ViKiD cloud",
+    rewind: "Time-travel debugging",
+    generic: "This function",
+  },
 
   methods,
   values,
@@ -90,8 +99,7 @@ export const en = {
   script_moved_to_programs: <p><span>Moved to</span><br /><br /><b>programs</b></p>,
   upload_content_generic_error: `😢 Oops!\n\nThe file upload failed.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nThe file is too large to be uploaded!\n\nThe maximum allowed size is ${mb} megabyte.`,
-  generic_premium_members_only: `🛈 This feature requires a premium membership.\n\n🛒 Do you want to visit our e-shop for more info?`,
-  upload_premium_members_only: `🛈 Uploading to the ViKiD cloud requires a premium membership.\n\n🛒 Do you want to visit our e-shop for more info?`,
+  feature_premium_members_only: (feature: FeatureKey) => `🛈 ${en.features[feature]} requires a premium membership.\n\n🛒 Do you want to visit our e-shop for more info?`,
   premium_members_only_title: `🥇 Premium members only`,
   waiting_premium_member_sale: <div><h1>🥇 Waiting for your subscription to be processed...</h1><br /><h2>⏳ This can take a few minutes.</h2><br /><em>🛈 You can also paste the license key from the order confirmation email in your account page.</em></div>,
   premium_member_sale_successful: <p><h1>🥇 You are now a Premium Member!</h1><br /><br /><span>😍 Warm thanks from the ViKiD team, you are amazing!</span></p>,

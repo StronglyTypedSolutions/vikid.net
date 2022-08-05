@@ -5,11 +5,17 @@ import { methods } from "./methods";
 import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
-import type { Translations } from "../types";
+import type { FeatureKey, Translations } from "../types";
 import config from "@vikid-core/config";
 
 export const nl: Translations = {
   language: "nl" as Language,
+
+  features: {
+    upload: "Assets uploaden  naar de ViKiD cloud",
+    rewind: "Time-travel debugging",
+    generic: "Deze functie",
+  },
 
   methods,
   values,
@@ -90,8 +96,7 @@ export const nl: Translations = {
   script_moved_to_programs: <p><span>Verplaatst naar</span><br /><br /><b>Programma's</b></p>,
   upload_content_generic_error: `😢 Oops!\n\nHet bestand kon niet geüpload worden.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nHet bestand is te groot om te uploaden!\n\nDe maximum grootte is ${mb} megabyte.`,
-  generic_premium_members_only: `🥇 Deze functie vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
-  upload_premium_members_only: `🥇 Uploaden naar de ViKiD cloud vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
+  feature_premium_members_only: (feature: FeatureKey) => `🛈 ${nl.features[feature]} vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,
   premium_members_only_title: `🥇 Enkel voor premium leden`,
   waiting_premium_member_sale: <div><h1>🥇 Even geduld, we verwerken je premium lidmaatschap...</h1><br /><h2>⏳ Dit kan enkele minuten duren.</h2><br /><em>🛈 Je kan ook de licentiesleutel uit de orderbevestiging email plakken in je account page.</em></div>,
   premium_member_sale_successful: <p><h1>🥇 Je nu een Premium ViKiD lid!</h1><br /><br /><span>😍 Hartelijk dank van het ViKiD team, je bent geweldig!</span></p>,

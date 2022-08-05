@@ -8,3 +8,11 @@ export type ValueDescription = typeof values;
 export type Translations = typeof en;
 
 export type TranslationKey = keyof Translations;
+
+export interface Features {
+  readonly upload: string;
+  readonly rewind: string;
+  readonly generic: string;
+}
+
+export type FeatureKey = keyof Features;
