@@ -19,7 +19,8 @@ export const en = {
     templatize: "Creating program templates",
     generic: "This function",
     video: "Exporting videos",
-    image: "Exporting images"
+    image: "Exporting images",
+    html: "Exporting HTML pages",
   } as Features,
 
   methods,
@@ -309,6 +310,7 @@ export const en = {
 
   export_video: "Export video (GIF/WebM/MP4)",
   export_image: "Export image (JPEG/WebP/PNG)",
+  export_html: "Export HTML page (JS + canvas)",
 
   warn_unsaved: {
     message: "⚠️ You modified this program without saving it.\n\n❗ If you leave this page, you will lose your changes!\n",

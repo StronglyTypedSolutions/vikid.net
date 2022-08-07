@@ -17,7 +17,8 @@ export const nl: Translations = {
     templatize: "Programma sjablonen maken",
     generic: "Deze functie",
     video: "Videos exporteren",
-    image: "Afbeelding exporteren"
+    image: "Afbeeldingen exporteren",
+    html: "HTML paginas exporteren",
   } as Features,
 
   methods,
@@ -286,6 +287,7 @@ export const nl: Translations = {
 
   export_video: "Exporteer video (GIF/WebM/MP4)",
   export_image: "Exporteer afbeelding (JPEG/WebP/PNG)",
+  export_html: "Exporteer HTML pagina (JS + canvas)",
 
   list_plain: "Pas de functie toe op de lijst zelf",
   list_map: "Pas de functie toe op elk element in de lijst (map)",
