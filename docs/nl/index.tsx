@@ -16,7 +16,8 @@ export const nl: Translations = {
     rewind: "Time-travel debugging",
     templatize: "Programma sjablonen maken",
     generic: "Deze functie",
-    video: "Video exporteren"
+    video: "Videos exporteren",
+    image: "Afbeelding exporteren"
   } as Features,
 
   methods,
@@ -195,18 +196,25 @@ export const nl: Translations = {
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
   landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
 
-  video_exporter_title: "🎥 Video exporter",
-  video_exporter_width: "Beeld breedte",
-  video_exporter_height: "Beeld hoogte",
-  video_exporter_fps: "Videobeeldsnelheid",
-  video_exporter_duration: "Video lengte",
+  media_exporter_title: "🎥 Media exporter",
+  media_exporter_file: "Bestandsnaam",
+  media_exporter_no_file: "(geen)",
+  media_exporter_width: "Beeld breedte",
+  media_exporter_height: "Beeld hoogte",
+  video_fps: "Videobeeldsnelheid",
+  video_duration: "Video lengte",
+  video_bit_rate: "Video bit-rate",
+  video_bit_rate_unit: "megabits/seconde",
+  video_codecs: "Video codecs",
+  webm_precise: "Gebruik frame accurate software codec?",
+
   start: "Start!",
   abort: "Onderbreek...",
+  done: "Klaar",
   pixels: "pixels",
   seconds: "seconds",
-  per_second: "/seconde",
-  gif_quality: "GIF kwaliteit",
-  gif_quality_range: "0...100",
+  per_second: "per seconde",
+  image_quality: "GIF kwaliteit",
 
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\nFoute volgorde van formules.\n\nDe formule '${referencedLetLabel}' moet vóór de formule '${currentLetLabel}' staan zijn in een puzzel`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nDe derde parameter van de functie ∞\nmoet een verwijzing zijn naar een formule in hetzelfde sub-programma`,
@@ -277,6 +285,7 @@ export const nl: Translations = {
   play_as_puzzle: "Speel als puzzel",
 
   export_video: "Exporteer video (GIF/WebM/MP4)",
+  export_image: "Exporteer afbeelding (JPEG/WebP/PNG)",
 
   list_plain: "Pas de functie toe op de lijst zelf",
   list_map: "Pas de functie toe op elk element in de lijst (map)",
@@ -306,7 +315,8 @@ export const nl: Translations = {
     no: "Ga terug",
   },
 
-  video_export_failed: "⚠️ Video kon niet geëxporteerd worden",
+  media_export_failed: "⚠️ Video kon niet geëxporteerd worden",
+  showSaveFilePicker_missing: "😕 Deze browser biedt geen ondersteuning om bestanden te kiezen.\n🖥️ Gebruik aub een op Chromium gebaseerde browser, zoals Google Chrome of Microsoft Edge.",
 
   copy_script_text: "Kopieer het programma naar je klembord (tekst)",
   copy_script_json: "Kopieer het programma naar je klembord (JSON)",

@@ -18,7 +18,8 @@ export const en = {
     rewind: "Time-travel debugging",
     templatize: "Creating program templates",
     generic: "This function",
-    video: "Exporting video"
+    video: "Exporting videos",
+    image: "Exporting images"
   } as Features,
 
   methods,
@@ -196,18 +197,24 @@ export const en = {
   portrait_not_supported: "😕 Portrait mode not supported",
   landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",
 
-  video_exporter_title: "🎥 Video exporter",
-  video_exporter_width: "Frame width",
-  video_exporter_height: "Frame height",
-  video_exporter_fps: "Frame rate",
-  video_exporter_duration: "Video duration",
+  media_exporter_title: "🎥 Media exporter",
+  media_exporter_width: "Frame width",
+  media_exporter_height: "Frame height",
+  media_exporter_file: "File name",
+  media_exporter_no_file: "(none)",
+  video_fps: "Frame rate",
+  video_duration: "Video duration",
   start: "Start!",
   abort: "Abort...",
+  done: "Done",
   pixels: "pixels",
   seconds: "seconds",
-  per_second: "/second",
-  gif_quality: "GIF quality",
-  gif_quality_range: "0...100",
+  per_second: "per second",
+  image_quality: "Image quality",
+  video_bit_rate: "Video bit-rate",
+  video_bit_rate_unit: "megabits/second",
+  video_codecs: "Hardware codecs (advanced)",
+  webm_precise: "Use frame accurate software codec?",
 
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
@@ -301,13 +308,16 @@ export const en = {
   share_script: "Put a shareable link on your clipboard",
 
   export_video: "Export video (GIF/WebM/MP4)",
+  export_image: "Export image (JPEG/WebP/PNG)",
 
   warn_unsaved: {
     message: "⚠️ You modified this program without saving it.\n\n❗ If you leave this page, you will lose your changes!\n",
     yes: "Leave",
     no: "Stay",
   },
-  video_export_failed: "⚠️ Failed to export video",
+  media_export_failed: "⚠️ Failed to export media",
+
+  showSaveFilePicker_missing: "😕 Your browser doesn't support file browsing.\n🖥️ Please use a Chromium-based browser, like Google Chrome or Microsoft Edge.",
 
   copy_script_text: "Copy program to clipboard (text)",
   copy_script_json: "Copy program to clipboard (JSON)",

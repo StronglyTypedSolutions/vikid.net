@@ -15,6 +15,7 @@ export interface Features {
   readonly templatize: string;
   readonly generic: string;
   readonly video: string;
+  readonly image: string;
 }
 
 export type FeatureKey = keyof Features;
