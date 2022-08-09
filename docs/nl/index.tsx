@@ -317,7 +317,10 @@ export const nl: Translations = {
     no: "Ga terug",
   },
 
-  media_export_failed: "⚠️ Video kon niet geëxporteerd worden",
+  media_export_failed: "⚠️ Media kon niet geëxporteerd worden",
+  html_export_failed: "⚠️ De HTML pagina kon niet geëxporteerd worden",
+  html_export_warning: "⚠️ Er liep iets mis tijdens de export",
+
   showSaveFilePicker_missing: "😕 Deze browser biedt geen ondersteuning om bestanden te kiezen.\n🖥️ Gebruik aub een op Chromium gebaseerde browser, zoals Google Chrome of Microsoft Edge.",
 
   copy_script_text: "Kopieer het programma naar je klembord (tekst)",

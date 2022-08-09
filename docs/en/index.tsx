@@ -318,6 +318,8 @@ export const en = {
     no: "Stay",
   },
   media_export_failed: "⚠️ Failed to export media",
+  html_export_failed: "⚠️ Failed to export HTML page",
+  html_export_warning: "⚠️ Something went wrong during the export",
 
   showSaveFilePicker_missing: "😕 Your browser doesn't support file browsing.\n🖥️ Please use a Chromium-based browser, like Google Chrome or Microsoft Edge.",
 
