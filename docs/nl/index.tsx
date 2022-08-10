@@ -18,7 +18,7 @@ export const nl: Translations = {
     generic: "Deze functie",
     video: "Videos exporteren",
     image: "Afbeeldingen exporteren",
-    html: "HTML paginas exporteren",
+    html: "HTML exporteren",
   } as Features,
 
   methods,
@@ -281,13 +281,14 @@ export const nl: Translations = {
 
   please_wait: "😴 Even geduld aub",
 
-  export_puzzle: "Exporteer als puzzel",
-  import_puzzle: "Importeer een puzzel",
   play_as_puzzle: "Speel als puzzel",
 
   export_video: "Exporteer video (GIF/WebM/MP4)",
   export_image: "Exporteer afbeelding (JPEG/WebP/PNG)",
-  export_html: "Exporteer HTML pagina (JS + canvas)",
+  export_html_page: "Download als web-pagina (HTML)",
+  export_html_site: "Download als web-site (ZIP)",
+  export_html_page_tooltip: "🌍 De web-pagina kan je op elk toestel openen met een moderne web-browser.",
+  export_html_site_tooltip: "⚠️ De web-site moet je zelf hosten op een externe web-server.",
 
   list_plain: "Pas de functie toe op de lijst zelf",
   list_map: "Pas de functie toe op elk element in de lijst (map)",
@@ -309,7 +310,8 @@ export const nl: Translations = {
   save_script: "Sla dit programma op",
   download_script: "Download dit programma naar je toestel",
   upload_script: "Upload een programma van je toestel",
-  share_script: "Zet een deelbare link op je klembord",
+  share_script: "Deel je programma met anderen",
+  share_puzzle: "Deel je programma als een puzzel",
 
   warn_unsaved: {
     message: "⚠️ Je hebt je programma gewijzigd zonder op te slaan.\n\n❗ Als je verder gaat, verlies je je wijzigingen!",

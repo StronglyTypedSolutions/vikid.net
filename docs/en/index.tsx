@@ -20,7 +20,7 @@ export const en = {
     generic: "This function",
     video: "Exporting videos",
     image: "Exporting images",
-    html: "Exporting HTML pages",
+    html: "Exporting HTML",
   } as Features,
 
   methods,
@@ -282,8 +282,6 @@ export const en = {
 
   please_wait: "😴 Please wait",
 
-  export_puzzle: "Export as a puzzle",
-  import_puzzle: "Import a puzzle",
   play_as_puzzle: "Play as puzzle",
 
   list_plain: "Apply the function on the list itself",
@@ -306,11 +304,15 @@ export const en = {
   save_script: "Save this program",
   download_script: "Download this program to your device",
   upload_script: "Upload a program from your device",
-  share_script: "Put a shareable link on your clipboard",
+  share_script: "Share this program with others",
+  share_puzzle: "Share this program as a puzzle",
 
   export_video: "Export video (GIF/WebM/MP4)",
   export_image: "Export image (JPEG/WebP/PNG)",
-  export_html: "Export HTML page (JS + canvas)",
+  export_html_page: "Download as web-page (HTML)",
+  export_html_site: "Download as web-site (ZIP)",
+  export_html_page_tooltip: "🌍 The web-page can be openend on any device with a modern web-browser.",
+  export_html_site_tooltip: "⚠️ The web-site must be hosted on an external web-server.",
 
   warn_unsaved: {
     message: "⚠️ You modified this program without saving it.\n\n❗ If you leave this page, you will lose your changes!\n",
