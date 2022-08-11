@@ -17,6 +17,7 @@ export interface Features {
   readonly video: string;
   readonly image: string;
   readonly html: string;
+  readonly share: string;
 }
 
 export type FeatureKey = keyof Features;

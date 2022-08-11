@@ -19,6 +19,7 @@ export const nl: Translations = {
     video: "Videos exporteren",
     image: "Afbeeldingen exporteren",
     html: "HTML exporteren",
+    share: "Delen als puzzel",
   } as Features,
 
   methods,

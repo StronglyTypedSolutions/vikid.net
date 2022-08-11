@@ -21,6 +21,7 @@ export const en = {
     video: "Exporting videos",
     image: "Exporting images",
     html: "Exporting HTML",
+    share: "Sharing puzzles",
   } as Features,
 
   methods,
