@@ -282,7 +282,9 @@ export const nl: Translations = {
 
   please_wait: "😴 Even geduld aub",
 
-  play_as_puzzle: "Speel als puzzel",
+  play_as_puzzle: "Speel het programma als een puzzel",
+  play_as_puzzle_button: "Speel het programma als een puzzel,\nbeginnend bij de actieve formule.",
+  play_as_puzzle_tooltip: "The actieve formule bepaalt de eerste puzzel stap.",
 
   export_video: "Exporteer video (GIF/WebM/MP4)",
   export_image: "Exporteer afbeelding (JPEG/WebP/PNG)",

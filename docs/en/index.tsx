@@ -283,7 +283,9 @@ export const en = {
 
   please_wait: "😴 Please wait",
 
-  play_as_puzzle: "Play as puzzle",
+  play_as_puzzle: "Play the program as a puzzle",
+  play_as_puzzle_button: "Play the program as a puzzle,\nstarting from the active formula.",
+  play_as_puzzle_tooltip: "The active formula indicates the first puzzle step.",
 
   list_plain: "Apply the function on the list itself",
   list_map: "Apply the function on each element in the list (map)",
