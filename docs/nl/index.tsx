@@ -198,6 +198,8 @@ export const nl: Translations = {
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
   landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
 
+  module_importer_title: "⬡ Module importeren",
+
   media_exporter_title: "🎥 Media exporter",
   media_exporter_file: "Bestandsnaam",
   media_exporter_no_file: "(geen)",

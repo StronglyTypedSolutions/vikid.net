@@ -199,6 +199,8 @@ export const en = {
   portrait_not_supported: "😕 Portrait mode not supported",
   landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",
 
+  module_importer_title: "⬡ Module importer",
+
   media_exporter_title: "🎥 Media exporter",
   media_exporter_width: "Frame width",
   media_exporter_height: "Frame height",
