@@ -217,6 +217,7 @@ export const en = {
   video_bit_rate_unit: "megabits/second",
   video_codecs: "Hardware codecs (advanced)",
   webm_precise: "Use frame accurate software codec?",
+  export_grid: "Show background grid?",
 
   extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
   extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,

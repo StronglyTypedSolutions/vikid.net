@@ -209,6 +209,7 @@ export const nl: Translations = {
   video_bit_rate_unit: "megabits/seconde",
   video_codecs: "Video codecs",
   webm_precise: "Gebruik frame accurate software codec?",
+  export_grid: "Toon achtergrond raster?",
 
   start: "Start!",
   abort: "Onderbreek...",
