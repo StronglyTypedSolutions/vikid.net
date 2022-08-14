@@ -73,10 +73,10 @@ For example, `addition` on the signals `input` and `param` zips the `+ operator`
 input.add(param) := input.zip(param, +)
 ```
 
-Often we use the __same symbol or name__ for both the reactive function and non-reactive operator. For example, the sine function:
+Often we use the __same symbol or name__ for both the reactive function and non-reactive operator. For example, the `power` function:
 
 ```pseudo
-input.sin(param) := input.zip(param, sin)
+input.pow(param) := input.zip(param, pow)
 ```
 
 The semantics of a binary zip are:
