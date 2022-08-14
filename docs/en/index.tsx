@@ -97,7 +97,7 @@ export const en = {
   agree_delete: "Yes, delete it",
   confirm_delete_template: (title: string) => `❓ Are you sure you want to delete template '${title}'?\n\n❗ Programs using the template will break!\n\n⚠️ After a few days this cannot be undone anymore!`,
   templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template'!`,
-  request_template_tags: `🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n`,
+  request_template_tags: `\n🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n\n⬡ The 'module' tag enables import in the playground.\n`,
   edit_template: `🔩 Edit template tags.`,
   script_moved_to_trashcan: <p><span>Moved to</span><br /><br /><b>trashcan</b></p>,
   script_moved_to_templates: <p><span>Moved to</span><br /><br /><b>templates</b></p>,
@@ -303,6 +303,7 @@ export const en = {
   templates_empty: "You have no templates.",
   examples_empty: "There are no examples yet.",
   trashcan_empty: "Your trash can is empty.",
+  modules_empty: "You have no templates tagged as 'module'",
 
   program_name: "Enter a name for your program:",
   my_program: "My program",

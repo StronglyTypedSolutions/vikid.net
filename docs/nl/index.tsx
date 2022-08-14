@@ -94,7 +94,7 @@ export const nl: Translations = {
   confirm_delete_template: (title: string) => `❓ Ben je zeker dat je sjabloon '${title}' wil verwijderen?\n\n⚠️ Na een paar dagen kan je dit niet meer ongedaan maken!`,
   agree_delete: "Ja, verwijder het",
   templatization_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet omgezet worden naar een sjabloon!`,
-  request_template_tags: `🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n`,
+  request_template_tags: `\n🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n\n⬡ Met de 'module' tag kan je importeren in de playground.\n`,
   edit_template: `🔩 Pas de tags van je sjabloon aan.`,
   script_moved_to_trashcan: <p><span>Verplaatst naar</span><br /><br /><b>Prullenmand</b></p>,
   script_moved_to_templates: <p><span>Verplaatst naar</span><br /><br /><b>Sjablonen</b></p>,
@@ -309,6 +309,7 @@ export const nl: Translations = {
   templates_empty: "Je hebt geen sjablonen.",
   examples_empty: "Er zijn nog geen voorbeelden.",
   trashcan_empty: "Je prullenbak is leeg.",
+  modules_empty: "Je hebt geen sjablonen met de 'module' tag",
 
   program_name: "Geef je programma een naam:",
   my_program: `Mijn programma`,
