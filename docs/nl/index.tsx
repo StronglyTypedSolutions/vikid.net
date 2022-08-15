@@ -549,7 +549,7 @@ export const nl: Translations = {
   explain_create_ref: "Om te <b>verwijzen</b> naar een <b>eerder gebouwde formule</b> klik je op de <b>ketting</b> knop.",
   explain_created_ref: "Proficiat, je hebt zonet je eerste <b>verwijzing</b> naar een formule gemaakt!",
   explain_apply_ref: "<b>Pas nu een functie toe</b> op deze verwijzing, en los de formule op.",
-  explain_multiple_refs: "Als je <b>meerdere verwijzingen</b> kan maken, toont het <b>getal onder de ketting</b> hoeveel er nog zijn.",
+  explain_multiple_refs: "Als je <b>meerdere verwijzingen</b> kan maken,<br/>toont het <b>getal onder de ketting</b> hoeveel er nog zijn.",
 
   explain_fine_number_editing: "Om een getal in <b>kleinere stapjes</b> aan te passen, <b>versleep je het midden van de knop</b>.",
   explain_number_set_types: "Gebruik deze knoppen om de <b>getallen verzameling</b> in stellen.",

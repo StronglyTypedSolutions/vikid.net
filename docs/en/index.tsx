@@ -547,7 +547,7 @@ export const en = {
   explain_create_ref: "To <b>refer</b> to a formula, just click on the <b>chain</b> button.",
   explain_created_ref: "Congratulations, you just made your first <b>reference</b> to a formula!",
   explain_apply_ref: "<b>Now apply a function to </b> the reference, and complete the formula.",
-  explain_multiple_refs: "If <b>multiple references</b> can be made, then the <b>number below the chain</b> shows how many are left.",
+  explain_multiple_refs: "If <b>multiple references</b> can be made,<br/>then the <b>number below the chain</b> shows how many are left.",
   explain_fine_number_editing: "To change a number with <b>smaller steps</b>, <b>drag the center</b> of the knob.",
   explain_number_set_types: "Use these buttons to specify the <b>number set</b>.",
   explain_integer_set_type: "For example, <b>click the `integers` button</b>, and move the shape.",
