@@ -522,6 +522,8 @@ export const nl: Translations = {
   click_to_proceed: "Klik op deze knop om naar <b>de volgende puzzel</b> te gaan.",
   click_grade_button: "Je <b>formule is nu klaar</b>; klik hier om ze te controleren.",
 
+  explain_tutorial: "<b>We leggen stap-per-stap uit hoe ViKiD werkt.</b><br/><br/><i>Als je een stap gemist hebt, herstart dan met <b>deze knop</b></i>.<br/></br>Klik eender waar om verder gaan.",
+
   explain_single_use: "Je mag elk blok maar één keer gebruiken!",
   explain_restart: "Als je vastzit, klik dan hier <b>om opnieuw te beginnen</b>...",
   explain_undo: "of hier <b>om één wijziging ongedaan te maken</b>...",

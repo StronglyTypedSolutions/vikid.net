@@ -519,6 +519,8 @@ export const en = {
   click_to_proceed: "Click this button to <b>go to the next puzzle</b>.",
   click_grade_button: "Your <b>formula is ready</b>; click here to check it.",
 
+  explain_tutorial: "<b>Let's show step-by-step how ViKiD works.</b><br/><br/><i>If you missed a step, use <b>this button</b> to restart.</i><br/><br/>Click anywhere to continue.",
+
   explain_single_use: "Each block may only <b>be used once</b>!",
   explain_restart: "If you're stuck, click here to <b>restart from scratch</b>...",
   explain_undo: "or here to <b>undo one change</b>...",
