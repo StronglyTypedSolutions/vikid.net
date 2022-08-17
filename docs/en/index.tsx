@@ -112,6 +112,7 @@ export const en = {
   cookies_on_this_pc: "on this computer.",
   cookies_thanks_to_cookies: "Thanks to cookies we can keep you signed in, remember your game progress, personalise your experience, and improve ViKiD. Sign-in cookies are neccessary.",
   cookies_we_value_privacy: "We respect your privacy and protect your data.",
+  cookies_explain_link: "https://kids.kiddle.co/HTTP_cookie",
 
   shop_coming_soon: <h1>Coming soon!</h1>,
   shop_redirect: "Redirecting to shop...",

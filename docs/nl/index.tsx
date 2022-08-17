@@ -113,6 +113,7 @@ export const nl: Translations = {
   cookies_on_this_pc: "op deze computer.",
   cookies_thanks_to_cookies: "Dankzij cookies kan je ingelogd blijven, onthouden we jouw vooruitgang in het spel, personalizeren en verbeteren we ViKiD. Cookies om in te loggen zijn noodzakelijk.",
   cookies_we_value_privacy: "Wij respecteren jouw privacy en beschermen jouw gegevens.",
+  cookies_explain_link: "https://wikikids.nl/Cookie_(internet)",
 
   consent_agree_all_cookies: "Alle noodzakelijke en optionele cookies aanvaarden",
   consent_agree_selected_cookies: "Alle noodzakelijke en geselecteerde cookies aanvaarden",
