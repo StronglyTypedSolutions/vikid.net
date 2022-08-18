@@ -15,7 +15,7 @@ export const nl: Translations = {
   language: "nl" as Language,
 
   features: {
-    upload: "Assets uploaden  naar de ViKiD cloud",
+    upload: "Assets uploaden naar de ViKiD cloud",
     rewind: "Time-travel debugging",
     templatize: "Programma sjablonen maken",
     generic: "Deze functie",
@@ -102,6 +102,8 @@ export const nl: Translations = {
   script_moved_to_trashcan: <p><span>Verplaatst naar</span><br /><br /><b>Prullenmand</b></p>,
   script_moved_to_templates: <p><span>Verplaatst naar</span><br /><br /><b>Sjablonen</b></p>,
   script_moved_to_programs: <p><span>Verplaatst naar</span><br /><br /><b>Programma's</b></p>,
+
+  upload_into_cloud: "☁ Upload beeld en geluid in de ViKiD cloud",
   upload_content_generic_error: `😢 Oops!\n\nHet bestand kon niet geüpload worden.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nHet bestand is te groot om te uploaden!\n\nDe maximum grootte is ${mb} megabyte.`,
   feature_premium_members_only: (feature: FeatureKey) => `🛈 ${nl.features[feature]} vereist een premium lidmaatschap.\n\n🛒 Wil je onze e-shop bezoeken voor meer informatie?`,

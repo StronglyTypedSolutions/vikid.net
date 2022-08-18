@@ -103,6 +103,8 @@ export const en = {
   script_moved_to_trashcan: <p><span>Moved to</span><br /><br /><b>trashcan</b></p>,
   script_moved_to_templates: <p><span>Moved to</span><br /><br /><b>templates</b></p>,
   script_moved_to_programs: <p><span>Moved to</span><br /><br /><b>programs</b></p>,
+
+  upload_into_cloud: "☁ Upload images and sound into the ViKiD cloud",
   upload_content_generic_error: `😢 Oops!\n\nThe file upload failed.`,
   upload_content_too_large: (mb: number) => `😢 Oops!\n\nThe file is too large to be uploaded!\n\nThe maximum allowed size is ${mb} megabyte.`,
   feature_premium_members_only: (feature: FeatureKey) => `🛈 ${en.features[feature]} requires a premium membership.\n\n🛒 Do you want to visit our e-shop for more info?`,
