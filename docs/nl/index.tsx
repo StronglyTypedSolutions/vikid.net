@@ -8,6 +8,9 @@ import { primitives, values } from "./values";
 import type { FeatureKey, Features, Translations } from "../types";
 import config from "@vikid-core/config";
 
+const puzzle_error_in_prog = `🐞 Fout in puzzel programma:\n\n`;
+const puzzle_error_in_let = (currentLetLabel: string): string => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\n`;
+
 export const nl: Translations = {
   language: "nl" as Language,
 
@@ -75,6 +78,7 @@ export const nl: Translations = {
   uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis! ↺ Herlaad de web-pagina en probeer het nog eens.\n\n⛑️ Als er een crash bestand gedownload is, kan je dit ⮹ importeren en verder werken.",
 
   puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Puzzel '${id} kon niet geladen worden.\n\n↺ Herlaad de web-pagina en probeer het nog eens.`,
+  puzzle_preview_error: `🧩 Omzetten naar puzzel is mislukt.`,
 
   account_not_found_title: "Account niet gevonden!",
   account_not_found: "❓ Oops, ViKiD kent je nog niet.\n\n🚹 Wil je een nieuwe account maken?",
@@ -221,20 +225,22 @@ export const nl: Translations = {
   per_second: "per seconde",
   image_quality: "GIF kwaliteit",
 
-  extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\nFoute volgorde van formules.\n\nDe formule '${referencedLetLabel}' moet vóór de formule '${currentLetLabel}' staan zijn in een puzzel`,
-  extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nDe derde parameter van de functie ∞\nmoet een verwijzing zijn naar een formule in hetzelfde sub-programma`,
-  extract_redundant_lets: (lets: string) => `🐞 Fout in puzzel programma!\n\nDe formules ${lets} worden niet gebruikt in het eindresultaat.\n\nDit is niet toegelaten in een puzzel.\n\nGebruik de functie 🎁 om een formule te markeren als een voorbeeld,\nof verwijder de formules.`,
-  extract_nested_seq: "🐞 Fout in puzzel programma!\n\nSub-programma's zijn niet toegelaten in een puzzel.",
-  extract_nev: "🐞 Fout in puzzel programma!\n\n'Nooit' expressies worden nog niet ondersteund in een puzzel.",
-  extract_puzzle_mode_param: (currentLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nNiet ondersteunde waarde voor de parameter van 🧩.\n\nDe 🧩 functie zet de puzzel mode. 🧩0 = bouw modus, 🧩1 = vrije modus`,
-  extract_puzzle_anim_param: (currentLetLabel: string) => `🐞 Error in puzzel formula '${currentLetLabel}':\n\nNiet ondersteunde waarde voor de parameter.\n\nDe puzzel cycle functie zet de puzzel animatie cyclus duurtijd, in seconden`,
-  extract_puzzle_multi: (currentLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nEen formule kan slechts één maal de functie 🧩 bevatten.\n\nDe 🧩 functie zet de puzzel mode. 🧩0 = bouw modus, 🧩1 = vrije modus`,
-  extract_premade_param: (currentLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nNiet ondersteunde waarde voor de parameter van 🎁.\n\nDe 🎁 functie specifieert een voorgemaakt onderdeel van de formule.\n\n🎁(uit) = voorgemaakte puzzel, 🎁(aan) voorgemaakt niet aanpasbaar voorbeeld`,
-  extract_premade_multi: (currentLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nEen formule kan slechts één maal de functie 🎁 bevatten.\n\nDe 🎁 functie specifieert een voorgemaakt onderdeel van de formule.\n\n🎁(uit) = voorgemaakte puzzel, 🎁(aan) niet aanpasbaar voorbeeld`,
-  extract_select_param: (currentLetLabel: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nNiet ondersteunde waarde voor de parameter van 🟨.\n\nDe 🟨 functie specifieert de initiele selectie in de formule.\n\n🟨(uit) = selecteer de waarde, 🟨(aan) = selecteer de functie`,
-  extract_actuator_param: (currentLetLabel: string, index: number) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nNiet ondersteunde waarde voor parameter #${index} van functie 👁️.\n\nDe eerste parameter moet 0, 1 (oog) of 2 (oor) zijn.\n\nDe tweede parameter moet een verwijzing zijn naar de 'actuator' formule.`,
-  extract_import_error: (currentLetLabel: string, importName: string) => `🐞 Fout in puzzel formule '${currentLetLabel}':\n\nGeimporteerde sjablonen worden nog niet ondersteund.\n\nZie sjabloon '${importName}'`,
-  extract_no_step_order: "🐞 Fout in puzzel formule.\n\nVolgorde van stappen kon niet bepaald worden.",
+  extract_primitive: (currentLetLabel: string, kind: string) => `${puzzle_error_in_let(currentLetLabel)}Het type '${kind}' is niet toegestaan in puzzel blokken.\n\nEnkel primitieve waarden kunnen gebruikt worden.`,
+  extract_set_type: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Aanpasbare getallen van type ℝ zijn niet toegestaan in puzzel blokken.\n\nEnkel ℕ, ℤ and ℚ kunnen gebruikt worden.`,
+  extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Foute volgorde van formules.\n\nDe formule '${referencedLetLabel}' moet vóór de formule '${currentLetLabel}' staan zijn in een puzzel`,
+  extract_feedback_ref: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}De derde parameter van de functie ∞\nmoet een verwijzing zijn naar een formule in hetzelfde sub-programma`,
+  extract_redundant_lets: (lets: string) => `${puzzle_error_in_prog}De formules ${lets} worden niet gebruikt in het eindresultaat.\n\nDit is niet toegelaten in een puzzel.\n\nGebruik de functie 🎁 om een formule te markeren als een voorbeeld,\nof verwijder de formules.`,
+  extract_nested_seq: `${puzzle_error_in_prog}Sub-programma's zijn niet toegelaten in een puzzel.`,
+  extract_nev: `${puzzle_error_in_prog}'Nooit' expressies worden nog niet ondersteund in een puzzel.`,
+  extract_puzzle_mode_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Niet ondersteunde waarde voor de parameter van 🧩.\n\nDe 🧩 functie zet de puzzel mode. 🧩0 = bouw modus, 🧩1 = vrije modus`,
+  extract_puzzle_anim_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Niet ondersteunde waarde voor de parameter.\n\nDe puzzel cycle functie zet de puzzel animatie cyclus duurtijd, in seconden`,
+  extract_puzzle_multi: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Een formule kan slechts één maal de functie 🧩 bevatten.\n\nDe 🧩 functie zet de puzzel mode. 🧩0 = bouw modus, 🧩1 = vrije modus`,
+  extract_premade_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Niet ondersteunde waarde voor de parameter van 🎁.\n\nDe 🎁 functie specifieert een voorgemaakt onderdeel van de formule.\n\n🎁(uit) = voorgemaakte puzzel, 🎁(aan) voorgemaakt niet aanpasbaar voorbeeld`,
+  extract_premade_multi: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Een formule kan slechts één maal de functie 🎁 bevatten.\n\nDe 🎁 functie specifieert een voorgemaakt onderdeel van de formule.\n\n🎁(uit) = voorgemaakte puzzel, 🎁(aan) niet aanpasbaar voorbeeld`,
+  extract_select_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Niet ondersteunde waarde voor de parameter van 🟨.\n\nDe 🟨 functie specifieert de initiele selectie in de formule.\n\n🟨(uit) = selecteer de waarde, 🟨(aan) = selecteer de functie`,
+  extract_actuator_param: (currentLetLabel: string, index: number) => `${puzzle_error_in_let(currentLetLabel)}Niet ondersteunde waarde voor parameter #${index} van functie 👁️.\n\nDe eerste parameter moet 0, 1 (oog) of 2 (oor) zijn.\n\nDe tweede parameter moet een verwijzing zijn naar de 'actuator' formule.`,
+  extract_import_error: (currentLetLabel: string, importName: string) => `${puzzle_error_in_let(currentLetLabel)}Geimporteerde sjablonen worden nog niet ondersteund.\n\nZie sjabloon '${importName}'`,
+  extract_no_step_order: `${puzzle_error_in_prog}Volgorde van stappen kon niet bepaald worden.`,
 
   vector: "Vector",
   point: "Punt",
@@ -510,7 +516,7 @@ export const nl: Translations = {
   click_square: "Klik op de waarde <b>'vierkant'</b>...",
   // clicked_square: "Het vierkant komt zo in je <b>formule</b>, en is <b><S>geselecteerd</S></b>.",
   click_paint: "Klik op de functie <b>'geverfd'</b> ...",
-  explain_output: "Lees de formule <i>van links naar rechts</i>: <b>vierkant geverfd in blauw</b> ⟶ <b>blauw vierkant</b>",
+  explain_output: "Lees de formule <i>van links naar rechts: </i><b>vierkant geverfd in blauw</b> ⟶ <b>blauw vierkant</b>",
   //change_selected_param: "Laten we de <b><S>geselecteerde</S> parameter aanpassen</b>",
 
   click_color: "Klik op de waarde <b>'blauwe kleur'</b>...",

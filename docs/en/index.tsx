@@ -8,7 +8,8 @@ import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import { FeatureKey, Features } from "../types";
 
-
+const puzzle_error_in_prog = `🐞 Error in puzzle program:\n\n`;
+const puzzle_error_in_let = (currentLetLabel: string): string => `🐞 Error in puzzle formula '${currentLetLabel}':\n\n`;
 
 export const en = {
   language: "en" as Language,
@@ -78,6 +79,7 @@ export const en = {
   uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Something unexpected happened! ↺ Please reload the web-page and try again.\n\n⛑️ If a crash file was downloaded, then you can ⮹ import this to continue your work.",
 
   puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Failed to load puzzle '${id}.\n\n↺ Please reload the web-page and try again.`,
+  puzzle_preview_error: `🧩 Conversion to puzzle failed.`,
 
   account_not_found_title: "Account not found!",
   account_not_found: "❓ Oops, ViKiD doesn't know you yet.\n\n🚹 Do you want to create a new account?",
@@ -221,21 +223,22 @@ export const en = {
   webm_precise: "Use frame accurate software codec?",
   export_grid: "Show background grid?",
 
-  extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nWrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
-  extract_feedback_ref: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nThe third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
-  extract_redundant_lets: (lets: string) => `🐞 Error in puzzle program.\n\nThe formulas ${lets} are not used in the end-result.\n\nUnused formulas are not allowed in a puzzle.\n\nUse the 🎁 function to mark formulas as pure examples,\nor delete the formulas.`,
-  extract_nested_seq: "🐞 Error in puzzle program.\n\nSub-programs are not allowed in a puzzle.",
-  extract_nev: "🐞 Error in puzzle program.\n\n'Never' expressions are not yet supported in a puzzle.",
-  extract_puzzle_mode_param: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nUnsupported parameter value.\n\nThe puzzle mode function sets the puzzle mode:\n\n🧩0 = build mode, 🧩1 = freestyle mode`,
-  extract_puzzle_anim_param: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nUnsupported parameter value.\n\nThe puzzle cycle function sets the puzzle animation cycle duration, in seconds`,
-  extract_puzzle_multi: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\n🧩 can only appear once in a puzzle formula.\n\nThe 🧩 function sets the puzzle mode:\n\n🧩0 = build mode, 🧩1 = freestyle mode`,
-  extract_premade_param: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nUnsupported parameter value for 🎁.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a premade non-editable example`,
-  extract_premade_multi: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\n🎁 can only appear once in a puzzle formula.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a non-editable example`,
-  extract_select_param: (currentLetLabel: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nUnsupported parameter value for 🟨.\n\nThe 🟨 function specifies the initial selection in the formula.\n\n🟨(off) = select the value, 🟨(on) = select the function instead`,
-  extract_actuator_param: (currentLetLabel: string, index: number) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nUnsupported value for parameter #${index} of function 👁️.\n\nThe first parameter must be 0, 1 (eye) or 2 (ear).\n\nThe second parameter must be a reference to the 'actuator' formula`,
-  extract_import_error: (currentLetLabel: string, importName: string) => `🐞 Error in puzzle formula '${currentLetLabel}':\n\nImported templates are not yet supported. See template '${importName}'.`,
-
-  extract_no_step_order: "🐞 Error in puzzle program.\n\nFailed to find a sequence of steps.",
+  extract_primitive: (currentLetLabel: string, kind: string) => `${puzzle_error_in_let(currentLetLabel)}The type '${kind}' is not allowed in puzzle blocks.\n\nOnly primitive values can be used.`,
+  extract_set_type: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Editable numbers of type ℝ are not allowed in puzzle blocks.\n\nOnly ℕ, ℤ and ℚ can be used.`,
+  extract_wrong_order: (currentLetLabel: string, referencedLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Wrong order of formulas.\n\nThe formula '${referencedLetLabel}' has to appear before the formula '${currentLetLabel}' in a puzzle`,
+  extract_feedback_ref: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}The third parameter of the ∞ function\nmust be reference to a formula in the current sub-program`,
+  extract_redundant_lets: (lets: string) => `${puzzle_error_in_prog}The formulas ${lets} are not used in the end-result.\n\nUnused formulas are not allowed in a puzzle.\n\nUse the 🎁 function to mark formulas as pure examples,\nor delete the formulas.`,
+  extract_nested_seq: `${puzzle_error_in_prog}Sub-programs are not allowed in a puzzle.`,
+  extract_nev: `${puzzle_error_in_prog}'Never' expressions are not yet supported in a puzzle.`,
+  extract_puzzle_mode_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value.\n\nThe puzzle mode function sets the puzzle mode:\n\n🧩0 = build mode, 🧩1 = freestyle mode`,
+  extract_puzzle_anim_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value.\n\nThe puzzle cycle function sets the puzzle animation cycle duration, in seconds`,
+  extract_puzzle_multi: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}🧩 can only appear once in a puzzle formula.\n\nThe 🧩 function sets the puzzle mode:\n\n🧩0 = build mode, 🧩1 = freestyle mode`,
+  extract_premade_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value for 🎁.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a premade non-editable example`,
+  extract_premade_multi: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}🎁 can only appear once in a puzzle formula.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a non-editable example`,
+  extract_select_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value for 🟨.\n\nThe 🟨 function specifies the initial selection in the formula.\n\n🟨(off) = select the value, 🟨(on) = select the function instead`,
+  extract_actuator_param: (currentLetLabel: string, index: number) => `${puzzle_error_in_let(currentLetLabel)}Unsupported value for parameter #${index} of function 👁️.\n\nThe first parameter must be 0, 1 (eye) or 2 (ear).\n\nThe second parameter must be a reference to the 'actuator' formula`,
+  extract_import_error: (currentLetLabel: string, importName: string) => `${puzzle_error_in_let(currentLetLabel)}Imported templates are not yet supported. See template '${importName}'.`,
+  extract_no_step_order: `${puzzle_error_in_prog}Failed to find a sequence of steps.`,
 
   vector: "Vector",
   point: "Point",
@@ -508,7 +511,7 @@ export const en = {
   click_square: "Click the value <b>'square'</b>...",
   // clicked_square: "The square is now <b>used in your formula</b>, and <b><S>selected</S></b>",
   click_paint: " Click the function <b>'painted'</b>...",
-  explain_output: "Read the formula <i>from left to right</i>: <b>square painted blue</b> ⟶ <b>blue square</b>",
+  explain_output: "Read the formula <i>from left to right: </i><b>square painted blue</b> ⟶ <b>blue square</b>",
 
   //change_selected_param: "Let us <b>change the <S>selected parameter</S></b>",
   click_color: "Click the value <b>'blue color'</b>",
