@@ -12,7 +12,7 @@ The __make__ `regular polygon` function [lifted on signals](/refman/concepts/pur
 # Example
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
-{ ‘⌂’: { a👁: 🏭.«shapeNgon»(3) } }
+{ ‘⌂’: { a👁: 🏭.figureNgon(3,5,⟨0 0 1⟩) } }
 ```
 
 
