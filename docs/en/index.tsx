@@ -559,5 +559,10 @@ export const en = {
   explain_integer_set_type: "For example, <b>click the `integers` button</b>, and move the shape.",
   explain_toggle_literal: "To <b>reverse the sign of a number</b>, <b>double click</b> it, or use the <K>-</K> key.",
 
-  explain_debug_toolbar: "With these buttons, you can <b>(re)start, stop and pause</b> the simulation."
+  explain_debug_toolbar: "With these buttons, you can <b>(re)start, stop and pause</b> the simulation.",
+
+  known_issues: "Known issues",
+  github: "GitHub",
+  youtube: "YouTube",
+  facebook: "Facebook"
 };

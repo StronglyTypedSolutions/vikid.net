@@ -565,5 +565,10 @@ export const nl: Translations = {
   explain_integer_set_type: "Als voorbeeld, <b>klik op de `gehele getallen` knop</b>, en verplaats de vorm",
   explain_toggle_literal: "Om het <b>teken van een getal om te draaien</b>, gebruik de <K>-</K> toets, of <b>dubbelklik</b>.",
 
-  explain_debug_toolbar: "Met deze knoppen kan je de simulatie <b>(her)starten, stoppen en pauzeren</b>."
+  explain_debug_toolbar: "Met deze knoppen kan je de simulatie <b>(her)starten, stoppen en pauzeren</b>.",
+
+  known_issues: "Gekende problemen",
+  github: "GitHub",
+  youtube: "YouTube",
+  facebook: "Facebook"
 };
