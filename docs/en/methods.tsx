@@ -446,8 +446,8 @@ export const methods = methodDescriptions({
   [MethodId.COLOR_HSL]: {
     _: overloadDescription("color", "hue", "saturation", "lightness", "perceptual?", "https://en.wikipedia.org/wiki/HSL_and_HSV")
   },
-  [MethodId.SHAPE_NGON]: {
-    _: overloadDescription("regular polygon", "corner count", "https://en.wikipedia.org/wiki/Regular_polygon")
+  [MethodId.FIGURE_NGON]: {
+    _: overloadDescription("regular polygon", "corner count", "radius", "center", "https://en.wikipedia.org/wiki/Regular_polygon")
   },
   [MethodId.GAMEPAD_SWITCH]: {
     _: overloadDescription("gamepad switch", "switch id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout")

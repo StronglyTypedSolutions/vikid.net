@@ -449,8 +449,8 @@ export const methods = methodDescriptions({
   [MethodId.COLOR_HSL]: {
     _: overloadDescription("kleur", "tint", "verzadiging", "helderheid", "perceptueel?", "https://nl.wikipedia.org/wiki/HSL_(kleurruimte)")
   },
-  [MethodId.SHAPE_NGON]: {
-    _: overloadDescription("regelmatige veelhoek", "aantal hoeken", "https://nl.wikipedia.org/wiki/Regelmatige_veelhoek")
+  [MethodId.FIGURE_NGON]: {
+    _: overloadDescription("regelmatige veelhoek", "aantal hoeken", "straal", "middelpunt", "https://nl.wikipedia.org/wiki/Regelmatige_veelhoek")
   },
   [MethodId.GAMEPAD_SWITCH]: {
     _: overloadDescription("gamepad schakelaar", "welke schakelaar", "welke gamepad", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout")
