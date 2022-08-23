@@ -369,7 +369,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("puzzle", "kind [@=0 ⇒ fixed blocks, @1 ⇒ free values]")
   },
   [MethodId.OUTLINE]: {
-    _: overloadDescription("outlines", "enabled?")
+    _: overloadDescription("outline", "thickness [@≤0 => hidden]", "color")
   },
   [MethodId.CORRECT]: {
     _: overloadDescription("correct", "preview?", "wrong value")
