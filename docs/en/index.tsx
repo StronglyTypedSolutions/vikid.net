@@ -99,7 +99,12 @@ export const en = {
   agree_delete: "Yes, delete it",
   templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template'!`,
   request_template_tags: `\n🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n\n⬡ The 'module' tag enables import in the playground.\n`,
-  edit_template: `🔩 Edit template tags.`,
+  edit_template_tags: `🔩 Edit template tags.`,
+  edit_template_title: `Open template`,
+  edit_template_question: `❓ How would you like to use the program of this template?`,
+  edit_template_duplicate: `⎘ Duplicate`,
+  edit_template_modify: `✎ Modify`,
+
   script_moved_to_trashcan: <p><span>Moved to</span><br /><br /><b>trashcan</b></p>,
   script_moved_to_templates: <p><span>Moved to</span><br /><br /><b>templates</b></p>,
   script_moved_to_programs: <p><span>Moved to</span><br /><br /><b>programs</b></p>,

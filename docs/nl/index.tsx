@@ -98,7 +98,12 @@ export const nl: Translations = {
   agree_delete: "Ja, verwijder het",
   templatization_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet omgezet worden naar een sjabloon!`,
   request_template_tags: `\n🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n\n⬡ Met de 'module' tag kan je importeren in de playground.\n`,
-  edit_template: `🔩 Pas de tags van je sjabloon aan.`,
+  edit_template_tags: `🔩 Pas de tags van je sjabloon aan.`,
+  edit_template_title: `Open sjabloon.`,
+  edit_template_question: `❓ Wat wil je met het programma van dit sjabloon doen?`,
+  edit_template_duplicate: `⎘ Dupliceren`,
+  edit_template_modify: `✎ Aanpassen`,
+
   script_moved_to_trashcan: <p><span>Verplaatst naar</span><br /><br /><b>Prullenmand</b></p>,
   script_moved_to_templates: <p><span>Verplaatst naar</span><br /><br /><b>Sjablonen</b></p>,
   script_moved_to_programs: <p><span>Verplaatst naar</span><br /><br /><b>Programma's</b></p>,
