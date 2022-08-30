@@ -324,7 +324,7 @@ export const nl: Translations = {
   trashcan_empty: "Je prullenbak is leeg.",
   modules_empty: "Je hebt geen sjablonen met de 'module' tag",
 
-  program_name: "Geef je programma een naam:",
+  program_name: "Geef je programma een naam",
   my_program: `Mijn programma`,
 
   save_script: "Sla dit programma op",

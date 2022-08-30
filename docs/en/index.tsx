@@ -315,7 +315,7 @@ export const en = {
   trashcan_empty: "Your trash can is empty.",
   modules_empty: "You have no templates tagged as 'module'",
 
-  program_name: "Enter a name for your program:",
+  program_name: "Enter a name for your program",
   my_program: "My program",
 
   save_script: "Save this program",
