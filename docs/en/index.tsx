@@ -346,7 +346,7 @@ export const en = {
   copy_script_json: "Copy program to clipboard (JSON)",
   paste_script: "Paste program from clipboard",
 
-  import_module: "Import a module",
+  import_module: "Import a 'module' template",
   show_list_item_methods: "Show functions on the list items?",
 
   make_adjustable: "Make adjustable parameter",

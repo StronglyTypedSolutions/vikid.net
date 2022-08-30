@@ -349,7 +349,7 @@ export const nl: Translations = {
   copy_script_json: "Kopieer het programma naar je klembord (JSON)",
   paste_script: "Plak het programma uit je klembord",
 
-  import_module: "Importeer een module",
+  import_module: "Importeer een 'module' sjabloon",
   show_list_item_methods: "Toon functies op de elementen in de lijst?",
 
   make_adjustable: "Maak aanpasbare parameter",
