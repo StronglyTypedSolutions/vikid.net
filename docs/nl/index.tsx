@@ -96,6 +96,9 @@ export const nl: Translations = {
   script_restore_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet terug toegevoegd worden!`,
   confirm_delete_program: (title: string, type: "program" | "template") => `❓ Ben je zeker dat je ${type === "program" ? "programma" : "sjabloon"} '${title}' wil verwijderen?\n\n⚠️ Na een paar dagen kan je dit niet meer ongedaan maken!`,
   agree_delete: "Ja, verwijder het",
+
+  module_import_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet geimporteerd worden als een module!`,
+
   templatization_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet omgezet worden naar een sjabloon!`,
   request_template_tags: `\n🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n\n⬡ Met de 'module' tag kan je importeren in de playground.\n`,
   edit_template_tags: `🔩 Pas de tags van je sjabloon aan.`,

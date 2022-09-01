@@ -97,7 +97,10 @@ export const en = {
   script_restore_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be restored!`,
   confirm_delete_program: (title: string, type: "program" | "template") => `❓ Are you sure you want to delete ${type} '${title}'?\n\n⚠️ After a few days this cannot be undone anymore!`,
   agree_delete: "Yes, delete it",
-  templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template'!`,
+
+  module_import_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be imported as a module!`,
+
+  templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template!`,
   request_template_tags: `\n🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n\n⬡ The 'module' tag enables import in the playground.\n`,
   edit_template_tags: `🔩 Edit template tags.`,
   edit_template_title: `Open template`,
