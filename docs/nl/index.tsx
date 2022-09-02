@@ -376,8 +376,8 @@ export const nl: Translations = {
   mark_eye_track: "Maak visueel spoor",
   remove_eye_track: "Verwijder visueel spoor",
 
-  mark_ear_track: "Maak audio spoor",
-  remove_ear_track: "Verwijder audio spoor",
+  mark_sfx_track: "Maak neven-effecten spoor",
+  remove_sfx_track: "Verwijder neven-effecten spoor",
 
   create_script_thumb: "Sla een miniatuur van het programma op",
 

@@ -390,7 +390,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("feedback", "preview?", "initial value", "recursive reference")
   },
   [MethodId.ACTUATOR]: {
-    _: overloadDescription("actuator", "which [@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear]", "actuator reference")
+    _: overloadDescription("actuator", "which [@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ sfx]", "actuator reference")
   },
 
   /** Drawing methods */

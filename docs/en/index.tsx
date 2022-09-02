@@ -247,7 +247,7 @@ export const en = {
   extract_premade_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value for 🎁.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a premade non-editable example`,
   extract_premade_multi: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}🎁 can only appear once in a puzzle formula.\n\nThe 🎁 function specifies a premade formula.\n\n🎁(off) = a premade puzzle, 🎁(on) = a non-editable example`,
   extract_select_param: (currentLetLabel: string) => `${puzzle_error_in_let(currentLetLabel)}Unsupported parameter value for 🟨.\n\nThe 🟨 function specifies the initial selection in the formula.\n\n🟨(off) = select the value, 🟨(on) = select the function instead`,
-  extract_actuator_param: (currentLetLabel: string, index: number) => `${puzzle_error_in_let(currentLetLabel)}Unsupported value for parameter #${index} of function 👁️.\n\nThe first parameter must be 0, 1 (eye) or 2 (ear).\n\nThe second parameter must be a reference to the 'actuator' formula`,
+  extract_actuator_param: (currentLetLabel: string, index: number) => `${puzzle_error_in_let(currentLetLabel)}Unsupported value for parameter #${index} of function 👁️.\n\nThe first parameter must be 0, 1 (eye) or 2 (sfx).\n\nThe second parameter must be a reference to the 'actuator' formula`,
   extract_import_error: (currentLetLabel: string, importName: string) => `${puzzle_error_in_let(currentLetLabel)}Imported templates are not yet supported. See template '${importName}'.`,
   extract_no_step_order: `${puzzle_error_in_prog}Failed to find a sequence of steps.`,
 
@@ -373,8 +373,8 @@ export const en = {
   mark_eye_track: "Make visual track",
   remove_eye_track: "Remove visual track",
 
-  mark_ear_track: "Make audio track",
-  remove_ear_track: "Remove audio track",
+  mark_sfx_track: "Make side-effects track",
+  remove_sfx_track: "Remove side-effects track",
 
   create_script_thumb: "Save a thumbnail snapshot",
 
