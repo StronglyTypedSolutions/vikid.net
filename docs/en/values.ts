@@ -54,7 +54,9 @@ export const values = {
 
   sat: "satellite",
 
-  dynamic: "dynamic"
+  dynamic: "dynamic",
+
+  effect: "side-effect",
 }
 
 export const primitives: Record<PrimitiveKind, string> = {
@@ -71,5 +73,4 @@ export const primitives: Record<PrimitiveKind, string> = {
   [PrimitiveKind.Factory]: "factory",
   [PrimitiveKind.SoundStream]: "streamed sound source",
   [PrimitiveKind.SoundBuffer]: "buffered sound source",
-  [PrimitiveKind.Audio]: "audio node",
 }
