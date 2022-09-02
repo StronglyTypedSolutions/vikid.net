@@ -98,6 +98,7 @@ export const nl: Translations = {
   agree_delete: "Ja, verwijder het",
 
   module_import_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet geimporteerd worden als een module!`,
+  module_has_main_refs: (progId: string, paths: string) => `⚠️ Programma '${progId}' kon niet geimporteerd worden als een module,\n🔗 omdat het root verwijzingen heeft naar het hoofd sub-programma ⌂.\n\n⛔ Dit is nog niet ondersteund.\n\n🔗 De volgende verwijzingen moeten worden gebroken:\n${paths}`,
 
   templatization_error: (progId: string) => `😢 Oops!\n\nProgramma '${progId}' kon niet omgezet worden naar een sjabloon!`,
   request_template_tags: `\n🔩 Geef minstens één tag aan je sjabloon.\n\n🛈 Gebruik een spatie tussen de tags.\n\n⬡ Met de 'module' tag kan je importeren in de playground.\n`,

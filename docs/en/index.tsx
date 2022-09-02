@@ -99,6 +99,7 @@ export const en = {
   agree_delete: "Yes, delete it",
 
   module_import_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be imported as a module!`,
+  module_has_main_refs: (progId: string, paths: string) => `⚠️ Program '${progId}' couldn't be imported as a module,\n🔗 because is has root references to the main sub-program ⌂.\n\n⛔ This is not yet supported.\n\n🔗 The following references need to be broken:\n\n${paths}`,
 
   templatization_error: (progId: string) => `😢 Oops!\n\nProgram '${progId}' couldn't be converted to a template!`,
   request_template_tags: `\n🔩 Give at least one tag to your template.\n\n🛈 Use a space to separate the tags.\n\n⬡ The 'module' tag enables import in the playground.\n`,
