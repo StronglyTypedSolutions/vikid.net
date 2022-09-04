@@ -54,7 +54,9 @@ export const values = {
 
   sat: "satellite",
 
-  dynamic: "dynamic"
+  dynamic: "dynamic",
+
+  effect: "side-effect",
 }
 
 export const primitives: Record<PrimitiveKind, string> = {
