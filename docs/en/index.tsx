@@ -424,7 +424,9 @@ export const en = {
   pick_instance: "Pick adjusted instances",
   filter_instances: "Filter all/present/past/future instanties",
   more_script_tools: "related...",
-  exit_selection_mode: "Return to regular selection mode",
+
+  enter_selection_mode: "◻ Activate multi-selection mode.\n🖥️On desktop, CTRL & SHIFT click a formula.\n👍On tablet, long-press a formula.\n",
+  exit_selection_mode: "Deactivate multi-selection mode",
   work_in_progress: "work in progress!",
 
   shared_project_to_clipboard: "🔗 A link to your program was copied to your clipboard.\n\n🌟 Paste it anywhere you want, e.g. in an email, or on\n\n👍 Facebook, Instagram, Twitter, Discord, Skype, WhatsApp,...",

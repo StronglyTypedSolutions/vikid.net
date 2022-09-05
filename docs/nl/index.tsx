@@ -417,7 +417,8 @@ export const nl: Translations = {
   create_reference: "🔗 Maak een link naar deze formule\n\n🎞️ Druk lang om de link één update te vertragen",
   pick_instance: "Kies aangepaste instantie",
   filter_instances: "Toon alle/huidige/verleden/toekomstige instanties",
-  exit_selection_mode: "Ga terug naar normale selectie mode",
+  enter_selection_mode: "◻ Activeer multi-selectie mode.\n🖥️Op desktop kan je CTRL & SHIFT klikken op de formules.\n👍Op tablet kan je lang drukken op een formule.\n",
+  exit_selection_mode: "◻ Deactiveer multi-selectie mode",
   work_in_progress: "work-in-progress!",
 
   forbid_reference: "😕 Je kan geen link maken naar deze formule",
