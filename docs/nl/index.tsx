@@ -407,6 +407,8 @@ export const nl: Translations = {
   move_binding_down: "Zet de formule later in de lijst",
   delete_binding: "Verwijder de actieve formule",
   delete_bindings: "Verwijder de geselecteerde formules",
+  copy_bindings: "Kopieer de geselecteerde formule(s) naar het klembord",
+  paste_bindings: "Plak formules uit je klembord",
   duplicate_binding: "Dupliceer de actieve formule",
   rename_binding: "Geef een naam aan de actieve formule",
   group_bindings: "Groepeer de geselecteerde formules in een sub-programma",

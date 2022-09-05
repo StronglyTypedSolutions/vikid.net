@@ -413,6 +413,8 @@ export const en = {
   move_binding_down: "Put the formula later in the list",
   delete_binding: "Remove the active formula",
   delete_bindings: "Remove the selected formulas",
+  copy_bindings: "Copy the selected formula(s) to the clipboard",
+  paste_bindings: "Paste formulas from the clipboard",
   duplicate_binding: "Duplicate the active formula",
   rename_binding: "Rename the active formula",
   group_bindings: "Group the selected formulas into a sub-program",
