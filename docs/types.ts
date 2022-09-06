@@ -18,6 +18,7 @@ export interface Features {
   readonly image: string;
   readonly html: string;
   readonly share: string;
+  readonly instances: string;
 }
 
 export type FeatureKey = keyof Features;

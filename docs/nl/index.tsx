@@ -23,6 +23,7 @@ export const nl: Translations = {
     image: "Afbeeldingen exporteren",
     html: "HTML exporteren",
     share: "Delen als puzzel",
+    instances: "Aangepaste instanties inspecteren"
   } as Features,
 
   methods,

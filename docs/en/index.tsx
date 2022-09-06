@@ -23,6 +23,7 @@ export const en = {
     image: "Exporting images",
     html: "Exporting HTML",
     share: "Sharing puzzles",
+    instances: "Inspecting adjusted instances"
   } as Features,
 
   methods,
