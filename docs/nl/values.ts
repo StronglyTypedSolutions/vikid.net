@@ -56,7 +56,7 @@ export const values: ValueDescription = {
 
   dynamic: "dynamisch",
 
-  effect: "neven-effect",
+  task: "taak",
 }
 
 export const primitives: Record<PrimitiveKind, string> = {
