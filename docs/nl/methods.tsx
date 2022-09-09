@@ -769,8 +769,4 @@ export const methods = methodDescriptions({
   [MethodId.CMD_RESULT]: {
     _: overloadDescription("resultaat van het commando")
   },
-
-  [MethodId.CMD_WITH]: {
-    _: overloadDescription("nieuw commando", "met resultaat")
-  },
 });
