@@ -56,7 +56,9 @@ export const values = {
 
   dynamic: "dynamic",
 
-  task: "task",
+  command: "command",
+
+  race: (step: number) => `command#${step} must only be used once!`
 }
 
 export const primitives: Record<PrimitiveKind, string> = {

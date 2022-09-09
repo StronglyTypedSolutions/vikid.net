@@ -766,11 +766,11 @@ export const methods = methodDescriptions({
     _: overloadDescription("als waarde van type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
   },
 
-  [MethodId.TASK_RESULT]: {
-    _: overloadDescription("resultaat van de taak")
+  [MethodId.CMD_RESULT]: {
+    _: overloadDescription("resultaat van het commando")
   },
 
-  [MethodId.TASK_FIRE]: {
-    _: overloadDescription("volgende taak", "waarde")
+  [MethodId.CMD_WITH]: {
+    _: overloadDescription("nieuw commando", "met resultaat")
   },
 });
