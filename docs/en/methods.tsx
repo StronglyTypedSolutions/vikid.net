@@ -195,7 +195,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
-    _: overloadDescription("as soon as possible", "maximum intra-frame updates")
+    _: overloadDescription("update as soon as possible", "active?")
   },
   [MethodId.MERGE]: {
     _: overloadDescription("merged with", "param", "http://reactivex.io/documentation/operators/merge.html")
@@ -206,10 +206,6 @@ export const methods = methodDescriptions({
   [MethodId.MERGE_BOTH]: {
     _: overloadDescription("merged with", "simultaneous", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
-  [MethodId.VSYNC]: {
-    _: overloadDescription("when shown on screen", "active?")
-  },
-
   /** Transformation operators */
   [MethodId.TRANSLATE_V]: {
     _: overloadDescription("translated", "param", "https://en.wikipedia.org/wiki/Translation_(geometry)")

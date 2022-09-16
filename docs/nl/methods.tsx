@@ -197,7 +197,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("bij update, neem", "bron", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
-    _: overloadDescription("zo snel mogelijk", "maximum intra-frame updates")
+    _: overloadDescription("update zo snel mogelijk", "actief?")
   },
   [MethodId.MERGE]: {
     _: overloadDescription("gecombineerd met", "param", "http://reactivex.io/documentation/operators/merge.html")
@@ -207,9 +207,6 @@ export const methods = methodDescriptions({
   },
   [MethodId.MERGE_BOTH]: {
     _: overloadDescription("gecombineerd met", "simultaan", "param", "http://reactivex.io/documentation/operators/merge.html")
-  },
-  [MethodId.VSYNC]: {
-    _: overloadDescription("zodra getoond op het scherm", "active?")
   },
 
   /** Transformation operators */
