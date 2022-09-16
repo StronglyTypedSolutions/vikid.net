@@ -12,7 +12,7 @@ TODO: Explain the function overload and parameters `input`, `with label`, `witho
 # Example
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
-{ ‘⌂’: { a👁: ⟨1 0 0⟩.«hitTest»('label', '', ☑, 0) } }
+{ ‘⌂’: { a👁: ⟨1 0 0⟩.«hitTest»('label', '', ☑) } }
 ```
 
 
