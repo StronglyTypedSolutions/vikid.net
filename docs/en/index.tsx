@@ -446,7 +446,7 @@ export const en = {
 
   restart_clock: "Restart clock",
   faulted_clock: "😕 Sorry, we encountered an internal error in the simulation",
-  timeout_clock: "⚠️ The clock stopped because your script\nwould make the user interface unresponsive\n\nTry to fix your script,\nand clock to restart.\n",
+  timeout_clock: "⚠️ The clock stopped because your script\nwould make the user interface unresponsive\n\nTry to fix your script, and click to restart.\n",
   start_clock: "Start clock",
   stop_clock: "Stop clock",
   step_clock: "Tick clock",

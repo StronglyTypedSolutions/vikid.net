@@ -691,7 +691,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("verstuur", "bericht", "aantal")
   },
   [MethodId.RECEIVE]: {
-    _: overloadDescription("ontvang berichten", "leeg?", "asap")
+    _: overloadDescription("ontvang berichten", "leeg?")
   },
 
   [MethodId.TUPLE_2]: {

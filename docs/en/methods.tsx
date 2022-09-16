@@ -682,7 +682,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("send", "message", "count")
   },
   [MethodId.RECEIVE]: {
-    _: overloadDescription("receive messages", "empty?", "asap")
+    _: overloadDescription("receive messages", "empty?")
   },
 
   [MethodId.TUPLE_2]: {
