@@ -206,9 +206,6 @@ export const methods = methodDescriptions({
   [MethodId.MERGE_BOTH]: {
     _: overloadDescription("merged with", "simultaneous", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
-  [MethodId.VSYNC]: {
-    _: overloadDescription("when shown on screen", "active?")
-  },
 
   /** Transformation operators */
   [MethodId.TRANSLATE_V]: {
