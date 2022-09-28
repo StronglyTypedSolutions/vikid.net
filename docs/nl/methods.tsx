@@ -283,6 +283,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("bevat punt?", "punt")
   },
   [MethodId.RENDER]: {
+    "𝕊": overloadDescription("render GLSL fragment shader", "breedte [pixels]", "hoogte [pixels]", "geïnterpoleerd?", "uniform mapping"),
     _: overloadDescription("render als bitmap", "breedte [pixels]", "hoogte [pixels]", "geïnterpoleerd?")
   },
   [MethodId.COMPOSE]: {

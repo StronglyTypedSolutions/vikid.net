@@ -281,6 +281,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("contains point?", "point")
   },
   [MethodId.RENDER]: {
+    "𝕊": overloadDescription("render GLSL fragment shader", "width [pixels]", "height [pixels]", "interpolated?", "uniform mapping"),
     _: overloadDescription("render to image", "width [pixels]", "height [pixels]", "interpolated?")
   },
   [MethodId.COMPOSE]: {
