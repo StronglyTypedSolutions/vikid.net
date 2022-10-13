@@ -16,6 +16,6 @@ The __buffered sound source__ `slice sound` function [lifted on signals](/refman
 ```
 
 
-[related...](duration)
+
 
 # Semantics

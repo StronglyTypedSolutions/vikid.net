@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `input`, `default input`, `op
 ```
 
 
-[related...](open!)
+
 
 # Semantics

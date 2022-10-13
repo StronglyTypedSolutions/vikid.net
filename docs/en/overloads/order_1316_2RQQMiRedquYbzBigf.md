@@ -16,6 +16,6 @@ The __[number]__ `indices of ordered elements` function [lifted on signals](/ref
 ```
 
 
-[related...](descending?)
+
 
 # Semantics

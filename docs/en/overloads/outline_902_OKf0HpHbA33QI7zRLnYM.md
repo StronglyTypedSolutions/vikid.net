@@ -16,6 +16,6 @@ The __graphic__ `outlines` function [lifted on signals](/refman/concepts/pure_fu
 ```
 
 
-[related...](enabled?)
+
 
 # Semantics

@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `make`, `allow hover?`, `supp
 ```
 
 
-[related...](support touch?)
+
 
 # Semantics

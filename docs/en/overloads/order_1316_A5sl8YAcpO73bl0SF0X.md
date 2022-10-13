@@ -16,6 +16,6 @@ The __[boolean]__ `indices of ordered elements` function [lifted on signals](/re
 ```
 
 
-[related...](descending?)
+
 
 # Semantics

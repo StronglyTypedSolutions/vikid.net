@@ -16,6 +16,6 @@ The __number__ `selected` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](functie?)
+
 
 # Semantics

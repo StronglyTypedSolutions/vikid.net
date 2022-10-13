@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `input`, `message`, `count`, 
 ```
 
 
-[related...](count)
+
 
 # Semantics

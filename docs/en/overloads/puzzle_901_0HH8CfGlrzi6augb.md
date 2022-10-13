@@ -16,6 +16,6 @@ The __number__ `puzzle` function [lifted on signals](/refman/concepts/pure_funct
 ```
 
 
-[related...](kind [@=1 ⇒ fixed blocks, @2 ⇒ free values])
+
 
 # Semantics

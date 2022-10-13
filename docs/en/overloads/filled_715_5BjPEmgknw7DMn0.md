@@ -16,6 +16,6 @@ The __drawing__ `as graphic` function [lifted on signals](/refman/concepts/pure_
 ```
 
 
-[related...](color)
+
 
 # Semantics

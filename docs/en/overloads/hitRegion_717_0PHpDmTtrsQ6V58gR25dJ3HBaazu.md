@@ -16,6 +16,6 @@ The __graphic__ `hit region` function [lifted on signals](/refman/concepts/pure_
 ```
 
 
-[related...](data)
+
 
 # Semantics

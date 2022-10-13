@@ -16,6 +16,6 @@ The __text__ `as graphic` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](line spacing)
+
 
 # Semantics

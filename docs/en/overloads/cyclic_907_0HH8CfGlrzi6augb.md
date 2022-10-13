@@ -16,6 +16,6 @@ The __number__ `animation cycle` function [lifted on signals](/refman/concepts/p
 ```
 
 
-[related...](duration)
+
 
 # Semantics

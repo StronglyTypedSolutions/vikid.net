@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `input`, `with label`, `witho
 ```
 
 
-[related...](maximum depth)
+
 
 # Semantics

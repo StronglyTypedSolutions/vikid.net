@@ -195,7 +195,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
-    _: overloadDescription("as soon as possible", "maximum intra-frame updates")
+    _: overloadDescription("as soon as possible", "maximum intra-frame updates", "global update?")
   },
   [MethodId.MERGE]: {
     _: overloadDescription("merged with", "param", "http://reactivex.io/documentation/operators/merge.html")

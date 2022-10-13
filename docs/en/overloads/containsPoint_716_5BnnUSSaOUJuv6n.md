@@ -16,6 +16,6 @@ The __graphic__ `contains point?` function [lifted on signals](/refman/concepts/
 ```
 
 
-[related...](point)
+
 
 # Semantics

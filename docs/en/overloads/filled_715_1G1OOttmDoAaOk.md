@@ -16,6 +16,6 @@ The __vector__ `as graphic` function [lifted on signals](/refman/concepts/pure_f
 ```
 
 
-[related...](thickness)
+
 
 # Semantics

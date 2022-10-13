@@ -16,6 +16,6 @@ The __[ℝ³]__ `render to image` function [lifted on signals](/refman/concepts/
 ```
 
 
-[related...](interpolated?)
+
 
 # Semantics

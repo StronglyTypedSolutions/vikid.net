@@ -16,6 +16,6 @@ The __vector__ `smallest` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](number)
+
 
 # Semantics

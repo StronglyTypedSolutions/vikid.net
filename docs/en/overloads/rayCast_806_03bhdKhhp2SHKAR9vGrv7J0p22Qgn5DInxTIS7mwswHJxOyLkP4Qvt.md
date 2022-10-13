@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `input`, `data type`, `with l
 ```
 
 
-[related...](active?)
+
 
 # Semantics

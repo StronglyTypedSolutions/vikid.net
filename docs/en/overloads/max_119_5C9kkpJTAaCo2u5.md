@@ -16,6 +16,6 @@ The __vector__ `largest` function [lifted on signals](/refman/concepts/pure_func
 ```
 
 
-[related...](number)
+
 
 # Semantics

@@ -16,6 +16,6 @@ The __number__ `actuator` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](actuator reference)
+
 
 # Semantics

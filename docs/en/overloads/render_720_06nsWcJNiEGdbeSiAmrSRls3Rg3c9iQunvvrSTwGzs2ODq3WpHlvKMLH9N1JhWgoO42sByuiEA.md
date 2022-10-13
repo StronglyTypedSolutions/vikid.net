@@ -16,6 +16,6 @@ The __(𝕂, ℝ)__ `render to image` function [lifted on signals](/refman/conce
 ```
 
 
-[related...](interpolated?)
+
 
 # Semantics

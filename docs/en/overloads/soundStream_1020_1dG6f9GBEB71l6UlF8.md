@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `make`, `id or URI`, `output`
 ```
 
 
-[related...](id or URI)
+
 
 # Semantics

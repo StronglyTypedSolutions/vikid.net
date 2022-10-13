@@ -16,6 +16,6 @@ The __text__ `padded` function [lifted on signals](/refman/concepts/pure_functio
 ```
 
 
-[related...](at the end?)
+
 
 # Semantics

@@ -16,6 +16,6 @@ The __{number ↦ number}__ `get all elements` function [lifted on signals](/ref
 ```
 
 
-[related...](ordering)
+
 
 # Semantics

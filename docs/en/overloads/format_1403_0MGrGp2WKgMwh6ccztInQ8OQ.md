@@ -16,6 +16,6 @@ The __number__ `format to text` function [lifted on signals](/refman/concepts/pu
 ```
 
 
-[related...](indent)
+
 
 # Semantics

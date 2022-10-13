@@ -16,6 +16,6 @@ The __{number}__ `get all elements` function [lifted on signals](/refman/concept
 ```
 
 
-[related...](ordering)
+
 
 # Semantics

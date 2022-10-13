@@ -16,6 +16,6 @@ The __[text]__ `join text` function [lifted on signals](/refman/concepts/pure_fu
 ```
 
 
-[related...](separator)
+
 
 # Semantics

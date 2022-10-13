@@ -16,6 +16,6 @@ The __[number]__ `padded` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](at the end?)
+
 
 # Semantics

@@ -16,6 +16,6 @@ The __number__ `extra` function [lifted on signals](/refman/concepts/pure_functi
 ```
 
 
-[related...](param)
+
 
 # Semantics

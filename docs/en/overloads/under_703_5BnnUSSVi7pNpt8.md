@@ -16,6 +16,6 @@ The __graphic__ `behind` function [lifted on signals](/refman/concepts/pure_func
 ```
 
 
-[related...](graphic)
+
 
 # Semantics

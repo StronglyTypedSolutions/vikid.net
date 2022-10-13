@@ -16,6 +16,6 @@ The __number__ `render to image` function [lifted on signals](/refman/concepts/p
 ```
 
 
-[related...](interpolated?)
+
 
 # Semantics

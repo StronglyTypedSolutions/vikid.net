@@ -16,6 +16,6 @@ The __color__ `render to image` function [lifted on signals](/refman/concepts/pu
 ```
 
 
-[related...](interpolated?)
+
 
 # Semantics

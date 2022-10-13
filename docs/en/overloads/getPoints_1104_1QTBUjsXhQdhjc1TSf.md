@@ -16,6 +16,6 @@ The __drawing__ `list of points` function [lifted on signals](/refman/concepts/p
 ```
 
 
-[related...](corners only?)
+
 
 # Semantics

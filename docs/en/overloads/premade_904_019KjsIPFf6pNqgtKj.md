@@ -16,6 +16,6 @@ The __number__ `pre-made` function [lifted on signals](/refman/concepts/pure_fun
 ```
 
 
-[related...](skip?)
+
 
 # Semantics

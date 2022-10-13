@@ -16,6 +16,6 @@ The __number__ `print to debug console` function [lifted on signals](/refman/con
 ```
 
 
-[related...](active?)
+
 
 # Semantics

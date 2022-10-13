@@ -16,6 +16,6 @@ The __graphic__ `in front of` function [lifted on signals](/refman/concepts/pure
 ```
 
 
-[related...](graphic)
+
 
 # Semantics

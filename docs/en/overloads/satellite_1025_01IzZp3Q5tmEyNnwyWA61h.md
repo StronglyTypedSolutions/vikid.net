@@ -16,6 +16,6 @@ TODO: Explain the function overload and parameters `make`, `type`, `output`
 ```
 
 
-[related...](type)
+
 
 # Semantics

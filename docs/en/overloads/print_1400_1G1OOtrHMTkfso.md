@@ -16,6 +16,6 @@ The __vector__ `as text` function [lifted on signals](/refman/concepts/pure_func
 ```
 
 
-[related...](digits after decimal point)
+
 
 # Semantics

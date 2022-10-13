@@ -16,6 +16,6 @@ The __transformation__ `as text` function [lifted on signals](/refman/concepts/p
 ```
 
 
-[related...](digits after decimal point)
+
 
 # Semantics

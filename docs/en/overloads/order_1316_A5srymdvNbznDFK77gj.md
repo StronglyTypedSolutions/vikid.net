@@ -16,6 +16,6 @@ The __[text]__ `indices of ordered elements` function [lifted on signals](/refma
 ```
 
 
-[related...](descending?)
+
 
 # Semantics

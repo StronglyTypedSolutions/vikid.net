@@ -16,6 +16,6 @@ The __text__ `parse from text` function [lifted on signals](/refman/concepts/pur
 ```
 
 
-[related...](type)
+
 
 # Semantics
