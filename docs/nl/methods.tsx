@@ -283,6 +283,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("bevat punt?", "punt")
   },
   [MethodId.RENDER]: {
+    "𝔾": overloadDescription("render als bitmap", "resolutie [hoogte in pixels]", "geïnterpoleerd?", "breedte", "hoogte", "cache?"),
     _: overloadDescription("render als bitmap", "breedte [pixels]", "hoogte [pixels]", "geïnterpoleerd?")
   },
   [MethodId.COMPOSE]: {

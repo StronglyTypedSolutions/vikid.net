@@ -281,6 +281,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("contains point?", "point")
   },
   [MethodId.RENDER]: {
+    "𝔾": overloadDescription("render to image", "resolution [height in pixels]", "interpolated?", "width", "height", "cache?"),
     _: overloadDescription("render to image", "width [pixels]", "height [pixels]", "interpolated?")
   },
   [MethodId.COMPOSE]: {

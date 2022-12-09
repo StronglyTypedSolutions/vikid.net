@@ -12,7 +12,7 @@ The __graphic__ `render to image` function [lifted on signals](/refman/concepts/
 # Example
 ```vikid-script
 𝕍i𝕂i𝔻 v0.7-750-g7e6c265e2b95 s22
-{ ‘⌂’: { a👁: ●.«render»(384, 256, ☑) } }
+{ ‘⌂’: { a👁: ●.«render»(256, ☑, 18, 12, ☑) } }
 ```
 
 
