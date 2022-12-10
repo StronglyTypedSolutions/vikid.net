@@ -287,6 +287,9 @@ export const methods = methodDescriptions({
   [MethodId.COMPOSE]: {
     _: overloadDescription("compose", "operator", "foreground", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation")
   },
+  [MethodId.HIT_SHAPE]: {
+    _: overloadDescription("with collision shape", "shape")
+  },
 
   /** Vector and matrix operators */
   [MethodId.HOR]:

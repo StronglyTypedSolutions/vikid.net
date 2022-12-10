@@ -289,6 +289,9 @@ export const methods = methodDescriptions({
   [MethodId.COMPOSE]: {
     _: overloadDescription("compositie", "operator", "voorgrond", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation")
   },
+  [MethodId.HIT_SHAPE]: {
+    _: overloadDescription("met botsingsvorm", "vorm")
+  },
 
   /** Vector operators */
   [MethodId.HOR]:
