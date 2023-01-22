@@ -361,24 +361,27 @@ export const nl: Translations = {
   remove_adjustable: "Verwijder aanpasbare parameter",
   adjust_parameters: "Parameters aanpassen",
 
-  mark_broadcaster: "Maak actieve formule beschikbaar in sub-programma's",
+  make_broadcaster: "Maak actieve formule beschikbaar in sub-programma's",
   remove_broadcaster: "Verberg actieve formule voor sub-programma's",
   warning: "⚠️ Opgelet!",
   body_break_broadcaster: (paths: string) => `⚠️ Het verbergen van de actieve formule voor sub-programma's\nzou de volgende 🔗 links in geneste formules breken:\n\n${paths}\n\n🛠️ Je zal je programma hierna moeten herstellen, of annuleer en\n💡 gebruik SHIFT + 🖱️RECHTER MUISKNOP om deze links te vinden.`,
   button_break_broadcaster: "Breek links!",
   // in_use_broadcaster: (paths: string[]) => `⚠️ Kan de actieve formule niet verbergen voor sub-programma's\nomdat deze 🔗 links ernaar verwijzen:\n\n${paths.join("\n")}\nGebruik (SHIFT + RECHTER MUISKNOP 🖱️) op de actieve formule om deze links te vinden,\nof gebruik SHIFT+CLICK op deze knop om de links te breken.`,
 
-  mark_active_track: "Maak actief spoor",
+  make_active_track: "Maak actief spoor",
   remove_active_track: "Verwijder actief spoor",
 
-  mark_message_track: "Maak berichten spoor",
+  make_message_track: "Maak berichten spoor",
   remove_message_track: "Verwijder berichten spoor",
 
-  mark_eye_track: "Maak visueel spoor",
+  make_eye_track: "Maak visueel spoor",
   remove_eye_track: "Verwijder visueel spoor",
 
-  mark_ear_track: "Maak audio spoor",
+  make_ear_track: "Maak audio spoor",
   remove_ear_track: "Verwijder audio spoor",
+
+  make_effect_track: "Maak audio spoor",
+  remove_effect_track: "Verwijder audio spoor",
 
   create_script_thumb: "Sla een miniatuur van het programma op",
 

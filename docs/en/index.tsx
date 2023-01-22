@@ -358,24 +358,27 @@ export const en = {
   remove_adjustable: "Remove adjustable parameter",
   adjust_parameters: "Adjust parameters",
 
-  mark_broadcaster: "Make active formula available in sub-programs",
+  make_broadcaster: "Make active formula available in sub-programs",
   remove_broadcaster: "Hide active formula in sub-programs",
   warning: "⚠️ Warning!",
   body_break_broadcaster: (paths: string) => `⚠️ Hiding the active formula for sub-programs\nwould break links 🔗 in the following nested formulas :\n\n${paths}\n\n🛠️ You will need to fix your program afterwards, or cancel and\n💡 use SHIFT + 🖱️RIGHT MOUSE BUTTON to find these links.`,
   button_break_broadcaster: "Break links!",
   // in_use_broadcaster: (paths: string[]) => `⚠️ Can't hide active formule for sub-programs\nbecause the following 🔗 links refer to it:\n\n${paths.join("\n")}\nUse (SHIFT + RIGHT MOUSE BUTTON 🖱️) on the active formula to find these links,\nor SHIFT+CLICK on this button to break these links.`,
 
-  mark_active_track: "Make active track",
+  make_active_track: "Make active track",
   remove_active_track: "Remove active track",
 
-  mark_message_track: "Make message track",
+  make_message_track: "Make message track",
   remove_message_track: "Remove message track",
 
-  mark_eye_track: "Make visual track",
+  make_eye_track: "Make visual track",
   remove_eye_track: "Remove visual track",
 
-  mark_ear_track: "Make audio track",
+  make_ear_track: "Make audio track",
   remove_ear_track: "Remove audio track",
+
+  make_effect_track: "Make side-effect track",
+  remove_effect_track: "Remove side-effect track",
 
   create_script_thumb: "Save a thumbnail snapshot",
 

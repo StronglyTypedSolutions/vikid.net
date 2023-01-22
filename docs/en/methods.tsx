@@ -617,6 +617,12 @@ export const methods = methodDescriptions({
   [MethodId.PARSE]: {
     _: overloadDescription("parse from text", "formaat", "type")
   },
+  [MethodId.RESULT]: {
+    _: overloadDescription("wait for the result of an side-effect", "asap")
+  },
+  [MethodId.SEQUENCE]: {
+    _: overloadDescription("followed by", "next side-effect")
+  },
   [MethodId.PROMPT]: {
     _: overloadDescription("ask the user for text input", "default input", "open!")
   },
@@ -642,6 +648,10 @@ export const methods = methodDescriptions({
   },
   [MethodId.SET_STAMP]: {
     _: overloadDescription("set timestamp", "new timestamp")
+  },
+
+  [MethodId.UNSUPPORTED]: {
+    _: overloadDescription("(not supported anymore)")
   },
 
   [MethodId.PLAY_SOUND]: {

@@ -621,6 +621,12 @@ export const methods = methodDescriptions({
   [MethodId.PARSE]: {
     _: overloadDescription("ontleed tekst", "formaat", "type")
   },
+  [MethodId.RESULT]: {
+    _: overloadDescription("wacht op het resultaat van een neveneffect", "asap")
+  },
+  [MethodId.SEQUENCE]: {
+    _: overloadDescription("gevolgd door", "volgend neveneffect")
+  },
   [MethodId.PROMPT]: {
     _: overloadDescription("vraag de gebruiker om tekst in te voeren", "standaard invoer", "open!")
   },
@@ -647,6 +653,10 @@ export const methods = methodDescriptions({
   },
   [MethodId.SET_STAMP]: {
     _: overloadDescription("wijzig tijdstempel", "nieuwe tijdstempel")
+  },
+
+  [MethodId.UNSUPPORTED]: {
+    _: overloadDescription("(niet meer ondersteund)")
   },
 
   [MethodId.PLAY_SOUND]: {
