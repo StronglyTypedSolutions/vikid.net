@@ -628,7 +628,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("gevolgd door", "volgend neveneffect")
   },
   [MethodId.PROMPT]: {
-    _: overloadDescription("vraag de gebruiker om tekst in te voeren", "standaard invoer", "open!")
+    _: overloadDescription("vraag de gebruiker om tekst in te voeren", "standaard tekst resultaat", "open!")
   },
   [MethodId.ALERT]: {
     _: overloadDescription("waarschuw de gebruiker", "open!")

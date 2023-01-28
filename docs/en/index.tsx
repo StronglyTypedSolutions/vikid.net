@@ -285,7 +285,7 @@ export const en = {
   welcome: "Welcome ",
   player: "Player",
   register: "Register",
-  world: "World",
+  social: "Social",
   shop: "Shop",
   hello: "Hello",
   slogan_RCP: "Your Reactive Creation Platform",
@@ -581,5 +581,6 @@ export const en = {
   known_issues: "Known issues",
   github: "GitHub",
   youtube: "YouTube",
-  facebook: "Facebook"
+  facebook: "Facebook",
+  discord: "Discord"
 };

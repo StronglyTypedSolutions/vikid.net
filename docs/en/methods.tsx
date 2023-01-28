@@ -624,7 +624,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("followed by", "next side-effect")
   },
   [MethodId.PROMPT]: {
-    _: overloadDescription("ask the user for text input", "default input", "open!")
+    _: overloadDescription("ask the user to enter text", "default text result", "open!")
   },
   [MethodId.ALERT]: {
     _: overloadDescription("notify the user", "open!")

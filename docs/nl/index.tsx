@@ -287,7 +287,7 @@ export const nl: Translations = {
   welcome: "Welkom ",
   player: "Speler",
   register: "Registreren",
-  world: "Wereld",
+  social: "Social",
   shop: "Shop",
   hello: "Hallo",
   slogan_RCP: "Jouw Reactief Creatie Platform",
@@ -586,5 +586,6 @@ export const nl: Translations = {
   known_issues: "Gekende problemen",
   github: "GitHub",
   youtube: "YouTube",
-  facebook: "Facebook"
+  facebook: "Facebook",
+  discord: "Discord"
 };
