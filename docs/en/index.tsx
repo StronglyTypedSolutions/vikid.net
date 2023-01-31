@@ -380,6 +380,9 @@ export const en = {
   make_effect_track: "Make side-effect track",
   remove_effect_track: "Remove side-effect track",
 
+  edit_web_header: "Change web page header URL",
+  invalid_web_header_url: "Invalid web page URL.\nShould be empty to remove the header,\nor an absolute URL starting with http or https.",
+
   create_script_thumb: "Save a thumbnail snapshot",
 
   check_answer: "❓ Is my solution correct?",

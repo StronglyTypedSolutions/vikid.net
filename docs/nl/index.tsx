@@ -383,6 +383,9 @@ export const nl: Translations = {
   make_effect_track: "Maak audio spoor",
   remove_effect_track: "Verwijder audio spoor",
 
+  edit_web_header: "Wijzig web pagina header URL",
+  invalid_web_header_url: "Ongeldige web pagina header URL.\nDeze moet leeg zijn om de web header te verwijderen,\nof een absolute URL die begint met http of https.",
+
   create_script_thumb: "Sla een miniatuur van het programma op",
 
   check_answer: "❓ Is mijn oplossing juist?",
