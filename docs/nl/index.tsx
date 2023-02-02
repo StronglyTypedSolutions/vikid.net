@@ -266,6 +266,8 @@ export const nl: Translations = {
   ui_enter_full_screen: "UI op volledig scherm",
   ui_exit_full_screen: "UI op normaal scherm",
 
+  www_enter_full_screen: "Toon de web header op een volledig scherm.\n\nDruk lang (of ALT+klik)\nom de header te openen in een nieuwe tab.",
+
   output_enter_full_screen: "Speel op volledig scherm",
   output_exit_full_screen: "Speel op normaal scherm",
 

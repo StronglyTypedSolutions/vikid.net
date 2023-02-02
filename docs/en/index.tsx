@@ -264,6 +264,8 @@ export const en = {
   ui_enter_full_screen: "Enter full screen UI",
   ui_exit_full_screen: "Exit full screen UI",
 
+  www_enter_full_screen: "Show the web header full screen.\n\nLong press (or CTRL+klik) to open the header in a new tab.",
+
   output_enter_full_screen: "Play on full screen",
   output_exit_full_screen: "Play on regular screen",
 
