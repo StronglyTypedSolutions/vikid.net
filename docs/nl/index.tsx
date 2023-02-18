@@ -71,14 +71,14 @@ export const nl: Translations = {
   common_success_title: "Gelukt!",
   common_error_title: "Error!",
 
-  generic_error: `😢 Oops!\n\n🐞 Er liep iets mis\n\n↺ Probeer het nog eens.`,
+  generic_error: `😢 Oops!\n\n🐞 Er liep iets mis\n\n↻ Probeer het nog eens.`,
 
-  generic_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↺ Probeer het nog eens.",
-  reload_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↺ Herlaad de web-pagina.",
-  uncaught_fatal_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis!\n\n↺ Herlaad de web-pagina en probeer het nog eens.",
-  uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis! ↺ Herlaad de web-pagina en probeer het nog eens.\n\n⛑️ Als er een crash bestand gedownload is, kan je dit ⮹ importeren en verder werken.",
+  generic_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↻ Probeer het nog eens.",
+  reload_api_error: "😢 Oops!\n\n🐞 De ViKiD backend gaf een fout terug.\n\n↻ Herlaad de web-pagina.",
+  uncaught_fatal_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis!\n\n↻ Herlaad de web-pagina en probeer het nog eens.",
+  uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Er ging iets onverwachts mis! ↻ Herlaad de web-pagina en probeer het nog eens.\n\n⛑️ Als er een crash bestand gedownload is, kan je dit ⮹ importeren en verder werken.",
 
-  puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Puzzel '${id} kon niet geladen worden.\n\n↺ Herlaad de web-pagina en probeer het nog eens.`,
+  puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Puzzel '${id} kon niet geladen worden.\n\n↻ Herlaad de web-pagina en probeer het nog eens.`,
   puzzle_preview_error: `🧩 Omzetten naar puzzel is mislukt.`,
 
   account_not_found_title: "Account niet gevonden!",
@@ -208,11 +208,11 @@ export const nl: Translations = {
 
   resolution_not_supported: "😕 Resolutie niet ondersteund",
   screen_size_too_small: (width: number, height: number) => `📺 Je scherm heeft een resolutie van ${width}×${height};\ndit is te klein voor ViKiD's minimum (${config.minLargestViewSize}×${config.minSmallestViewSize}).\n\n🔍 Probeer de webpagina uit te zoomen,\n \n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
-  screen_width_too_small: (width: number) => `📺 Je scherm heeft een CSS breedte van ${width};\ndit is te klein voor ViKiD's minimum (${config.minReadingViewWidth}}).\n\n↺ Probeer je scherm te draaienm 🔍 de webpagina uit te zoomen,\n\n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
+  screen_width_too_small: (width: number) => `📺 Je scherm heeft een CSS breedte van ${width};\ndit is te klein voor ViKiD's minimum (${config.minReadingViewWidth}}).\n\n↻ Probeer je scherm te draaienm 🔍 de webpagina uit te zoomen,\n\n🖥 desktop mode aan te zetten\n,🖥️ of gebruik een toestel met een groter scherm,\n💻 zoals een laptop of grote tablet.`,
 
 
   portrait_not_supported: "😕 Staand scherm niet ondersteund",
-  landscape_request_rotation: "↺ Draai je toestel naar de 🖵 liggende stand.",
+  landscape_request_rotation: "↻ Draai je toestel naar de 🖵 liggende stand.",
 
   module_importer_title: "⬡ Module importeren",
 
@@ -267,6 +267,7 @@ export const nl: Translations = {
   ui_exit_full_screen: "UI op normaal scherm",
 
   www_enter_full_screen: "Toon de web header op een volledig scherm.\n\nDruk lang (of ALT+klik)\nom de header te openen in een nieuwe tab.",
+  www_refresh_source: "↻ Herlaad de web header pagina",
 
   output_enter_full_screen: "Speel op volledig scherm",
   output_exit_full_screen: "Speel op normaal scherm",
@@ -449,11 +450,11 @@ export const nl: Translations = {
 
   user_registration_confirmed: "🤩 Je email adres werkt!\n\nJe kan nu in de playground er op los bouwen!",
   user_registration_completed: "🤩 Bedankt om te registeren!\n\n📧 Je zal een e-mail ontvangen om je account te activeren.\n\n🕵 Controleer ook zeker je spam mailbox!",
-  not_signed_in: "😕 Je moet ingelogd zijn om toegang te krijgen.\n\n↺ Herlaad de web-pagina als inloggen niet lukt.",
+  not_signed_in: "😕 Je moet ingelogd zijn om toegang te krijgen.\n\n↻ Herlaad de web-pagina als inloggen niet lukt.",
   tutorial_not_played_title: "Voldoende ervaring?",
   tutorial_not_played: (count: number) => `⚠️ Om ViKiD te leren, is het aangeraden om minstens\n🧩 ${count} puzzels op te lossen in de tutorial.\n\n❓ Wil je ons puzzel spel eerst proberen?`,
-  no_access: "😕 Je hebt geen toegang tot deze module.\n\n💰 Als je deze module gekocht hebt, log dan eerst uit,\n\n↺herlaad de pagina, en log opnieuw in.",
-  resource_not_found: "😕 Deze pagina bestaat niet.\n\n❓ Heb je de juiste URL ingevoerd in de adres balk?\n\n↺ Probeer het nog eens",
+  no_access: "😕 Je hebt geen toegang tot deze module.\n\n💰 Als je deze module gekocht hebt, log dan eerst uit,\n\n↻herlaad de pagina, en log opnieuw in.",
+  resource_not_found: "😕 Deze pagina bestaat niet.\n\n❓ Heb je de juiste URL ingevoerd in de adres balk?\n\n↻ Probeer het nog eens",
   sandbox_requires_account: "👓 Om de math-e-magic achter dit programma te zien,\n\n⚠️ moet je inloggen of een ViKiD account maken.",
 
   restart_clock: "Herstart de klok",

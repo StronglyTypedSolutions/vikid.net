@@ -72,14 +72,14 @@ export const en = {
   common_success_title: "Success!",
   common_error_title: "Error!",
 
-  generic_error: `😢 Oops!\n\n🐞 Something went wrong.\n\n↺ Please try again.`,
+  generic_error: `😢 Oops!\n\n🐞 Something went wrong.\n\n↻ Please try again.`,
 
-  generic_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↺ Please try again..",
-  reload_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↺ Please reload the web-page.",
-  uncaught_fatal_error: "😢 Oops!\n\n🐞 Something unexpected happened!\n\n↺ Please reload the web-page and try again.",
-  uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Something unexpected happened! ↺ Please reload the web-page and try again.\n\n⛑️ If a crash file was downloaded, then you can ⮹ import this to continue your work.",
+  generic_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↻ Please try again..",
+  reload_api_error: "😢 Oops!\n\n🐞 The ViKiD backend responsed with an error.\n\n↻ Please reload the web-page.",
+  uncaught_fatal_error: "😢 Oops!\n\n🐞 Something unexpected happened!\n\n↻ Please reload the web-page and try again.",
+  uncaught_fatal_edit_error: "😢 Oops!\n\n🐞 Something unexpected happened! ↻ Please reload the web-page and try again.\n\n⛑️ If a crash file was downloaded, then you can ⮹ import this to continue your work.",
 
-  puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Failed to load puzzle '${id}.\n\n↺ Please reload the web-page and try again.`,
+  puzzle_load_error: (id: string) => `😢 Oops!\n\n🐞 Failed to load puzzle '${id}.\n\n↻ Please reload the web-page and try again.`,
   puzzle_preview_error: `🧩 Conversion to puzzle failed.`,
 
   account_not_found_title: "Account not found!",
@@ -208,10 +208,10 @@ export const en = {
 
   resolution_not_supported: "😕 Resolution not supported",
   screen_size_too_small: (width: number, height: number) => `📺 Your screen has a CSS resolution of ${width}×${height};\nthis too small for ViKiD's minimum (${config.minLargestViewSize}×${config.minSmallestViewSize}).\n\n🔍 Try zooming out the webpage,\n🖥 or enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
-  screen_width_too_small: (width: number) => `📺 Your screen has a CSS width of ${width};\nthis too small for ViKiD's minimum (${config.minReadingViewWidth}).\n\n↺ Try rotating your device, 🔍 zooming out the webpage,\n🖥 enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
+  screen_width_too_small: (width: number) => `📺 Your screen has a CSS width of ${width};\nthis too small for ViKiD's minimum (${config.minReadingViewWidth}).\n\n↻ Try rotating your device, 🔍 zooming out the webpage,\n🖥 enable desktop modus,\n 🖥️ or use a device with a larger screen,\n💻 like a laptop or large tablet.`,
 
   portrait_not_supported: "😕 Portrait mode not supported",
-  landscape_request_rotation: "↺ Try rotating your device into 🖥️ landscape mode.",
+  landscape_request_rotation: "↻ Try rotating your device into 🖥️ landscape mode.",
 
   module_importer_title: "⬡ Module importer",
 
@@ -265,6 +265,7 @@ export const en = {
   ui_exit_full_screen: "Exit full screen UI",
 
   www_enter_full_screen: "Show the web header full screen.\n\nLong press (or CTRL+klik) to open the header in a new tab.",
+  www_refresh_source: "↻ Refresh the web header page",
 
   output_enter_full_screen: "Play on full screen",
   output_exit_full_screen: "Play on regular screen",
@@ -445,11 +446,11 @@ export const en = {
 
   user_registration_confirmed: "🤩 Your e-mail address is working!\n\nYou can now build whatever you want in the playground!",
   user_registration_completed: "🤩 Thanks for registering!\n\n📧 We have sent you an e-mail to activate your account.\n\n🕵 Be sure to check your spam mailbox!",
-  not_signed_in: "😕 You need to be signed in to get access.\n\n↺ Reload the webpage if sign-in doesn't work.",
+  not_signed_in: "😕 You need to be signed in to get access.\n\n↻ Reload the webpage if sign-in doesn't work.",
   tutorial_not_played_title: "Enough experience?",
   tutorial_not_played: (count: number) => `⚠️ To learn ViKiD, it is advised to solve at least\n🧩 ${count} puzzles in the tutorial!\n\n❓ Would you like to try our puzzle game first?`,
-  no_access: "😕 You don't have access to this module.\n\n💰 If you purchased the module, please first sign-out,\n↺ refresh, and then sign-in again.",
-  resource_not_found: "😕 This resource doesn't exist.\n\n❓ Did you enter the correct URL in the address bar?\n\n↺ Please try again.",
+  no_access: "😕 You don't have access to this module.\n\n💰 If you purchased the module, please first sign-out,\n↻ refresh, and then sign-in again.",
+  resource_not_found: "😕 This resource doesn't exist.\n\n❓ Did you enter the correct URL in the address bar?\n\n↻ Please try again.",
   sandbox_requires_account: "👓 To see the math-e-magic behind this,\n\n⚠️ you need to sign-in or create a ViKiD account.",
 
   restart_clock: "Restart clock",
