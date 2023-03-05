@@ -281,6 +281,7 @@ export const en = {
 
   about: "About",
   build: "Build",
+  forum: "Forum",
   play: "Play",
   learn: "Learn",
   login: "Sign in",

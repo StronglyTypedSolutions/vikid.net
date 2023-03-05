@@ -283,6 +283,7 @@ export const nl: Translations = {
 
   about: "Over ViKiD",
   build: "Bouwen",
+  forum: "Forum",
   play: "Spelen",
   learn: "Leren",
   login: "Aanmelden",
