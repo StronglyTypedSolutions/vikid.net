@@ -449,10 +449,14 @@ export const en = {
   user_registration_completed: "🤩 Thanks for registering!\n\n📧 We have sent you an e-mail to activate your account.\n\n🕵 Be sure to check your spam mailbox!",
   not_signed_in: "😕 You need to be signed in to get access.\n\n↻ Reload the webpage if sign-in doesn't work.",
   tutorial_not_played_title: "Enough experience?",
-  tutorial_not_played: (count: number) => `⚠️ To learn ViKiD, it is advised to solve at least\n🧩 ${count} puzzles in the tutorial!\n\n❓ Would you like to try our puzzle game first?`,
+  tutorial_not_played: (count: number) => `⚠️ If you are new to programming,\n🛈 it is advised to solve at least\n🧩 ${count} puzzles in the tutorial!\n\n❓ Would you like to try our puzzle game first?`,
   no_access: "😕 You don't have access to this module.\n\n💰 If you purchased the module, please first sign-out,\n↻ refresh, and then sign-in again.",
   resource_not_found: "😕 This resource doesn't exist.\n\n❓ Did you enter the correct URL in the address bar?\n\n↻ Please try again.",
-  sandbox_requires_account: "👓 To see the math-e-magic behind this,\n\n⚠️ you need to sign-in or create a ViKiD account.",
+  magic_requires_account: "👓 To see the math-e-magic behind this,\n\n⚠️ you need to sign-in or create a ViKiD account.",
+
+  requires_account_title: "Account required",
+  saving_requires_account: "⚠️ You need an account to save your program in the cloud.\n\n🚹 Please create one, or login to your account.",
+  create_account: "Create account",
 
   restart_clock: "Restart clock",
   faulted_clock: "😕 Sorry, we encountered an internal error in the simulation",

@@ -453,10 +453,14 @@ export const nl: Translations = {
   user_registration_completed: "🤩 Bedankt om te registeren!\n\n📧 Je zal een e-mail ontvangen om je account te activeren.\n\n🕵 Controleer ook zeker je spam mailbox!",
   not_signed_in: "😕 Je moet ingelogd zijn om toegang te krijgen.\n\n↻ Herlaad de web-pagina als inloggen niet lukt.",
   tutorial_not_played_title: "Voldoende ervaring?",
-  tutorial_not_played: (count: number) => `⚠️ Om ViKiD te leren, is het aangeraden om minstens\n🧩 ${count} puzzels op te lossen in de tutorial.\n\n❓ Wil je ons puzzel spel eerst proberen?`,
+  tutorial_not_played: (count: number) => `⚠️ Als je nog niet kan programmeren,\n🛈 is het aangeraden om minstens\n🧩 ${count} puzzels op te lossen in de tutorial.\n\n❓ Wil je ons puzzel spel eerst proberen?`,
   no_access: "😕 Je hebt geen toegang tot deze module.\n\n💰 Als je deze module gekocht hebt, log dan eerst uit,\n\n↻herlaad de pagina, en log opnieuw in.",
   resource_not_found: "😕 Deze pagina bestaat niet.\n\n❓ Heb je de juiste URL ingevoerd in de adres balk?\n\n↻ Probeer het nog eens",
-  sandbox_requires_account: "👓 Om de math-e-magic achter dit programma te zien,\n\n⚠️ moet je inloggen of een ViKiD account maken.",
+  magic_requires_account: "👓 Om de math-e-magic achter dit programma te zien,\n\n⚠️ moet je inloggen of een ViKiD account maken.",
+
+  requires_account_title: "Account nodig",
+  saving_requires_account: "⚠️ Je hebt een account nodig om je programma te bewaren in de cloud.\n\n🚹 Gelieve een account te maken, of in te loggen.",
+  create_account: "Maak account",
 
   restart_clock: "Herstart de klok",
   faulted_clock: "😕 Sorry, er is een interne fout in de simulatie opgetreden",
