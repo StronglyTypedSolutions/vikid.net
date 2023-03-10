@@ -7,7 +7,7 @@
 ```
 
 # Description
-TODO: Explain the function overload and parameters `input`, `maximum intra-frame updates`, `global update?`, `output`
+TODO: Explain the function overload and parameters `input`, `maximum intra-frame updates`, `output`
 
 # Example
 ```vikid-script
