@@ -57,6 +57,8 @@ export const values: ValueDescription = {
   dynamic: "dynamisch",
 
   effect: "neven-effect",
+
+  event: "gebeurtenis"
 }
 
 export const primitives: Record<PrimitiveKind, string> = {
