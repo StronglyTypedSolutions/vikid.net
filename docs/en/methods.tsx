@@ -206,6 +206,15 @@ export const methods = methodDescriptions({
   [MethodId.MERGE_BOTH]: {
     _: overloadDescription("merged with", "simultaneous", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
+  [MethodId.PACK_EVENT]: {
+    _: overloadDescription("packed as event")
+  },
+  [MethodId.FIRE_EVENT]: {
+    _: overloadDescription("fire event", "include past events?")
+  },
+  [MethodId.HAS_EVENT]: {
+    _: overloadDescription("event happened?")
+  },
 
   /** Transformation operators */
   [MethodId.TRANSLATE_V]: {
