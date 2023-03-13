@@ -212,7 +212,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("ingepakt als gebeurtenis")
   },
   [MethodId.FIRE_EVENT]: {
-    _: overloadDescription("vuur gebeurtenis af", "inclusief het verleden?")
+    _: overloadDescription("vuur gebeurtenis af")
   },
   [MethodId.HAS_EVENT]: {
     _: overloadDescription("is gebeurd?")

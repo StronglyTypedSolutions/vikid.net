@@ -210,7 +210,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("packed as event")
   },
   [MethodId.FIRE_EVENT]: {
-    _: overloadDescription("fire event", "include past events?")
+    _: overloadDescription("fire event")
   },
   [MethodId.HAS_EVENT]: {
     _: overloadDescription("event happened?")
