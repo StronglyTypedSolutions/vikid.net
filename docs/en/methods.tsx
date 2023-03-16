@@ -191,6 +191,9 @@ export const methods = methodDescriptions({
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
   },
+  [MethodId.SNAP_FILTER]: {
+    _: overloadDescription("snapshot and filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
+  },
   [MethodId.SNAPSHOT]: {
     _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
   },
@@ -206,8 +209,11 @@ export const methods = methodDescriptions({
   [MethodId.MERGE_BOTH]: {
     _: overloadDescription("merged with", "simultaneous", "param", "http://reactivex.io/documentation/operators/merge.html")
   },
-  [MethodId.PACK_EVENT]: {
-    _: overloadDescription("packed as event")
+  [MethodId.WRAP_EVENT]: {
+    _: overloadDescription("wrapped as event")
+  },
+  [MethodId.UNWRAP_EVENT]: {
+    _: overloadDescription("unwrapped event")
   },
   [MethodId.FIRE_EVENT]: {
     _: overloadDescription("fire event")
