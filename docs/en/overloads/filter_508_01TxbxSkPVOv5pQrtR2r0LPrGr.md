@@ -10,7 +10,7 @@
 - When the `input` _updates_, it is _copied_ to the `output` but _only when_ the `pass through?` signal value is `true`.
 - In electronics, this resembles a [transistor](https://en.wikipedia.org/wiki/Transistor).
 
-> Note that when the `pass through?` updates from `false` to `true`, it _will not update_ the `output`; this occurs _only when_ the `input` updates. To get this behavior, simple take a [snapshot](/refman/overloads/when_500_01ItCxfnKcnYHL2788ns4f) of the `input` using the `pass through?` as a trigger. 
+> Note that when the `pass through?` updates from `false` to `true`, it _will not update_ the `output`; this occurs _only when_ the `input` updates. To get this behavior, simply take a [snapshot](/refman/overloads/when_500_01ItCxfnKcnYHL2788ns4f) of the `input` using the `pass through?` as a trigger, or use the other [filter-on-right](/refman/overloads/filterOnRight_516_01TxbxSkPVOv5pQrtR2r0LPrGr) or [filter-on-both](/refman/overloads/filterOnBoth_515_01TxbxSkPVOv5pQrtR2r0LPrGr) filter variants.
 
 > Since you need the above behavior very often, we provide the handy [snapFilter](/refman/overloads/snapFilter_515_01TxbxSkPVOv5pQrtR2r0LPrGr] function for this.
 

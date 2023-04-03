@@ -191,10 +191,13 @@ export const methods = methodDescriptions({
     _: overloadDescription("recente updates", "tijdspanne [@<0 ⇒ tijdstempels | @>0 ⇒ seconden]", "vertraagd?", "glijdend?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
-    _: overloadDescription("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
+    _: overloadDescription("filter", "doorlaten als de invoer afvuurt?", "http://reactivex.io/documentation/operators/filter.html")
   },
-  [MethodId.SNAP_FILTER]: {
-    _: overloadDescription("snapshot en filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
+  [MethodId.FILTER_ON_BOTH]: {
+    _: overloadDescription("filter", "doorlaten als de invoer of parameter afvuren?", "http://reactivex.io/documentation/operators/filter.html")
+  },
+  [MethodId.FILTER_ON_RIGHT]: {
+    _: overloadDescription("filter", "doorlaten als de parameter afvuurt?", "http://reactivex.io/documentation/operators/filter.html")
   },
   [MethodId.SNAPSHOT]: {
     _: overloadDescription("bij update, neem", "bron", "http://reactivex.io/documentation/operators/sample.html")

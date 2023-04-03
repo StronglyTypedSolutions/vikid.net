@@ -189,10 +189,13 @@ export const methods = methodDescriptions({
     _: overloadDescription("recent updates", "duration [@<0 ⇒ stamps | @>0 ⇒ seconds]", "delay?", "slider", "active?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
-    _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
+    _: overloadDescription("filter", "pass through when input fires?", "http://reactivex.io/documentation/operators/filter.html")
   },
-  [MethodId.SNAP_FILTER]: {
-    _: overloadDescription("snapshot and filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
+  [MethodId.FILTER_ON_BOTH]: {
+    _: overloadDescription("filter", "pass through when input or parameter fire?", "http://reactivex.io/documentation/operators/filter.html")
+  },
+  [MethodId.FILTER_ON_RIGHT]: {
+    _: overloadDescription("filter", "pass through when parameter fires?", "http://reactivex.io/documentation/operators/filter.html")
   },
   [MethodId.SNAPSHOT]: {
     _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
