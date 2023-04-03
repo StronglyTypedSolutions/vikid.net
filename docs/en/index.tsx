@@ -37,6 +37,8 @@ export const en = {
 
   recent: "recently",
 
+  pending: "pending",
+
   more: "related...",
   parameter: "parameter",
   type: "type",

@@ -36,6 +36,8 @@ export const nl: Translations = {
   adjustableParameter: (name: string, index: number) => `<${name || "parameter"}@${index}>`,
 
   recent: "recent",
+  pending: "pending",
+
   more: "meer...",
   parameter: "parameter",
   type: "type",
