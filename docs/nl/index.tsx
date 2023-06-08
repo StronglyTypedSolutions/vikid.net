@@ -466,7 +466,7 @@ export const nl: Translations = {
 
   restart_clock: "Herstart de klok",
   faulted_clock: "😕 Sorry, er is een interne fout in de simulatie opgetreden",
-  timeout_clock: "⚠️ De klok is gestopt omdat je script\nde interface te hard zou vertragen.\n\nProbeer je script te verbeteren,\nen klik om opnieuw te starten.\n",
+  timeout_clock: (inEditor: boolean) => `⚠️ De klok is gestopt omdat je script\nde interface te hard zou vertragen.\n\nProbeer je script te verbeteren,\nen klik om opnieuw te starten.\n\n🛠️ Om de timeout te verhogen, surf naar\n\nhttps://vikid.net/cfg?${inEditor ? "set" : "srt"}=<ms>\n\nmet <ms> = aantal milliseconden.`,
   start_clock: "Start de klok",
   stop_clock: "Stop de klok",
   step_clock: "Tik de klok",

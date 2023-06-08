@@ -462,7 +462,7 @@ export const en = {
 
   restart_clock: "Restart clock",
   faulted_clock: "😕 Sorry, we encountered an internal error in the simulation",
-  timeout_clock: "⚠️ The clock stopped because your script\nwould make the user interface unresponsive\n\nTry to fix your script,\nand click to restart.\n",
+  timeout_clock: (inEditor: boolean) => `⚠️ The clock stopped because your script\nwould make the user interface unresponsive\n\nTry to fix your script, and click to restart.\n\n🛠️ To increase the timeout, navigate to\n\nhttps://vikid.net/cfg?${inEditor ? "set" : "srt"}=<ms>\n\nwhere <ms> = milliseconds.`,
   start_clock: "Start clock",
   stop_clock: "Stop clock",
   step_clock: "Tick clock",
