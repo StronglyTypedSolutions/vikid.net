@@ -1,4 +1,4 @@
-import { Let } from "@vikid-mod/language";
+import { Let, MethodId, TemplateMethodId } from "@vikid-mod/language";
 import { Language } from "locale";
 import config from "@vikid-core/config";
 import { groups } from "./groups";
@@ -7,6 +7,7 @@ import { puzzles } from "./puzzles";
 import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import { FeatureKey, Features } from "../types";
+import { assertNever } from "@vikid-core";
 
 const puzzle_error_in_prog = `🐞 Error in puzzle program:\n\n`;
 const puzzle_error_in_let = (currentLetLabel: string): string => `🐞 Error in puzzle formula '${currentLetLabel}':\n\n`;
@@ -409,7 +410,8 @@ export const en = {
   // insert_formula_before: "Insert a new formula before the active formula",
   append_formula_after: "Append a new formula after the active formula ",
   delete_formula: "Remove the highlighted part from the formula",
-  append_formula: "Append a new formula",
+  append_formula_empty: "Append a new empty formula",
+  append_formula_template: "Pick a template for the new formula",
   create_reference_to: "Link to another formula",
   break_reference_to: "Break the link to the formula",
   forbid_reference: "😕 You can't link to this formula",
@@ -595,5 +597,20 @@ export const en = {
   github: "GitHub",
   youtube: "YouTube",
   facebook: "Facebook",
-  discord: "Discord"
+  discord: "Discord",
+
+  default_binding_label_for(method: TemplateMethodId) {
+    switch (method) {
+      case MethodId.MOUSE_BUTTON: return "mouse down?";
+      case MethodId.MOUSE_POSITION: return "mouse position";
+      case MethodId.KEY_TRACKER: return "key down?";
+      case MethodId.TOUCH_POSITION: return "finger position";
+      case MethodId.TOUCH_DOWN: return "finger down?";
+      case MethodId.TOUCH_TRACKER: return "finger tracker";
+      case MethodId.GAMEPAD_SWITCH: return "gamepad down?";
+      case MethodId.GAMEPAD_VECTOR: return "gamepad stick";
+      case MethodId.GAMEPAD_NUMBER: return "gamepad trigger";
+      default: return assertNever(method);
+    }
+  }
 };

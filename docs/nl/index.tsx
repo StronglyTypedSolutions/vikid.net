@@ -1,4 +1,4 @@
-import { Let } from "@vikid-mod/language";
+import { Let, MethodId, TemplateMethodId } from "@vikid-mod/language";
 import { Language } from "locale";
 import { groups } from "./groups";
 import { methods } from "./methods";
@@ -7,6 +7,7 @@ import { sensors } from "./sensors";
 import { primitives, values } from "./values";
 import type { FeatureKey, Features, Translations } from "../types";
 import config from "@vikid-core/config";
+import { assertNever } from "@vikid-core";
 
 const puzzle_error_in_prog = `🐞 Fout in puzzel programma:\n\n`;
 const puzzle_error_in_let = (currentLetLabel: string): string => `🐞 Fout in puzzel formule '${currentLetLabel}:\n\n`;
@@ -412,7 +413,8 @@ export const nl: Translations = {
   // insert_formula_before: "Voeg een nieuwe formule toe voor de actieve formule",
   append_formula_after: "Voeg een nieuwe formule toe na de actieve formule",
   delete_formula: "Verwijder het aangeduide onderdeel van de formule",
-  append_formula: "Voeg een nieuwe formule toe",
+  append_formula_empty: "Voeg een nieuwe lege formule toe",
+  append_formula_template: "Kies een sjabloon voor de nieuwe formule",
   create_reference_to: "Maak een link naar een andere formule",
   break_reference_to: "Breek de link naar de formule",
 
@@ -600,5 +602,21 @@ export const nl: Translations = {
   github: "GitHub",
   youtube: "YouTube",
   facebook: "Facebook",
-  discord: "Discord"
+  discord: "Discord",
+
+  default_binding_label_for(method: TemplateMethodId) {
+    // TODO: Should we translate these?
+    switch (method) {
+      case MethodId.MOUSE_BUTTON: return "mouse down?";
+      case MethodId.MOUSE_POSITION: return "mouse position";
+      case MethodId.KEY_TRACKER: return "key down?";
+      case MethodId.TOUCH_POSITION: return "finger position";
+      case MethodId.TOUCH_DOWN: return "finger down?";
+      case MethodId.TOUCH_TRACKER: return "finger tracker";
+      case MethodId.GAMEPAD_SWITCH: return "gamepad down?";
+      case MethodId.GAMEPAD_VECTOR: return "gamepad stick";
+      case MethodId.GAMEPAD_NUMBER: return "gamepad trigger";
+      default: return assertNever(method);
+    }
+  }
 };
