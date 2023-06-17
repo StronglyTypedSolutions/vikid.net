@@ -612,5 +612,7 @@ export const en = {
       case MethodId.GAMEPAD_NUMBER: return "gamepad trigger";
       default: return assertNever(method);
     }
-  }
+  },
+
+  import_scratch_sprite: "Import sprite from MIT's Scratch"
 };

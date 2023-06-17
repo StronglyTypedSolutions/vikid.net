@@ -618,5 +618,7 @@ export const nl: Translations = {
       case MethodId.GAMEPAD_NUMBER: return "gamepad trigger";
       default: return assertNever(method);
     }
-  }
+  },
+
+  import_scratch_sprite: "Importeer sprite van MIT's Scratch"
 };
