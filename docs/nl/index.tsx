@@ -1,4 +1,4 @@
-import { Let, MethodId, TemplateMethodId } from "@vikid-mod/language";
+import { Let, MethodId, PresetMethodId } from "@vikid-mod/language";
 import { Language } from "locale";
 import { groups } from "./groups";
 import { methods } from "./methods";
@@ -414,7 +414,7 @@ export const nl: Translations = {
   append_formula_after: "Voeg een nieuwe formule toe na de actieve formule",
   delete_formula: "Verwijder het aangeduide onderdeel van de formule",
   append_formula_empty: "Voeg een nieuwe lege formule toe",
-  append_formula_template: "Kies een sjabloon voor de nieuwe formule",
+  append_formula_preset: "Kies een voorgemaakte formule",
   create_reference_to: "Maak een link naar een andere formule",
   break_reference_to: "Breek de link naar de formule",
 
@@ -604,7 +604,7 @@ export const nl: Translations = {
   facebook: "Facebook",
   discord: "Discord",
 
-  default_binding_label_for(method: TemplateMethodId) {
+  default_binding_label_for(method: PresetMethodId) {
     // TODO: Should we translate these?
     switch (method) {
       case MethodId.MOUSE_BUTTON: return "mouse down?";

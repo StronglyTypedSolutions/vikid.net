@@ -1,4 +1,4 @@
-import { Let, MethodId, TemplateMethodId } from "@vikid-mod/language";
+import { Let, MethodId, PresetMethodId } from "@vikid-mod/language";
 import { Language } from "locale";
 import config from "@vikid-core/config";
 import { groups } from "./groups";
@@ -411,7 +411,7 @@ export const en = {
   append_formula_after: "Append a new formula after the active formula ",
   delete_formula: "Remove the highlighted part from the formula",
   append_formula_empty: "Append a new empty formula",
-  append_formula_template: "Pick a template for the new formula",
+  append_formula_preset: "Pick a preset formula",
   create_reference_to: "Link to another formula",
   break_reference_to: "Break the link to the formula",
   forbid_reference: "😕 You can't link to this formula",
@@ -599,7 +599,7 @@ export const en = {
   facebook: "Facebook",
   discord: "Discord",
 
-  default_binding_label_for(method: TemplateMethodId) {
+  default_binding_label_for(method: PresetMethodId) {
     switch (method) {
       case MethodId.MOUSE_BUTTON: return "mouse down?";
       case MethodId.MOUSE_POSITION: return "mouse position";
