@@ -203,7 +203,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("bij update, neem", "bron", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
-    _: overloadDescription("zo snel mogelijk", "maximum intra-frame updates [@>0 => globaal, @<0 => lokaal]")
+    _: overloadDescription("zo snel mogelijk", "maximum intra-frame updates [@>0 ⇒ globaal, @<0 => lokaal]")
   },
   [MethodId.MERGE]: {
     _: overloadDescription("gecombineerd met", "param", "http://reactivex.io/documentation/operators/merge.html")
@@ -499,7 +499,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("lijntekening", "startpunt", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
   },
   [MethodId.BITMAP_IMAGE]: {
-    _: overloadDescription("externe sprite", "URI", "geïnterpoleerd?", "hoogte", "https://nl.wikipedia.org/wiki/Sprite_(computer)")
+    _: overloadDescription("externe sprite", "URI", "geïnterpoleerd?", "grootte [@≥0 ⇒ hoogte, @<0 ⇒ pixels-per-eenheid]", "center [point ⇒ pixels, vector ⇒ verhouding]", "https://nl.wikipedia.org/wiki/Sprite_(computer)")
   },
   [MethodId.EMPTY_LIST]: {
     _: overloadDescription("lege rij", "type", "https://nl.wikipedia.org/wiki/Array")
@@ -535,7 +535,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("gebufferd geluids bestand", "getal of URI")
   },
   [MethodId.PIXELS_PER_UNIT]: {
-    _: overloadDescription("screen pixels per ViKiD unit")
+    _: overloadDescription("screen pixels per ViKiD eenheid")
   },
   // [MethodId.NEW_MICROPHONE]: {
   //   _: overloadDescription("microfoon geluidsbron")

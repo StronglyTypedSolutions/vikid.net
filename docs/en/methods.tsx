@@ -201,7 +201,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("on update, snapshot of", "source", "http://reactivex.io/documentation/operators/sample.html")
   },
   [MethodId.ASAP]: {
-    _: overloadDescription("as soon as possible", "maximum intra-frame updates [@>0 => global, @<0 => local]")
+    _: overloadDescription("as soon as possible", "maximum intra-frame updates [@>0 ⇒ global, @<0 ⇒ local]")
   },
   [MethodId.MERGE]: {
     _: overloadDescription("merged with", "param", "http://reactivex.io/documentation/operators/merge.html")
@@ -388,7 +388,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("puzzle", "kind [@=0 ⇒ fixed blocks, @1 ⇒ free values]")
   },
   [MethodId.OUTLINE]: {
-    _: overloadDescription("outline", "thickness [@≤0 => hidden]", "color")
+    _: overloadDescription("outline", "thickness [@≤0 ⇒ hidden]", "color")
   },
   [MethodId.CORRECT]: {
     _: overloadDescription("correct", "preview?", "wrong value")
@@ -496,7 +496,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("line drawing", "start point", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
   },
   [MethodId.BITMAP_IMAGE]: {
-    _: overloadDescription("external sprite", "URI", "interpolated?", "height", "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)")
+    _: overloadDescription("external sprite", "URI", "interpolated?", "size  @≥0 ⇒ height, @<0 ⇒ pixels-per-unit]", "center [point ⇒ in pixels, vector ⇒ proportional]", "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)")
   },
   [MethodId.EMPTY_LIST]: {
     _: overloadDescription("empty array", "type", "https://en.wikipedia.org/wiki/Array_data_structure")
