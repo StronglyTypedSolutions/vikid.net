@@ -620,5 +620,6 @@ export const nl: Translations = {
     }
   },
 
-  import_scratch_sprite: "Importeer sprite van MIT's Scratch"
+  import_scratch_sprite: "Importeer sprite van MIT's Scratch",
+  import_scratch_backdrop: "Importeer achtergrond van MIT's Scratch",
 };

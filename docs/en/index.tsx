@@ -614,5 +614,6 @@ export const en = {
     }
   },
 
-  import_scratch_sprite: "Import sprite from MIT's Scratch"
+  import_scratch_sprite: "Import sprite from MIT's Scratch",
+  import_scratch_backdrop: "Import backgdrop from MIT's Scratch",
 };
