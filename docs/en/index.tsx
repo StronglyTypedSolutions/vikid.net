@@ -189,6 +189,7 @@ export const en = {
 
   reference_manual: "Reference manual",
   users_guide: "User guide",
+  gpt_guide: "Chat GPT tips",
 
   see_also: "See also:",
 

@@ -189,6 +189,7 @@ export const nl: Translations = {
 
   reference_manual: "Referentie handleiding",
   users_guide: "Gebruikers handleiding",
+  gpt_guide: "Chat GPT tips",
 
   see_also: "Zie ook:",
 
