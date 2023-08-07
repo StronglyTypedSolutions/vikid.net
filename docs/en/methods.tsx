@@ -788,18 +788,18 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.VARIABLE]: {
-    _: overloadDescription("variable", "type", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+    _: overloadDescription("variable", "type")
   },
   [MethodId.READ]: {
-    _: overloadDescription("observe?", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+    _: overloadDescription("read variable", "reactive?", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
   },
   [MethodId.WRITE]: {
-    _: overloadDescription("value", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+    _: overloadDescription("write variable", "value", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
   },
   [MethodId.CHANGE]: {
-    _: overloadDescription("delta", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+    _: overloadDescription("change variable", "delta", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
   },
   [MethodId.AFTER]: {
-    _: overloadDescription("before")
+    _: overloadDescription("update after", "reference")
   },
 });
