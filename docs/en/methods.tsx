@@ -444,7 +444,7 @@ export const methods = methodDescriptions({
   // [MethodId.NEW_BINDING]: "",
   [MethodId.VECTOR_2D]: {
     "ℝ²": overloadDescription("https://en.wikipedia.org/wiki/Euclidean_vector"),
-    _: overloadDescription("param", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector"),
+    _: overloadDescription("vector", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector"),
   },
   [MethodId.POINT_2D]: {
     "ℝ²": overloadDescription("https://en.wikipedia.org/wiki/Point_(geometry)"),
@@ -785,5 +785,21 @@ export const methods = methodDescriptions({
   },
   [MethodId.DYN_AS]: {
     _: overloadDescription("as value of type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
+  },
+
+  [MethodId.VARIABLE]: {
+    _: overloadDescription("variable", "type", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+  },
+  [MethodId.READ]: {
+    _: overloadDescription("observe?", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+  },
+  [MethodId.WRITE]: {
+    _: overloadDescription("value", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+  },
+  [MethodId.CHANGE]: {
+    _: overloadDescription("delta", "asap", "https://en.wikipedia.org/wiki/Variable_(computer_science)")
+  },
+  [MethodId.AFTER]: {
+    _: overloadDescription("before")
   },
 });
