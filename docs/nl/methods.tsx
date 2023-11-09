@@ -805,7 +805,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("schrijf variabele", "waarde", "asap", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
   },
   [MethodId.CHANGE]: {
-    _: overloadDescription("veranderen variable", "delta", "asap", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
+    _: overloadDescription("verander variable", "delta", "asap", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
   },
   [MethodId.AFTER]: {
     _: overloadDescription("update na", "verwijzing")
