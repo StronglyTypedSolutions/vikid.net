@@ -606,15 +606,14 @@ export const nl: Translations = {
   discord: "Discord",
 
   default_binding_label_for(method: PresetMethodId) {
-    // TODO: Should we translate these?
     switch (method) {
-      case MethodId.MOUSE_BUTTON: return "mouse down?";
-      case MethodId.MOUSE_POSITION: return "mouse position";
-      case MethodId.KEY_TRACKER: return "key down?";
-      case MethodId.TOUCH_POSITION: return "finger position";
-      case MethodId.TOUCH_DOWN: return "finger down?";
-      case MethodId.TOUCH_TRACKER: return "finger tracker";
-      case MethodId.GAMEPAD_SWITCH: return "gamepad down?";
+      case MethodId.MOUSE_BUTTON: return "muis ingedrukt?";
+      case MethodId.MOUSE_POSITION: return "muis positie";
+      case MethodId.KEY_TRACKER: return "toets ingedrukt?";
+      case MethodId.TOUCH_POSITION: return "vinger positie";
+      case MethodId.TOUCH_DOWN: return "vinger ingedrukt?";
+      case MethodId.TOUCH_TRACKER: return "vinger tracker";
+      case MethodId.GAMEPAD_SWITCH: return "gamepad ingedrukt?";
       case MethodId.GAMEPAD_VECTOR: return "gamepad stick";
       case MethodId.GAMEPAD_NUMBER: return "gamepad trigger";
       default: return assertNever(method);

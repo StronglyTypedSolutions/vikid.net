@@ -600,7 +600,7 @@ export const en = {
   facebook: "Facebook",
   discord: "Discord",
 
-  default_binding_label_for(method: PresetMethodId) {
+  default_binding_label_for(method: PresetMethodId): string {
     switch (method) {
       case MethodId.MOUSE_BUTTON: return "mouse down?";
       case MethodId.MOUSE_POSITION: return "mouse position";
