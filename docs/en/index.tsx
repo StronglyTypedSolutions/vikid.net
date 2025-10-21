@@ -417,7 +417,8 @@ export const en = {
   break_reference_to: "Break the link to the formula",
   forbid_reference: "😕 You can't link to this formula",
   cyclic_reference: `😕 Linking to this formula would create an infinite loop!`,
-  cyclic_reference_warning: (cycle: Let[]) => `⚠️ Linking to this formula would create an infinite loop!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Use e.g. the 'merge' function to create loops.\n🛈 Long-press to create a reference delayed by a single update.`,
+  delayed_reference_warning: (cycle: Let[]) => `⚠️ Linking to this formula would create an infinite loop!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Because the parameter allows cycles (⟳),\nwe inserted a delayed reference for you.\n\n🛈 You can long-press the 🔗 button\nto create a reference delayed by a single update.`,
+  cyclic_reference_error: (cycle: Let[]) => `⚠️ Linking to this formula would create an infinite loop!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Only parameters with the ⟳ symbol allow cycles (e.g. 'merge', 'integral', ...).`,
 
   signature: "Signature",
   synopsis: "Synopsis",
