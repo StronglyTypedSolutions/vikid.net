@@ -3,6 +3,8 @@ import { PrimitiveKind } from "@vikid-core/language";
 import { ValueDescription } from "../types";
 
 export const values: ValueDescription = {
+  update: "update",
+
   never: "never",
 
   undefined: "ongedefinieerd",

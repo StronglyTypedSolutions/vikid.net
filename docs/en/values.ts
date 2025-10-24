@@ -4,6 +4,8 @@ import { PrimitiveKind } from "@vikid-core/language";
 export type ValueDescription = typeof values;
 
 export const values = {
+  update: "update",
+
   never: "nooit",
 
   undefined: "undefined",
