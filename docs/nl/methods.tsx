@@ -795,4 +795,19 @@ export const methods = methodDescriptions({
     _: overloadDescription("als waarde van type", "type", "https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information")
   },
 
+  [MethodId.VARIABLE]: {
+    _: overloadDescription("variabele", "type", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
+  },
+  [MethodId.READ]: {
+    _: overloadDescription("lees variable", "reactief?", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
+  },
+  [MethodId.WRITE]: {
+    _: overloadDescription("schrijf variabele", "waarde", "asap", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
+  },
+  [MethodId.CHANGE]: {
+    _: overloadDescription("verander variable", "delta", "asap", "https://nl.wikipedia.org/wiki/Variabele_(informatica)")
+  },
+  [MethodId.AFTER]: {
+    _: overloadDescription("update na", "verwijzing")
+  },
 });

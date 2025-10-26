@@ -46,8 +46,6 @@ export const values = {
 
   any: "value",
 
-  receiver: "receiver",
-
   tuple: "tuple",
 
   bag: "set",
@@ -55,6 +53,8 @@ export const values = {
   map: "map",
 
   sat: "satellite",
+
+  var: "variable",
 
   dynamic: "dynamic",
 

@@ -46,8 +46,6 @@ export const values: ValueDescription = {
 
   any: "waarde",
 
-  receiver: "ontvanger",
-
   tuple: "tupel",
 
   bag: "verzameling",
@@ -55,6 +53,8 @@ export const values: ValueDescription = {
   map: "map",
 
   sat: "satelliet",
+
+  var: "variabele",
 
   dynamic: "dynamisch",
 
