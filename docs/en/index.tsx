@@ -282,6 +282,7 @@ export const en = {
   skill_senior: "Skill: advanced",
   skill_alien: "Skill: alien",
   skill_internal: "Skill: secret",
+  skill_unstable: "Skill: experimental",
 
   about: "About",
   build: "Build",

@@ -284,6 +284,7 @@ export const nl: Translations = {
   skill_senior: "Niveau: gevorderd",
   skill_alien: "Niveau: alien",
   skill_internal: "Niveau: geheim",
+  skill_unstable: "Niveau: experimenteel",
 
   about: "Over ViKiD",
   build: "Bouwen",
