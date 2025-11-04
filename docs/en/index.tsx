@@ -472,7 +472,7 @@ export const en = {
   stop_clock: "Stop clock",
   step_clock: "Tick clock",
   rewind_clock: "Tick clock backwards",
-  debug_clock: "Show time stamps",
+  debug_clock: "Show time stamps\n\nLong press => show evaluation order",
 
   puzzle_restart: "Start over",
 

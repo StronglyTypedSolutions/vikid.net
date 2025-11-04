@@ -476,7 +476,7 @@ export const nl: Translations = {
   stop_clock: "Stop de klok",
   step_clock: "Tik de klok",
   rewind_clock: "Tik de klok achteruit",
-  debug_clock: "Tijd stempels?",
+  debug_clock: "Toon tijd stempels?\n\nLang drukken => toon evaluatie volgorde",
 
   puzzle_restart: "Begin opnieuw",
 
