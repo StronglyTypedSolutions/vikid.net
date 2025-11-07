@@ -316,6 +316,8 @@ export const nl: Translations = {
   play_as_puzzle_button: "Speel het programma als een puzzel,\nbeginnend bij de actieve formule.",
   play_as_puzzle_tooltip: "The actieve formule bepaalt de eerste puzzel stap.",
 
+  find_undefined: "Vind de volgende onbepaalde waarde",
+
   export_video: "Exporteer video (GIF/WebM/MP4)",
   export_image: "Exporteer afbeelding (JPEG/WebP/PNG)",
   export_html_page: "Download als web-pagina (HTML)",

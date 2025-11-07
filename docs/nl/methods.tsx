@@ -59,12 +59,6 @@ export const methods = methodDescriptions({
   [MethodId.ATAN2]: {
     _: overloadDescription("arctangens", "x", "https://nl.wikipedia.org/wiki/Arctangens#De_functie_Arctan2")
   },
-  [MethodId.ASIN]: {
-    _: overloadDescription("boogsinus", "https://nl.wikipedia.org/wiki/Arcsinus")
-  },
-  [MethodId.ACOS]: {
-    _: overloadDescription("boogcosinus", "https://nl.wikipedia.org/wiki/Arccosinus")
-  },
   [MethodId.ABS]: {
     "ℝ": overloadDescription("absolute waarde", "https://wikikids.nl/Absolute_waarde"),
     "𝕍": overloadDescription("lengte", "https://nl.wikipedia.org/wiki/Vector_(wiskunde)#Norm_van_een_vector"),
@@ -712,10 +706,6 @@ export const methods = methodDescriptions({
   [MethodId.DEBUG_PAUSE]: {
     _: overloadDescription("bij update, pauzeer de klok", "update", "actief?")
   },
-  [MethodId.DEBUG_PAUSE]: {
-    _: overloadDescription("breakpoint", "actief?")
-  },
-
   [MethodId.SATELLITE]: {
     _: overloadDescription("satelliet", "type")
   },

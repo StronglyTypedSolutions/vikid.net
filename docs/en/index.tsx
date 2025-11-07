@@ -314,6 +314,8 @@ export const en = {
   play_as_puzzle_button: "Play the program as a puzzle,\nstarting from the active formula.",
   play_as_puzzle_tooltip: "The active formula indicates the first puzzle step.",
 
+  find_undefined: "Find next undefined value",
+
   list_plain: "Apply the function on the list itself",
   list_map: "Apply the function on each element in the list (map)",
   list_reduce: "Use the function to reduce all elements in the list to a value (reduce)",
