@@ -704,7 +704,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("print naar debug console", "prefix", "actief?")
   },
   [MethodId.DEBUG_PAUSE]: {
-    _: overloadDescription("bij update, pauzeer de klok", "update", "actief?")
+    _: overloadDescription("bij update, pauzeer de klok", "actief?")
   },
   [MethodId.SATELLITE]: {
     _: overloadDescription("satelliet", "type")
