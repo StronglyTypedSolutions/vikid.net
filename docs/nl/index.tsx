@@ -445,8 +445,9 @@ export const nl: Translations = {
   forbid_reference: "😕 Je kan geen link maken naar deze formule",
   cyclic_reference: "😕 Een link naar deze formule zou een oneindige lus maken!",
   cyclic_reference_warning: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Alleen parameters met het ⟳ symbool laten lussen toe (bvb 'combineren', 'integraal', ...).\n\n🛈 Druk lang om een link te maken vertraagd met één update.`,
-  // delayed_reference_warning: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Omdat de parameter lussen toelaat (⟳ symbool),\nhebben we een vertraagde link voor je gemaakt.\n\n🛈 Je kan lang drukken op de 🔗 knop om een link te maken vertraagd met één update.`,
-  // cyclic_reference_error: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Alleen parameters met het ⟳ symbool laten lussen toe (bvb 'combineren', 'integraal', ...).`,
+
+  delayed_reference_warning: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Omdat de parameter lussen toelaat (⟳ symbool),\nhebben we een vertraagde link voor je gemaakt.\n\n🛈 Je kan lang drukken op de 🔗 knop om een link te maken vertraagd met één update.`,
+  cyclic_reference_error: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Alleen parameters met het ⟳ symbool laten lussen toe (bvb 'combineren', 'integraal', ...).`,
 
   signature_output: "uitvoer",
   signature_input: "invoer",
