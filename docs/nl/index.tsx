@@ -1,5 +1,5 @@
 import { Let, MethodId, PresetMethodId } from "@vikid-mod/language";
-import { Language } from "locale";
+import { Language } from "locale/types";
 import { groups } from "./groups";
 import { methods } from "./methods";
 import { puzzles } from "./puzzles";

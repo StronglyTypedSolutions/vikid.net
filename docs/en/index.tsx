@@ -1,5 +1,5 @@
 import { Let, MethodId, PresetMethodId } from "@vikid-mod/language";
-import { Language } from "locale";
+import { Language } from "locale/types";
 import config from "@vikid-core/config";
 import { groups } from "./groups";
 import { methods } from "./methods";
